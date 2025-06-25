@@ -65,13 +65,6 @@ GLOBAL_LIST_EMPTY(wedge_icon_cache)
 		return get_material_by_name(mineral)
 	return get_material_by_name(MATERIAL_STEEL)
 
-/obj/machinery/door/airlock/orion
-	name = "Airlock"
-	icon = 'icons/obj/doors/orion.dmi'
-	assembly_type = /obj/structure/door_assembly
-	resistance = RESISTANCE_ARMOURED
-	opacity = 0
-
 /obj/machinery/door/airlock/command
 	name = "Airlock"
 	icon = 'icons/obj/doors/Doorcom.dmi'
@@ -96,12 +89,12 @@ GLOBAL_LIST_EMPTY(wedge_icon_cache)
 /obj/machinery/door/airlock/maintenance
 	name = "Maintenance Access"
 	icon = 'icons/obj/doors/Doormaint.dmi'
-	assembly_type = /obj/structure/door_assembly/door_assembly_mai
+	assembly_type = /obj/structure/door_assembly
 
 /obj/machinery/door/airlock/external
 	name = "External Airlock"
 	icon = 'icons/obj/doors/Doorext.dmi'
-	assembly_type = /obj/structure/door_assembly/door_assembly_ext
+	assembly_type = /obj/structure/door_assembly
 	opacity = 0
 	glass = 1
 
@@ -125,7 +118,7 @@ GLOBAL_LIST_EMPTY(wedge_icon_cache)
 	resistance = RESISTANCE_VAULT
 	opacity = 1
 	secured_wires = 1
-	assembly_type = /obj/structure/door_assembly/door_assembly_highsecurity //Until somebody makes better sprites.
+	assembly_type = /obj/structure/door_assembly //Until somebody makes better sprites.
 
 /obj/machinery/door/airlock/vault/bolted
 	icon_state = "door_locked"
@@ -135,21 +128,21 @@ GLOBAL_LIST_EMPTY(wedge_icon_cache)
 	name = "Freezer Airlock"
 	icon = 'icons/obj/doors/Doorfreezer.dmi'
 	opacity = 1
-	assembly_type = /obj/structure/door_assembly/door_assembly_fre
+	assembly_type = /obj/structure/door_assembly
 
 /obj/machinery/door/airlock/hatch
 	name = "Airtight Hatch"
 	icon = 'icons/obj/doors/Doorhatchele.dmi'
 	resistance = RESISTANCE_ARMOURED
 	opacity = 1
-	assembly_type = /obj/structure/door_assembly/door_assembly_hatch
+	assembly_type = /obj/structure/door_assembly
 
 /obj/machinery/door/airlock/maintenance_hatch
 	name = "Maintenance Hatch"
 	icon = 'icons/obj/doors/Doorhatchmaint2.dmi'
 	resistance = RESISTANCE_ARMOURED
 	opacity = 1
-	assembly_type = /obj/structure/door_assembly/door_assembly_mhatch
+	assembly_type = /obj/structure/door_assembly
 
 /obj/machinery/door/airlock/glass_command
 	name = "Maintenance Hatch"
@@ -200,7 +193,7 @@ GLOBAL_LIST_EMPTY(wedge_icon_cache)
 /obj/machinery/door/airlock/atmos
 	name = "Atmospherics Airlock"
 	icon = 'icons/obj/doors/Dooratmo.dmi'
-	assembly_type = /obj/structure/door_assembly/door_assembly_atmo
+	assembly_type = /obj/structure/door_assembly
 
 /obj/machinery/door/airlock/research
 	name = "Airlock"
@@ -235,7 +228,7 @@ GLOBAL_LIST_EMPTY(wedge_icon_cache)
 	maxHealth = 300
 	resistance = RESISTANCE_AVERAGE
 	opacity = 0
-	assembly_type = /obj/structure/door_assembly/door_assembly_atmo
+	assembly_type = /obj/structure/door_assembly
 	glass = 1
 
 /* NEW AIRLOCKS BLOCK */
@@ -243,42 +236,43 @@ GLOBAL_LIST_EMPTY(wedge_icon_cache)
 /obj/machinery/door/airlock/maintenance_cargo
 	name = "Maintenance Hatch"
 	icon = 'icons/obj/doors/Doormaint_cargo.dmi'
-	assembly_type = /obj/structure/door_assembly/door_assembly_maint_cargo
+	assembly_type = /obj/structure/door_assembly
 
 /obj/machinery/door/airlock/maintenance_command
 	name = "Maintenance Hatch"
 	icon = 'icons/obj/doors/Doormaint_command.dmi'
-	assembly_type = /obj/structure/door_assembly/door_assembly_maint_command
+	assembly_type = /obj/structure/door_assembly
 
 /obj/machinery/door/airlock/maintenance_engineering
 	name = "Maintenance Hatch"
 	icon = 'icons/obj/doors/Doormaint_engi.dmi'
-	assembly_type = /obj/structure/door_assembly/door_assembly_maint_engi
+	assembly_type = /obj/structure/door_assembly
 
 /obj/machinery/door/airlock/maintenance_medical
 	name = "Maintenance Hatch"
 	icon = 'icons/obj/doors/Doormaint_med.dmi'
-	assembly_type = /obj/structure/door_assembly/door_assembly_maint_med
+	assembly_type = /obj/structure/door_assembly
 
 /obj/machinery/door/airlock/maintenance_rnd
 	name = "Maintenance Hatch"
 	icon = 'icons/obj/doors/Doormaint_rnd.dmi'
-	assembly_type = /obj/structure/door_assembly/door_assembly_maint_rnd
+	assembly_type = /obj/structure/door_assembly
 
 /obj/machinery/door/airlock/maintenance_security
 	name = "Maintenance Hatch"
 	icon = 'icons/obj/doors/Doormaint_sec.dmi'
-	assembly_type = /obj/structure/door_assembly/door_assembly_maint_sec
+	assembly_type = /obj/structure/door_assembly
 
 /obj/machinery/door/airlock/maintenance_common
 	name = "Maintenance Hatch"
 	icon = 'icons/obj/doors/Doormaint_common.dmi'
-	assembly_type = /obj/structure/door_assembly/door_assembly_maint_common
+	assembly_type = /obj/structure/door_assembly
 
 /obj/machinery/door/airlock/maintenance_interior
 	name = "Maintenance Hatch"
 	icon = 'icons/obj/doors/Doormaint_int.dmi'
-	assembly_type = /obj/structure/door_assembly/door_assembly_maint_int
+	assembly_type = /obj/structure/door_assembly
+
 
 /* NEW AIRLOCKS BLOCK END */
 
@@ -352,7 +346,7 @@ GLOBAL_LIST_EMPTY(wedge_icon_cache)
 /obj/machinery/door/airlock/science
 	name = "Airlock"
 	icon = 'icons/obj/doors/Doorsci.dmi'
-	assembly_type = /obj/structure/door_assembly/door_assembly_science
+	assembly_type = /obj/structure/door_assembly
 
 /obj/machinery/door/airlock/glass_science
 	name = "Glass Airlocks"
@@ -360,7 +354,7 @@ GLOBAL_LIST_EMPTY(wedge_icon_cache)
 	maxHealth = 300
 	resistance = RESISTANCE_AVERAGE
 	opacity = 0
-	assembly_type = /obj/structure/door_assembly/door_assembly_science
+	assembly_type = /obj/structure/door_assembly
 	glass = 1
 
 /obj/machinery/door/airlock/highsecurity
@@ -369,7 +363,7 @@ GLOBAL_LIST_EMPTY(wedge_icon_cache)
 	resistance = RESISTANCE_ARMOURED
 	bullet_resistance = RESISTANCE_ARMOURED
 	secured_wires = 1
-	assembly_type = /obj/structure/door_assembly/door_assembly_highsecurity
+	assembly_type = /obj/structure/door_assembly
 
 /*
 About the new airlock wires panel:

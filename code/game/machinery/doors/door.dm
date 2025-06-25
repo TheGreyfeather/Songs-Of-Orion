@@ -36,7 +36,7 @@
 	//Multi-tile doors
 	dir = EAST
 	var/width = 1
-
+	var/automatic_door = FALSE
 	var/damage_smoke = FALSE
 	var/tryingToLock = FALSE // for autoclosing
 
@@ -105,7 +105,8 @@
 	return TRUE
 
 /obj/machinery/door/Bumped(atom/AM)
-	if(operating)
+	if(operating) return
+	if(automatic_door == FALSE)
 		return
 	if(ismob(AM))
 		var/mob/M = AM
