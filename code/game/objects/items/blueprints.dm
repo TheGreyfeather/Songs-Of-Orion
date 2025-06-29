@@ -70,7 +70,7 @@ move an amendment</a> to the drawing.</p>
 		else
 			return
 	text += "</BODY></HTML>"
-	usr << browse(text, "window=blueprints")
+	usr << browse(HTML_SKELETON_BODY(text), "window=blueprints")
 	onclose(usr, "blueprints")
 
 /obj/item/blueprints/proc/get_area_type(var/area/A = get_area(usr))

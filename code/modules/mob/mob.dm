@@ -555,12 +555,8 @@
 
 	if(href_list["flavor_more"])
 		if(src in view(usr))
-			var/dat = {"
-				<html><meta charset=\"utf-8\"><head><title>[name]</title></head>
-				<body><tt>[replacetext(flavor_text, "\n", "<br>")]</tt></body>
-				</html>
-			"}
-			usr << browse(dat, "window=[name];size=500x200")
+			var/dat = "<tt>[replacetext(flavor_text, "\n", "<br>")]</tt>"
+			usr << browse(HTML_SKELETON_TITLE(name, dat), "window=[name];size=500x200")
 			onclose(usr, "[name]")
 	if(href_list["flavor_change"])
 		update_flavor_text()

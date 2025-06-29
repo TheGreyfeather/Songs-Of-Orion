@@ -161,7 +161,7 @@
 	else
 		dat += "No Bidon connected. Please connect a Bidon to start the transfer.<BR>"
 
-	user << browse(dat, "window=AetheriumRefinery")
+	user << browse(HTML_SKELETON_BODY(dat), "window=AetheriumRefinery")
 	onclose(user, "AetheriumRefinery")
 	return
 

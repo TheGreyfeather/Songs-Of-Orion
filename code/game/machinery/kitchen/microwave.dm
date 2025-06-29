@@ -251,7 +251,7 @@
 <A href='?src=\ref[src];action=dispose'>Eject ingredients!<BR>\
 "}
 
-	user << browse("<HEAD><TITLE>[src] Controls</TITLE></HEAD><TT>[dat]</TT>", "window=[src]")
+	user << browse(HTML_SKELETON_TITLE("[src] Controls", dat), "window=[src]")
 	onclose(user, "[src]")
 	return
 

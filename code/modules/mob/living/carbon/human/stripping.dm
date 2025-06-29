@@ -15,7 +15,7 @@
 			if(!user.stats.getPerk(PERK_FAST_FINGERS))
 				visible_message(SPAN_DANGER("\The [user] is trying to empty \the [src]'s pockets!"))
 			else
-				to_chat(user, SPAN_NOTICE("You silently try to empty \the [src]'s pockets."))	
+				to_chat(user, SPAN_NOTICE("You silently try to empty \the [src]'s pockets."))
 			if(do_mob(user,src,HUMAN_STRIP_DELAY,progress = 1))
 				empty_pockets(user)
 			return

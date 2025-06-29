@@ -137,7 +137,7 @@
 	else
 		dat += "No bidon detected. Please connect a bidon."
 
-	user << browse(dat, "window=AetheriumAnalyzer")
+	user << browse(HTML_SKELETON_BODY(dat), "window=AetheriumAnalyzer")
 	onclose(user, "AetheriumAnalyzer")
 	return
 

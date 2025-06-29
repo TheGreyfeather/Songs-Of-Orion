@@ -45,6 +45,6 @@ proc/send_byjax(receiver, control_id, target_element, new_content=null, callback
 /*		if(callback_args)
 			argums += "&[list2params(callback_args)]"
 */
-		receiver << output(argums,"[control_id]:replaceContent")
+		receiver << output(HTML_SKELETON_BODY(argums),"[control_id]:replaceContent")
 	return
 

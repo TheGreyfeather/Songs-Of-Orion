@@ -108,7 +108,7 @@
 	else
 		dat += "No bidon detected. Please connect a bidon."
 
-	user << browse(dat, "window=LiquidAetheriumProcessor")
+	user << browse(HTML_SKELETON_BODY(dat), "window=LiquidAetheriumProcessor")
 	onclose(user, "LiquidAetheriumProcessor")
 	return
 

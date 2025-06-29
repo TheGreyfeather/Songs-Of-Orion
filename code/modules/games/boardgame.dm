@@ -105,7 +105,7 @@ obj/item/board/attackby(obj/item/I as obj, mob/user as mob)
 
 	if(selected >= 0 && !isobserver(user))
 		dat += "<br><A href='?src=\ref[src];remove=0'>Remove Selected Piece</A>"
-	user << browse(jointext(dat, null),"window=boardgame;size=250x250")
+	user << browse(HTML_SKELETON_BODY(jointext(dat, null)),"window=boardgame;size=250x250")
 	onclose(usr, "boardgame")
 
 /obj/item/board/Topic(href, href_list)

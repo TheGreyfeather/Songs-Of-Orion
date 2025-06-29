@@ -319,7 +319,7 @@
 	</body></html>
 	"}
 
-	usr << browse(dat, "window=players;size=600x480")
+	usr << browse(HTML_SKELETON_BODY(dat), "window=players;size=600x480")
 
 
 /datum/admins/proc/storyteller_panel()

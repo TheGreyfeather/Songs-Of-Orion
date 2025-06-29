@@ -75,8 +75,7 @@ proc/admin_notice(message, rights)
 		to_chat(usr, "Error: you are not an admin!")
 		return
 
-	var/body = "<html><head><title>Log Panel of [M.real_name]</title></head>"
-	body += "<body><center>Logs of <b>[M]</b><br>"
+	var/body = "<body><center>Logs of <b>[M]</b><br>"
 	body += "<a href='?src=\ref[src];viewlogs=\ref[M]'>REFRESH</a></center><br>"
 
 
@@ -85,7 +84,7 @@ proc/admin_notice(message, rights)
 		body += M.attack_log[i] + "<br>"
 		i--
 
-	usr << browse(body, "window=\ref[M]logs;size=500x500")
+	usr << browse(HTML_SKELETON_TITLE("Log Panel of [M.real_name]", body), "window=\ref[M]logs;size=500x500")
 
 
 //shows an interface for individual players, with various links (links require additional flags
@@ -103,8 +102,7 @@ proc/admin_notice(message, rights)
 		to_chat(usr, "Error: you are not an admin!")
 		return
 
-	var/body = "<html><head><title>Options for [M.key]</title></head>"
-	body += "<body>Options panel for <b>[M]</b>"
+	var/body = "<body>Options panel for <b>[M]</b>"
 
 	if(M.client)
 		body += " played by <b><a href='http://byond.com/members/[M.client.ckey]'>[M.client]</b></a> "
@@ -232,7 +230,7 @@ proc/admin_notice(message, rights)
 		</body></html>
 	"}
 
-	usr << browse(body, "window=adminplayeropts;size=550x515")
+	usr << browse(HTML_SKELETON_TITLE("Options for [M.key]", body), "window=adminplayeropts;size=550x515")
 
 /datum/player_info/var/author // admin who authored the information
 /datum/player_info/var/rank //rank of admin who made the notes
@@ -481,7 +479,7 @@ proc/admin_notice(message, rights)
 
 	//world << "Channelname: [src.admincaster_feed_channel.channel_name] [src.admincaster_feed_channel.author]"
 	//world << "Msg: [src.admincaster_feed_message.author] [src.admincaster_feed_message.body]"
-	usr << browse(dat, "window=admincaster_main;size=400x600")
+	usr << browse(HTML_SKELETON_BODY(dat), "window=admincaster_main;size=400x600")
 	onclose(usr, "admincaster_main")
 
 
@@ -497,7 +495,7 @@ proc/admin_notice(message, rights)
 			r = copytext( r, 1, findtext(r,"##") )//removes the description
 		dat += text("<tr><td>[t] (<A href='?src=\ref[src];removejobban=[r]'>unban</A>)</td></tr>")
 	dat += "</table>"
-	usr << browse(dat, "window=ban;size=400x400")
+	usr << browse(HTML_SKELETON_BODY(dat), "window=ban;size=400x400")
 
 /datum/admins/proc/Game()
 	if(!check_rights(0))
@@ -520,7 +518,7 @@ proc/admin_notice(message, rights)
 		<A href='?src=\ref[src];vsc=default'>Choose a default ZAS setting</A><br>
 		"}
 
-	usr << browse(dat, "window=admin2;size=210x280")
+	usr << browse(HTML_SKELETON_BODY(dat), "window=admin2;size=210x280")
 	return
 
 /datum/admins/proc/Secrets()
@@ -539,7 +537,7 @@ proc/admin_notice(message, rights)
 				continue
 			dat += "<A href='?src=\ref[src];admin_secrets=\ref[item]'>[item.name()]</A><BR>"
 		dat += "<BR>"
-	usr << browse(dat, "window=secrets")
+	usr << browse(HTML_SKELETON_BODY(dat), "window=secrets")
 	return
 
 /////////////////////////////////////////////////////////////////////////////////////////////////admins2.dm merge
