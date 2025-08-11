@@ -1853,8 +1853,7 @@
 /turf/floor/tiled/dark,
 /area/eris/security/armory)
 "aeD" = (
-/obj/machinery/vending/hydroseeds{
-	},
+/obj/machinery/vending/hydroseeds,
 /turf/floor/tiled/dark,
 /area/eris/security/prison)
 "aeE" = (
@@ -45179,7 +45178,6 @@
 /area/eris/rnd/server)
 "cfR" = (
 /obj/structure/table/rack,
-/obj/item/computer_hardware/hard_drive/portable/advanced/setup/security,
 /obj/item/cell/medium,
 /obj/item/computer_hardware/processor_unit,
 /obj/item/computer_hardware/tesla_link,
@@ -45303,7 +45301,6 @@
 /area/eris/command/meeting_room)
 "cgd" = (
 /obj/structure/table/rack,
-/obj/item/computer_hardware/hard_drive/portable/advanced/setup/medical,
 /obj/spawner/junkfood,
 /obj/item/cell/medium,
 /obj/item/computer_hardware/processor_unit,
@@ -97266,8 +97263,7 @@
 /turf/floor/tiled/cafe,
 /area/eris/crew_quarters/kitchen)
 "fvg" = (
-/obj/machinery/vending/hydroseeds{
-	},
+/obj/machinery/vending/hydroseeds,
 /turf/floor/grass,
 /area/eris/crew_quarters/hydroponics/garden)
 "fvm" = (
@@ -100641,8 +100637,7 @@
 /turf/floor/tiled/steel/monofloor,
 /area/eris/quartermaster/hangarsupply)
 "lQM" = (
-/obj/machinery/vending/hydroseeds{
-	},
+/obj/machinery/vending/hydroseeds,
 /turf/floor/wood,
 /area/eris/crew_quarters/hydroponics)
 "lSm" = (

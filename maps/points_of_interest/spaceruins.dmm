@@ -21,10 +21,6 @@
 /obj/asteroid_generator,
 /turf/space,
 /area/asteroid/rogue)
-"g" = (
-/obj/effect/overmap/sector/spaceruins,
-/turf/space,
-/area/asteroid/rogue)
 "h" = (
 /obj/effect/shuttle_landmark/spaceruins/nav2,
 /turf/space,
@@ -290,7 +286,7 @@ a
 a
 a
 a
-g
+a
 "}
 (2,1,1) = {"
 a

@@ -612,10 +612,6 @@
 /obj/item/material/shard,
 /turf/template_noop,
 /area/template_noop)
-"bO" = (
-/obj/structure/girder,
-/turf/floor/plating/under/airless,
-/area/template_noop)
 "bP" = (
 /obj/item/material/shard,
 /turf/floor/dummy/airless{
@@ -827,7 +823,7 @@ aa
 "}
 (8,1,1) = {"
 aa
-bO
+bi
 bP
 bP
 aP
@@ -854,7 +850,7 @@ aa
 "}
 (9,1,1) = {"
 aU
-bO
+bi
 aP
 aP
 aZ

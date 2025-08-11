@@ -46,7 +46,6 @@
 "m" = (
 /obj/structure/lattice,
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /turf/space,
 /area/crawler)
 "n" = (

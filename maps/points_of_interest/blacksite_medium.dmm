@@ -2,9 +2,6 @@
 "aa" = (
 /turf/space,
 /area/space)
-"ag" = (
-/turf/space,
-/area/space)
 "aj" = (
 /obj/structure/salvageable/os/console_broken{
 	dir = 1
@@ -2088,7 +2085,7 @@ aa
 aa
 aa
 aa
-ag
+aa
 "}
 (2,1,1) = {"
 aa

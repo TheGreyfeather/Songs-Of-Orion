@@ -7,6 +7,7 @@
 /turf/wall/untinted/onestar_reinforced,
 /area/crawler)
 "c" = (
+/obj/structure/closet/onestar/tier2/mineral,
 /turf/floor/tiled/derelict,
 /area/crawler)
 "d" = (
@@ -17,32 +18,31 @@
 /turf/wall/untinted/onestar_reinforced,
 /area/crawler)
 "f" = (
-/obj/rogue/telebeacon,
-/turf/floor/carpet,
-/area/crawler)
-"g" = (
-/obj/structure/closet/onestar/tier3/normal,
-/turf/floor/tiled/derelict,
-/area/crawler)
-"h" = (
-/obj/structure/closet/onestar/tier2/normal,
-/turf/floor/tiled/derelict,
-/area/crawler)
-"i" = (
-/mob/living/simple_animal/hostile/megafauna/one_star,
-/turf/floor/tiled/derelict,
-/area/crawler)
-"j" = (
 /obj/structure/closet/onestar/tier3/special,
 /turf/floor/tiled/derelict,
 /area/crawler)
-"k" = (
-/obj/structure/closet/onestar/tier2/mineral,
+"g" = (
 /turf/floor/tiled/derelict,
 /area/crawler)
-"l" = (
+"h" = (
+/mob/living/simple_animal/hostile/megafauna/one_star,
+/turf/floor/tiled/derelict,
+/area/crawler)
+"i" = (
 /obj/machinery/light,
 /turf/floor/tiled/derelict,
+/area/crawler)
+"w" = (
+/obj/structure/closet/onestar/tier3/normal,
+/turf/floor/tiled/derelict,
+/area/crawler)
+"S" = (
+/obj/structure/closet/onestar/tier2/normal,
+/turf/floor/tiled/derelict,
+/area/crawler)
+"V" = (
+/obj/rogue/telebeacon,
+/turf/floor/carpet,
 /area/crawler)
 
 (1,1,1) = {"
@@ -58,123 +58,123 @@ a
 "}
 (2,1,1) = {"
 a
-c
-c
-c
-c
-c
-c
-c
+g
+g
+g
+g
+g
+g
+g
 a
 "}
 (3,1,1) = {"
 a
-c
 g
-c
-c
-c
-j
-c
+w
+g
+g
+g
+f
+g
 a
 "}
 (4,1,1) = {"
 a
-c
-c
-c
-c
-c
-c
-c
+g
+g
+g
+g
+g
+g
+g
 a
 "}
 (5,1,1) = {"
 a
-c
-c
-c
-c
-c
-c
-c
+g
+g
+g
+g
+g
+g
+g
 a
 "}
 (6,1,1) = {"
 a
-c
+g
 d
 d
 d
 d
 d
-c
+g
 a
 "}
 (7,1,1) = {"
 b
-c
+g
+d
+h
+V
+g
 d
 i
-f
-c
-d
-l
 b
 "}
 (8,1,1) = {"
 a
-c
+g
 d
-c
+g
 d
-c
+g
 d
-c
+g
 a
 "}
 (9,1,1) = {"
 a
-c
-c
-c
-c
-c
-c
-c
+g
+g
+g
+g
+g
+g
+g
 a
 "}
 (10,1,1) = {"
 a
-c
-c
-c
-c
-c
-c
-c
+g
+g
+g
+g
+g
+g
+g
 a
 "}
 (11,1,1) = {"
 a
+g
+S
+g
+g
+g
 c
-h
-c
-c
-c
-k
-c
+g
 a
 "}
 (12,1,1) = {"
 a
-c
-c
-c
-c
-c
-c
-c
+g
+g
+g
+g
+g
+g
+g
 a
 "}
 (13,1,1) = {"

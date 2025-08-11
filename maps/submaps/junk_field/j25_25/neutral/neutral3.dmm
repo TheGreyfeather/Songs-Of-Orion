@@ -194,9 +194,6 @@
 	},
 /turf/floor/plating/under/airless,
 /area/template_noop)
-"bC" = (
-/turf/wall/low/with_glass/smart,
-/area/template_noop)
 "bK" = (
 /obj/structure/catwalk,
 /obj/structure/sign/atmos_co2{
@@ -811,7 +808,7 @@ cW
 cW
 bX
 cW
-bC
+dj
 ar
 ae
 cT

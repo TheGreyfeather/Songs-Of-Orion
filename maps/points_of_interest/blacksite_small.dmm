@@ -2,9 +2,6 @@
 "aa" = (
 /turf/space,
 /area/space)
-"ag" = (
-/turf/space,
-/area/space)
 "an" = (
 /obj/structure/inflatable/wall,
 /turf/floor/plating/under/airless,
@@ -809,9 +806,6 @@
 /obj/landmark/corpse/skeleton,
 /turf/floor/tiled/dark/brown_platform/airless,
 /area/outpost/blacksite/small)
-"Qo" = (
-/turf/floor/plating/under/airless,
-/area/outpost/blacksite/small)
 "Qx" = (
 /obj/spawner/junk,
 /turf/floor/plating/under/airless,
@@ -1194,7 +1188,7 @@ aa
 aa
 aa
 aa
-ag
+aa
 "}
 (2,1,1) = {"
 aa
@@ -9777,9 +9771,9 @@ aa
 aa
 aa
 aa
-Qo
-Qo
-Qo
+Fr
+Fr
+Fr
 aa
 aa
 aa
@@ -9977,12 +9971,12 @@ aa
 aa
 aa
 aa
-Qo
-Qo
-Qo
+Fr
+Fr
+Fr
 Cb
-Qo
-Qo
+Fr
+Fr
 aa
 aa
 aa
@@ -10000,7 +9994,7 @@ aa
 aa
 aa
 fP
-Qo
+Fr
 UB
 yO
 Xp
@@ -10179,7 +10173,7 @@ aa
 aa
 aa
 fk
-Qo
+Fr
 Cb
 Cb
 Cb
@@ -10202,7 +10196,7 @@ aa
 aa
 aa
 aa
-Qo
+Fr
 Jq
 UB
 fk
@@ -10405,8 +10399,8 @@ aa
 aa
 aa
 fP
-Qo
-Qo
+Fr
+Fr
 fP
 bq
 aa
@@ -10608,7 +10602,7 @@ aa
 aa
 aa
 aa
-Qo
+Fr
 fP
 aa
 aa
@@ -10786,7 +10780,7 @@ aa
 aa
 Xp
 xF
-Qo
+Fr
 WT
 xh
 Nz
@@ -10988,8 +10982,8 @@ aa
 aa
 Xp
 fP
-Qo
-Qo
+Fr
+Fr
 Cb
 Cb
 Xp
@@ -11192,8 +11186,8 @@ fk
 fP
 fP
 nK
-Qo
-Qo
+Fr
+Fr
 fk
 aa
 aa
@@ -12602,9 +12596,9 @@ aa
 aa
 aa
 fP
-Qo
-Qo
-Qo
+Fr
+Fr
+Fr
 fP
 aa
 aa
@@ -12803,7 +12797,7 @@ aa
 aa
 aa
 fP
-Qo
+Fr
 EQ
 Ei
 Xd
@@ -13209,7 +13203,7 @@ aa
 aa
 aa
 fP
-Qo
+Fr
 wb
 ix
 Xp
@@ -13411,11 +13405,11 @@ aa
 aa
 aa
 aa
-Qo
+Fr
 wx
 YG
 Qx
-Qo
+Fr
 aa
 aa
 aa
@@ -15437,8 +15431,8 @@ aa
 aa
 aa
 fP
-Qo
-Qo
+Fr
+Fr
 aa
 aa
 aa
@@ -15638,8 +15632,8 @@ aa
 aa
 aa
 aa
-Qo
-Qo
+Fr
+Fr
 fk
 aa
 aa
@@ -17472,7 +17466,7 @@ aa
 aa
 aa
 aa
-Qo
+Fr
 fP
 aa
 aa
@@ -17675,7 +17669,7 @@ aa
 aa
 aa
 fk
-Qo
+Fr
 fP
 aa
 aa
@@ -17877,8 +17871,8 @@ aa
 aa
 aa
 fk
-Qo
-Qo
+Fr
+Fr
 aa
 aa
 aa
@@ -18865,7 +18859,7 @@ fP
 fP
 fP
 fP
-Qo
+Fr
 Xp
 Xp
 Xp
@@ -19066,7 +19060,7 @@ aa
 aa
 aa
 fP
-Qo
+Fr
 Hz
 Hz
 Hz
@@ -19700,8 +19694,8 @@ ao
 nB
 ey
 St
-Qo
-Qo
+Fr
+Fr
 aa
 aa
 aa
@@ -20105,7 +20099,7 @@ Aq
 Aq
 Aq
 fk
-Qo
+Fr
 aa
 aa
 aa
@@ -20306,7 +20300,7 @@ Aq
 oI
 ev
 bQ
-Qo
+Fr
 fk
 aa
 aa
@@ -21513,7 +21507,7 @@ aa
 aa
 aa
 fP
-Qo
+Fr
 fk
 aa
 aa
@@ -21715,7 +21709,7 @@ aa
 aa
 aa
 aa
-Qo
+Fr
 fP
 aa
 aa
@@ -22924,7 +22918,7 @@ aa
 aa
 aa
 aa
-Qo
+Fr
 aa
 aa
 aa
@@ -24513,7 +24507,7 @@ aa
 fk
 fk
 Xp
-Qo
+Fr
 aa
 aa
 aa
@@ -24529,13 +24523,13 @@ Qd
 Du
 Cb
 Cb
-Qo
+Fr
 AO
-Qo
+Fr
 NU
 Re
 Re
-Qo
+Fr
 Mp
 ca
 Ei
@@ -24710,7 +24704,7 @@ bq
 bq
 Xp
 WW
-Qo
+Fr
 aa
 aa
 Cp
@@ -24732,18 +24726,18 @@ xD
 Cb
 Ro
 pj
-Qo
+Fr
 nK
-Qo
+Fr
 Re
 Re
 Re
-Qo
+Fr
 Xp
 Sh
 Xp
 Xp
-Qo
+Fr
 aa
 aa
 aa
@@ -24912,8 +24906,8 @@ bq
 bq
 Xp
 Re
-Qo
-Qo
+Fr
+Fr
 aa
 fP
 fP
@@ -24934,8 +24928,8 @@ on
 Cb
 Cb
 Cb
-Qo
-Qo
+Fr
+Fr
 pj
 Re
 Zu
@@ -24945,7 +24939,7 @@ DY
 Re
 DY
 AO
-Qo
+Fr
 aa
 aa
 aa
@@ -25115,11 +25109,11 @@ bq
 fk
 hG
 SH
-Qo
-Qo
-Qo
+Fr
+Fr
+Fr
 fP
-Qo
+Fr
 aa
 aa
 aa
@@ -25146,8 +25140,8 @@ Re
 Fp
 Zu
 Fp
-Qo
-Qo
+Fr
+Fr
 FZ
 aa
 aa
@@ -25321,7 +25315,7 @@ cW
 Re
 he
 Xp
-Qo
+Fr
 aa
 aa
 aa
@@ -25516,7 +25510,7 @@ bq
 bq
 bq
 bq
-Qo
+Fr
 Cp
 fk
 Xp
@@ -25734,7 +25728,7 @@ aa
 Xp
 Oj
 Cb
-Qo
+Fr
 Cb
 Cb
 lf
@@ -25935,7 +25929,7 @@ aa
 aa
 Xp
 fk
-Qo
+Fr
 fk
 Xp
 Xp
@@ -26547,7 +26541,7 @@ aa
 aa
 aa
 fk
-Qo
+Fr
 fk
 aa
 aa
@@ -26749,7 +26743,7 @@ aa
 aa
 aa
 xF
-Qo
+Fr
 fk
 aa
 aa
@@ -26951,14 +26945,14 @@ aa
 aa
 aa
 fP
-Qo
+Fr
 fP
 aa
 aa
 aa
 aa
 fk
-Qo
+Fr
 fk
 aa
 aa
@@ -27155,12 +27149,12 @@ aa
 aa
 fP
 fP
-Qo
+Fr
 fk
 fk
-Qo
+Fr
 Cp
-Qo
+Fr
 hC
 aa
 aa
@@ -27358,9 +27352,9 @@ aa
 aa
 aa
 fP
-Qo
+Fr
 xF
-Qo
+Fr
 fP
 fP
 aa
@@ -27560,7 +27554,7 @@ aa
 aa
 aa
 nK
-Qo
+Fr
 RO
 fP
 fP
@@ -27763,7 +27757,7 @@ aa
 aa
 Cp
 fk
-Qo
+Fr
 aa
 aa
 aa
@@ -27963,7 +27957,7 @@ aa
 aa
 aa
 aa
-Qo
+Fr
 Aq
 AO
 aa
@@ -28166,7 +28160,7 @@ aa
 aa
 aa
 aa
-Qo
+Fr
 aa
 aa
 aa
@@ -28378,8 +28372,8 @@ fP
 aa
 aa
 fP
-Qo
-Qo
+Fr
+Fr
 fP
 aa
 aa
@@ -28561,9 +28555,9 @@ aa
 aa
 Qx
 Qx
-Qo
+Fr
 fP
-Qo
+Fr
 aa
 aa
 aa
@@ -28762,7 +28756,7 @@ aa
 aa
 aa
 fP
-Qo
+Fr
 xF
 Aq
 fk
@@ -28779,7 +28773,7 @@ aa
 aa
 aa
 aa
-Qo
+Fr
 Aq
 yP
 IQ
@@ -28981,7 +28975,7 @@ aa
 aa
 aa
 aa
-Qo
+Fr
 OB
 VR
 RO
@@ -29164,10 +29158,10 @@ aa
 aa
 aa
 fP
-Qo
+Fr
 Aq
 aK
-Qo
+Fr
 Aq
 aa
 aa
@@ -29183,11 +29177,11 @@ aa
 aa
 aa
 aa
-Qo
+Fr
 Aq
 yb
-Qo
-Qo
+Fr
+Fr
 fk
 fP
 aa
@@ -29368,7 +29362,7 @@ aa
 aa
 aa
 fP
-Qo
+Fr
 fP
 fk
 fP
@@ -30196,9 +30190,9 @@ aa
 aa
 fP
 fP
-Qo
-Qo
-Qo
+Fr
+Fr
+Fr
 aa
 aa
 aa
@@ -30587,7 +30581,7 @@ aa
 aa
 aa
 fP
-Qo
+Fr
 fk
 fk
 fP
@@ -30789,11 +30783,11 @@ aa
 aa
 aa
 fP
-Qo
+Fr
 rt
-Qo
-Qo
-Qo
+Fr
+Fr
+Fr
 fP
 aa
 aa
@@ -30990,12 +30984,12 @@ aa
 aa
 aa
 aa
-Qo
-Qo
+Fr
+Fr
 yB
 mw
 eo
-Qo
+Fr
 fP
 aa
 aa

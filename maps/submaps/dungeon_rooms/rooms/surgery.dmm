@@ -14,8 +14,8 @@
 /turf/floor/tiled/cafe,
 /area/crawler)
 "e" = (
-/turf/wall/low/onestar,
 /obj/structure/curtain/medical,
+/turf/wall/low/onestar,
 /area/crawler)
 "f" = (
 /obj/crawler/crawler_wallbreaker/vertical,

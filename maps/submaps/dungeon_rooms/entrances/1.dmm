@@ -7,28 +7,28 @@
 /turf/wall/untinted/onestar_reinforced,
 /area/crawler)
 "c" = (
-/turf/floor/tiled/derelict,
+/turf/floor/bluegrid,
 /area/crawler)
 "d" = (
 /obj/machinery/light/floor,
 /turf/floor/tiled/derelict,
 /area/crawler)
 "e" = (
-/turf/floor/bluegrid,
-/area/crawler)
-"f" = (
-/obj/machinery/light/floor/built,
-/turf/floor/tiled/derelict,
-/area/crawler)
-"g" = (
 /obj/crawler/crawler_wallbreaker/vertical,
 /turf/wall/untinted/onestar_reinforced,
 /area/crawler)
-"h" = (
+"f" = (
 /obj/crawler/spawnpoint,
 /turf/floor/bluegrid,
 /area/crawler)
-"i" = (
+"g" = (
+/turf/floor/tiled/derelict,
+/area/crawler)
+"h" = (
+/obj/machinery/light/floor/built,
+/turf/floor/tiled/derelict,
+/area/crawler)
+"q" = (
 /obj/rogue/telebeacon/return_beacon,
 /turf/floor/tiled/derelict,
 /area/crawler)
@@ -38,7 +38,7 @@ a
 a
 a
 a
-g
+e
 a
 a
 a
@@ -46,123 +46,123 @@ a
 "}
 (2,1,1) = {"
 a
-c
-c
-c
-c
-c
-c
-c
+g
+g
+g
+g
+g
+g
+g
 a
 "}
 (3,1,1) = {"
 a
-c
-c
-c
-c
-c
-c
-c
+g
+g
+g
+g
+g
+g
+g
 a
 "}
 (4,1,1) = {"
 a
-c
+g
 d
-c
-c
-c
+g
+g
+g
 d
-c
+g
 a
 "}
 (5,1,1) = {"
 a
-c
-c
-c
-c
-c
-c
-c
+g
+g
+g
+g
+g
+g
+g
 a
 "}
 (6,1,1) = {"
 a
+g
 c
-e
-e
-e
 c
-e
 c
+g
+c
+g
 a
 "}
 (7,1,1) = {"
 b
+g
 c
-e
-i
-h
+q
+f
+g
 c
-e
-c
+g
 b
 "}
 (8,1,1) = {"
 a
+g
 c
-e
+g
 c
-e
-e
-e
 c
+c
+g
 a
 "}
 (9,1,1) = {"
 a
-c
-c
-c
-c
-c
-c
-c
+g
+g
+g
+g
+g
+g
+g
 a
 "}
 (10,1,1) = {"
 a
-c
-f
-c
-c
-c
-f
-c
+g
+h
+g
+g
+g
+h
+g
 a
 "}
 (11,1,1) = {"
 a
-c
-c
-c
-c
-c
-c
-c
+g
+g
+g
+g
+g
+g
+g
 a
 "}
 (12,1,1) = {"
 a
-c
-c
-c
-c
-c
-c
-c
+g
+g
+g
+g
+g
+g
+g
 a
 "}
 (13,1,1) = {"
@@ -170,7 +170,7 @@ a
 a
 a
 a
-g
+e
 a
 a
 a

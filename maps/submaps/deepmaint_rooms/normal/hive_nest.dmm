@@ -70,8 +70,8 @@
 /turf/floor/tiled/steel/techfloor_grid,
 /area/deepmaint)
 "n" = (
-/turf/wall/low/with_glass/smart_plasma,
 /obj/machinery/door/blast/regular,
+/turf/wall/low/with_glass/smart_plasma,
 /area/deepmaint)
 "o" = (
 /mob/living/simple_animal/hostile/hivemind/mechiver{
