@@ -93,8 +93,8 @@
 /turf/floor/plating/under,
 /area/deepmaint)
 "aq" = (
-/turf/wall/low/with_glass/reinforced,
 /obj/structure/disposalpipe/segment,
+/turf/wall/low/with_glass/reinforced,
 /area/deepmaint)
 "ar" = (
 /turf/floor/bluegrid,

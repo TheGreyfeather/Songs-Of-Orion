@@ -633,9 +633,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/floor/reinforced,
 /area/outpost/abandoned)
-"cN" = (
-/turf/mineral_unsimulated,
-/area/mine/unexplored)
 "cO" = (
 /turf/wall,
 /area/mine/unexplored)
@@ -912,7 +909,7 @@ aa
 aa
 aa
 aa
-cN
+aa
 "}
 (2,1,1) = {"
 aa

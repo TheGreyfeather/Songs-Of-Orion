@@ -136,9 +136,6 @@
 	},
 /turf/template_noop,
 /area/template_noop)
-"aG" = (
-/turf/wall/low/with_glass/smart,
-/area/template_noop)
 "aH" = (
 /obj/machinery/telecomms/relay,
 /turf/floor/tiled/steel/bluecorner/airless,
@@ -896,7 +893,7 @@ aa
 aa
 aa
 aa
-aG
+aS
 ao
 aj
 ad
@@ -923,7 +920,7 @@ aa
 aa
 aa
 aa
-aG
+aS
 ap
 ao
 ad
@@ -950,19 +947,19 @@ aa
 aa
 aa
 aa
-aG
-aG
-aG
 aS
 aS
-aG
-aG
-aG
+aS
+aS
+aS
+aS
+aS
+aS
 ac
-aG
+aS
 ac
-aG
-aG
+aS
+aS
 ac
 ac
 ac

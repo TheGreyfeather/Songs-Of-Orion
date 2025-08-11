@@ -8,16 +8,13 @@
 "c" = (
 /turf/space,
 /area/space)
-"d" = (
-/turf/wall/dummy,
-/area/crawler)
 "e" = (
 /obj/crawler/map_maker,
 /turf/space,
 /area/crawler)
 
 (1,1,1) = {"
-d
+a
 a
 a
 a

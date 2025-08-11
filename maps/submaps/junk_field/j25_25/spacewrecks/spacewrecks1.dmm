@@ -119,8 +119,6 @@
 	dir = 4
 	},
 /turf/floor/tiled/steel/monofloor/airless,
-	dir = 4
-	},
 /area/template_noop)
 "nv" = (
 /obj/structure/bed/padded,
@@ -145,8 +143,6 @@
 "oX" = (
 /mob/living/simple_animal/hostile/hivebot,
 /turf/floor/tiled/steel/monofloor/airless,
-	dir = 4
-	},
 /area/template_noop)
 "qA" = (
 /obj/structure/bed/chair/shuttle{
@@ -174,8 +170,6 @@
 /obj/structure/table/standard,
 /obj/spawner/tank,
 /turf/floor/tiled/steel/monofloor/airless,
-	dir = 4
-	},
 /area/template_noop)
 "vt" = (
 /obj/structure/girder,
@@ -197,8 +191,6 @@
 "wU" = (
 /obj/spawner/junk/low_chance,
 /turf/floor/tiled/steel/monofloor/airless,
-	dir = 4
-	},
 /area/template_noop)
 "xN" = (
 /obj/machinery/door/firedoor,
@@ -211,8 +203,6 @@
 "zJ" = (
 /mob/living/simple_animal/hostile/hivebot/range,
 /turf/floor/tiled/steel/monofloor/airless,
-	dir = 4
-	},
 /area/template_noop)
 "zM" = (
 /obj/structure/bed/chair/shuttle{
@@ -251,8 +241,6 @@
 "EG" = (
 /obj/machinery/light,
 /turf/floor/tiled/steel/monofloor/airless,
-	dir = 4
-	},
 /area/template_noop)
 "EL" = (
 /obj/spawner/powercell/low_chance,
@@ -270,8 +258,6 @@
 "FH" = (
 /obj/spawner/pack/machine,
 /turf/floor/tiled/steel/monofloor/airless,
-	dir = 4
-	},
 /area/template_noop)
 "Ga" = (
 /turf/floor/plating/under/airless,
@@ -337,8 +323,6 @@
 	dir = 1
 	},
 /turf/floor/tiled/steel/monofloor/airless,
-	dir = 4
-	},
 /area/template_noop)
 "RW" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -387,8 +371,6 @@
 /area/template_noop)
 "Xv" = (
 /turf/floor/tiled/steel/monofloor/airless,
-	dir = 4
-	},
 /area/template_noop)
 "Yj" = (
 /obj/structure/bed/chair/shuttle{

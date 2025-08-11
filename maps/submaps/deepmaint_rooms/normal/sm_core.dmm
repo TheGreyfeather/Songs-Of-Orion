@@ -32,10 +32,6 @@
 /obj/machinery/deployable/barrier,
 /turf/floor/plating/under,
 /area/deepmaint)
-"j" = (
-/obj/structure/girder,
-/turf/floor/plating/under,
-/area/deepmaint)
 "k" = (
 /obj/structure/catwalk,
 /obj/structure/barricade,
@@ -45,7 +41,6 @@
 /turf/wall/reinforced,
 /area/deepmaint)
 "m" = (
-/turf/wall/low/with_glass/plasma,
 /obj/machinery/door/blast/regular{
 	_wifi_id = null;
 	icon_state = "pdoor1";
@@ -53,6 +48,7 @@
 	name = "Reactor Core";
 	p_open = 0
 	},
+/turf/wall/low/with_glass/plasma,
 /area/deepmaint)
 "n" = (
 /obj/spawner/pack/rare,
@@ -76,16 +72,6 @@
 /turf/floor/reinforced{
 	name = "engine floor";
 	oxygen = 0
-	},
-/area/deepmaint)
-"r" = (
-/turf/wall/low/with_glass/plasma,
-/obj/machinery/door/blast/regular{
-	_wifi_id = null;
-	icon_state = "pdoor1";
-	id = null;
-	name = "Reactor Core";
-	p_open = 0
 	},
 /area/deepmaint)
 "t" = (
@@ -131,10 +117,10 @@ a
 a
 e
 i
-j
+u
 i
 k
-j
+u
 u
 t
 f
@@ -146,17 +132,17 @@ f
 i
 l
 l
-r
+m
 l
 l
-j
+u
 f
 a
 "}
 (5,1,1) = {"
 c
 e
-j
+u
 l
 n
 o
@@ -182,7 +168,7 @@ d
 (7,1,1) = {"
 d
 h
-j
+u
 l
 n
 o
@@ -195,13 +181,13 @@ d
 (8,1,1) = {"
 a
 e
-j
+u
 l
 l
 m
 l
 l
-j
+u
 f
 b
 "}
@@ -209,12 +195,12 @@ b
 b
 f
 i
-j
-j
+u
+u
 k
 t
-j
-j
+u
+u
 h
 a
 "}

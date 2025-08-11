@@ -28,9 +28,6 @@
 	},
 /turf/floor/tiled/dark/brown_perforated/airless,
 /area/template_noop)
-"aw" = (
-/turf/wall/low/onestar,
-/area/template_noop)
 "ay" = (
 /obj/structure/railing/grey,
 /turf/floor/dirt/airless,
@@ -708,7 +705,7 @@ Wo
 Wo
 Wo
 Wo
-aw
+lU
 Di
 Wo
 Wo

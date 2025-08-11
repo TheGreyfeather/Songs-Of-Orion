@@ -133,11 +133,6 @@
 /mob/living/carbon/superior_animal/stalker/dual,
 /turf/floor/tiled/derelict/white_small_edges,
 /area/crawler)
-"Q" = (
-/obj/structure/table/onestar,
-/obj/item/gun/projectile/pistol/type_90,
-/turf/floor/tiled/derelict/white_small_edges,
-/area/crawler)
 "W" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -215,7 +210,7 @@ b
 b
 f
 a
-Q
+o
 G
 o
 a

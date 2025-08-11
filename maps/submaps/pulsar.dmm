@@ -2,9 +2,6 @@
 "aa" = (
 /turf/space,
 /area/space)
-"ag" = (
-/turf/space,
-/area/space)
 "al" = (
 /turf/space{
 	icon_state = "black";
@@ -1153,12 +1150,6 @@
 	},
 /turf/floor/tiled/steel/orangecorner,
 /area/outpost/pulsar/maintenance)
-"Mm" = (
-/turf/wall/low/with_glass/smart,
-/area/outpost/pulsar/maintenance)
-"Nc" = (
-/turf/wall/low/with_glass/smart,
-/area/outpost/pulsar/maintenance)
 "Nh" = (
 /obj/structure/reagent_dispensers/fueltank/huge,
 /obj/structure/sign/nosmoking_2{
@@ -1692,7 +1683,7 @@ aa
 aa
 aa
 aa
-ag
+aa
 "}
 (2,1,1) = {"
 aa
@@ -22267,7 +22258,7 @@ jA
 dK
 eM
 hn
-Mm
+aS
 iI
 hS
 Px
@@ -22469,7 +22460,7 @@ iR
 dK
 eM
 hn
-Mm
+aS
 KB
 hT
 iR
@@ -22873,7 +22864,7 @@ fG
 cs
 Il
 KC
-Nc
+aS
 AD
 cs
 cs
@@ -28125,7 +28116,7 @@ hT
 hT
 iR
 dK
-Mm
+aS
 ee
 cQ
 QS
@@ -28327,7 +28318,7 @@ iI
 hn
 iR
 hM
-Mm
+aS
 hn
 cQ
 QS
