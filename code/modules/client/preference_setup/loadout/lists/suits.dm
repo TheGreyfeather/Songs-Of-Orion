@@ -29,7 +29,6 @@
 /datum/gear/suit/patient
 	display_name = "patient gown"
 	path = /obj/item/clothing/suit/patient
-	cost = 0
 
 /datum/gear/suit/labcoat
 	display_name = "old labcoat"
