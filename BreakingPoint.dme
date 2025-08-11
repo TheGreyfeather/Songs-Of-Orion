@@ -2806,7 +2806,6 @@
 #include "interface\interface.dm"
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
-#include "maps\submaps\centcomm.dmm"
 #include "maps\submaps\cave_pois\cave_pois.dm"
 #include "maps\submaps\deepmaint_rooms\template.dm"
 #include "maps\submaps\deepmaint_rooms\core\core_rooms.dm"
