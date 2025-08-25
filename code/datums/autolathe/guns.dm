@@ -50,7 +50,7 @@
 	name = "FS REV .35 \"Havelock\""
 	build_path = /obj/item/gun/projectile/revolver/havelock
 
-// .Magnum handguns
+// Magnum handguns
 
 /datum/design/autolathe/gun/revolver
 	name = "FS REV .40 \"Miller\""
