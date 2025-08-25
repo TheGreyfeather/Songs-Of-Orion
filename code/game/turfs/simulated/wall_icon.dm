@@ -48,7 +48,7 @@
 		else if(locate(/obj/machinery/door) in wall)
 			any_wall_connections[turn(direction, 0)] = TRUE
 			full_wall_connections[turn(direction, 0)] = TRUE
- 			wall.update_icon()
+			wall.update_icon()
 		else
 			any_wall_connections[direction] = FALSE
 			full_wall_connections[direction] = FALSE
