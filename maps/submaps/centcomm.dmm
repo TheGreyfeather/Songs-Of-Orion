@@ -94,7 +94,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall17"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "aR" = (
 /obj/structure/table/bar_special,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -158,7 +158,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall5"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "bI" = (
 /obj/structure/cryofeed,
 /turf/floor/tiled/dark/gray_platform,
@@ -168,7 +168,7 @@
 	id = "cargo_unload"
 	},
 /turf/shuttle/floor/mining,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "cg" = (
 /turf/floor/tiled/dark/gray_perforated,
 /area/holodeck/source/industrial_arena)
@@ -245,7 +245,7 @@
 	icon_state = "cargoshwall9"
 	},
 /turf/space,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "dz" = (
 /obj/structure/lattice,
 /turf/open/holonofloor,
@@ -404,7 +404,7 @@
 /area/space)
 "eu" = (
 /turf/shuttle/wall/cargo,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "ev" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -427,7 +427,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall7"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "eJ" = (
 /obj/effect/step_trigger/teleporter/random{
 	affect_ghosts = 1;
@@ -872,7 +872,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall33"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "gi" = (
 /turf/shuttle/wall{
 	dir = 8;
@@ -1329,7 +1329,7 @@
 	icon_state = "cargoshwall8"
 	},
 /turf/space,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "ik" = (
 /obj/effect/shuttle_landmark/escape_pod/out/pod1,
 /turf/space,
@@ -2680,7 +2680,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall20"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "mu" = (
 /obj/structure/table/woodentable,
 /turf/floor/carpet,
@@ -2781,7 +2781,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall24"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "mO" = (
 /obj/item/storage/deferred/rations,
 /obj/structure/table/reinforced,
@@ -2843,7 +2843,7 @@
 	icon_state = "cargoshwall38"
 	},
 /turf/space,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "ng" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 4;
@@ -2924,7 +2924,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall13"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "nH" = (
 /obj/item/robot_parts/head,
 /obj/structure/table/glass,
@@ -3017,7 +3017,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall18"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "oo" = (
 /obj/structure/flora/ausbushes/grassybush,
 /turf/floor/dummy{
@@ -3173,7 +3173,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall3"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "rE" = (
 /obj/structure/bed,
 /obj/item/bedsheet/hos,
@@ -3231,7 +3231,7 @@
 	icon_state = "cargoshwall26"
 	},
 /turf/space,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "sA" = (
 /obj/machinery/light{
 	dir = 4
@@ -3276,7 +3276,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall28"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "td" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
@@ -3330,7 +3330,7 @@
 /turf/shuttle/floor/mining{
 	icon_state = "10,19"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "tp" = (
 /obj/structure/table/woodentable,
 /obj/item/paper_bin{
@@ -3346,7 +3346,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall10"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "tv" = (
 /obj/structure/shuttle/engine/propulsion{
 	icon_state = "propulsion_r"
@@ -3371,12 +3371,12 @@
 	icon_state = "cargoshwall41"
 	},
 /turf/space,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "tG" = (
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall32"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "tN" = (
 /obj/structure/table/holosteel_reinforced,
 /obj/effect/floor_decal/industrial/danger{
@@ -3419,7 +3419,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall25"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "uh" = (
 /obj/item/storage/box/drinkingglasses{
 	pixel_x = 1;
@@ -3532,7 +3532,7 @@
 	dir = 8
 	},
 /turf/shuttle/floor/mining,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "vf" = (
 /obj/structure/railing/holorailing{
 	dir = 8
@@ -3761,7 +3761,7 @@
 	dir = 4
 	},
 /turf/shuttle/floor/mining,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "xM" = (
 /obj/structure/table/holosteel_reinforced,
 /obj/effect/floor_decal/industrial/danger,
@@ -3897,7 +3897,7 @@
 	icon_state = "cargoshwall34"
 	},
 /turf/space,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "yM" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	pixel_y = 25;
@@ -3905,7 +3905,7 @@
 	frequency = 1380
 	},
 /turf/shuttle/floor/mining,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "yQ" = (
 /obj/structure/railing/holorailing/grey,
 /obj/structure/lattice,
@@ -3959,7 +3959,7 @@
 	id = "cargo_load"
 	},
 /turf/shuttle/floor/mining,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "zl" = (
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
@@ -4089,7 +4089,7 @@
 	icon_state = "cargoshwall12"
 	},
 /turf/space,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "AU" = (
 /obj/structure/window/reinforced/crescent{
 	dir = 1
@@ -4283,7 +4283,7 @@
 	icon_state = "cargoshwall14"
 	},
 /turf/space,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "Du" = (
 /obj/structure/table/rack,
 /obj/item/tool/hammer/sledgehammer,
@@ -4324,7 +4324,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall6"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "DJ" = (
 /obj/structure/table/steel,
 /obj/item/storage/deferred/comms,
@@ -4342,7 +4342,7 @@
 	name = "Supply Dock Loading Door"
 	},
 /turf/shuttle/floor/mining,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "DS" = (
 /obj/machinery/light{
 	dir = 8;
@@ -4404,7 +4404,7 @@
 	icon_state = "cargoshwall39"
 	},
 /turf/space,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "ED" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
@@ -4477,7 +4477,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall11"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "Fc" = (
 /turf/open/holonofloor,
 /area/holodeck/source/spacebar)
@@ -4517,7 +4517,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall15"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "FQ" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/o2{
@@ -4601,7 +4601,7 @@
 	icon_state = "cargoshwall16"
 	},
 /turf/space,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "GL" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 4
@@ -4620,7 +4620,7 @@
 	icon_state = "cargoshwall23"
 	},
 /turf/space,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "GU" = (
 /obj/item/tool/knife/ritual,
 /turf/floor/dummy{
@@ -4756,11 +4756,11 @@
 	name = "Supply Dock Loading Door"
 	},
 /turf/shuttle/floor/mining,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "Ie" = (
 /obj/effect/shuttle_landmark/supply/transit,
 /turf/space,
-/area/shuttle/cargo/brazil)
+/area/space)
 "Ii" = (
 /obj/item/stool/holostool,
 /obj/effect/floor_decal/industrial/danger{
@@ -4814,7 +4814,7 @@
 /area/holodeck/source/spacebar)
 "IX" = (
 /turf/shuttle/floor/mining,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "IZ" = (
 /turf/open/holonofloor,
 /area/holodeck/source/wireframe)
@@ -4827,12 +4827,12 @@
 	icon_state = "cargoshwall36"
 	},
 /turf/space,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "Jg" = (
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall27"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "Jj" = (
 /obj/structure/table/holosteel_reinforced,
 /obj/effect/floor_decal/industrial/danger{
@@ -4937,9 +4937,6 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/pirate)
-"Kh" = (
-/turf/space,
-/area/shuttle/cargo/brazil)
 "Kn" = (
 /obj/structure/table/rack,
 /obj/item/storage/belt/utility/full,
@@ -5113,7 +5110,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall31"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "Mp" = (
 /obj/structure/table/steel_reinforced,
 /obj/effect/floor_decal/industrial/danger,
@@ -5435,7 +5432,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall22"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "Pk" = (
 /obj/structure/table/holosteel_reinforced,
 /turf/floor/holofloor/reinforced,
@@ -5465,7 +5462,7 @@
 	icon_state = "cargoshwall19"
 	},
 /turf/space,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "Qo" = (
 /obj/structure/table/rack,
 /obj/item/storage/belt/utility/full,
@@ -5490,7 +5487,7 @@
 	icon_state = "cargoshwall40"
 	},
 /turf/space,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "Qw" = (
 /obj/machinery/light{
 	dir = 4
@@ -5808,7 +5805,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall30"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "TL" = (
 /obj/structure/bed/chair/custom/holochair,
 /obj/effect/floor_decal/industrial/danger{
@@ -5853,7 +5850,7 @@
 	icon_state = "cargoshwall35"
 	},
 /turf/space,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "Ug" = (
 /obj/machinery/light{
 	dir = 4
@@ -5904,7 +5901,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall29"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "UP" = (
 /obj/structure/table/standard,
 /obj/item/bodybag,
@@ -5965,7 +5962,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall2"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "Vs" = (
 /obj/structure/closet/secure_closet/pirate,
 /turf/floor/carpet,
@@ -6020,7 +6017,7 @@
 	icon_state = "cargoshwall21"
 	},
 /turf/space,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "Wd" = (
 /obj/structure/railing/holorailing/grey{
 	dir = 8
@@ -6087,7 +6084,7 @@
 	icon_state = "cargoshwall37"
 	},
 /turf/space,
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "WK" = (
 /obj/structure/table/woodentable,
 /obj/item/device/lighting/toggleable/lamp{
@@ -6175,7 +6172,7 @@
 /turf/shuttle/wall/cargo{
 	icon_state = "cargoshwall4"
 	},
-/area/shuttle/cargo/brazil)
+/area/centcom/suppy)
 "XU" = (
 /obj/machinery/light{
 	dir = 4
@@ -8797,16 +8794,16 @@ aa
 aa
 aa
 aa
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -8999,16 +8996,16 @@ aa
 aa
 aa
 aa
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -9201,16 +9198,16 @@ aa
 aa
 aa
 aa
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -9403,16 +9400,16 @@ aa
 aa
 aa
 aa
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -9605,16 +9602,16 @@ aa
 aa
 aa
 aa
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -9807,16 +9804,16 @@ aa
 aa
 aa
 aa
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -10009,16 +10006,16 @@ aa
 aa
 aa
 aa
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
-Kh
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -10211,16 +10208,16 @@ aa
 aa
 aa
 aa
-Kh
-Kh
-Kh
-Kh
+aa
+aa
+aa
+aa
 Ie
-Kh
-Kh
-Kh
-Kh
-Kh
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa

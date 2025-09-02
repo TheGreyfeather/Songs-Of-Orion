@@ -401,7 +401,7 @@
 	landmark_transition = "nav_cargo_transition"
 	waypoint_offsite = "nav_cargo_start"
 	current_location = "nav_cargo_start"
-	shuttle_area = /area/shuttle/cargo/brazil
+	shuttle_area = /area/centcom/suppy
 	location = 1
 	move_time = 5
 

@@ -269,17 +269,6 @@ area/space/atmosalert()
 	requires_power = TRUE
 	base_turf = /turf/floor/asteroid
 
-
-/area/shuttle/cargo
-	icon_state = "shuttle"
-	name = "Cargo Shuttle"
-
-/area/shuttle/cargo/brazil
-	icon_state = "shuttle2"
-
-/area/shuttle/cargo/transit
-	icon_state = "shuttle2"
-
 // CENTCOM
 
 /area/centcom
