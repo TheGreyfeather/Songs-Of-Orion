@@ -584,8 +584,8 @@
 
 	.["shuttle"] = FALSE
 	if(SStrade && SStrade.shuttle && SStrade.shuttle.current_location)
-		.["shuttle"] = !IS_SHIP_LEVEL(SStrade.shuttle.current_location.z)
-		.["shuttle_status"] = SStrade.shuttle.active_docking_controller.get_docking_status()
+		.["shuttle"] = initial(SStrade.shuttle.current_location.name)
+		.["shuttle_status"] = SStrade.shuttle.moving_status
 
 	.["prg_type"] = PRG.program_type
 

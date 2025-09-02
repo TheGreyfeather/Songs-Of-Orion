@@ -29,11 +29,7 @@
 	{{if data.prg_type == "master"}}
 		<tr>
 			<td>
-				{{if data.shuttle}}
-					<span class="average">Shuttle location: off-site</span>
-				{{else}}
-					<span class="average">Shuttle location: on-site</span>
-				{{/if}}
+				Shuttle location: <span class="average">{{:data.shuttle}}</span>
 				<br>
 				Shuttle status: <span class="average">{{:data.shuttle_status}}</span>
 				{{:helper.link("Launch shuttle", 'arrowreturn-1-s', {'PRG_toogle_shuttle' : 1}, null, null)}}

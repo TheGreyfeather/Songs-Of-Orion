@@ -48,9 +48,9 @@
 #define PODS_LOCKDOWN	90	//1.5 mins - how long pods stay opened, if evacuation will be cancelled
 
 // Shuttle moving status.
-#define SHUTTLE_IDLE      0
-#define SHUTTLE_WARMUP    1
-#define SHUTTLE_INTRANSIT 2
+#define SHUTTLE_IDLE      "Idle"
+#define SHUTTLE_WARMUP    "Warmup"
+#define SHUTTLE_INTRANSIT "In transit"
 
 // Ferry shuttle processing status.
 #define IDLE_STATE   0

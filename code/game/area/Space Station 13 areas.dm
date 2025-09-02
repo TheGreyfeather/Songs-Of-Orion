@@ -277,6 +277,9 @@ area/space/atmosalert()
 /area/shuttle/cargo/brazil
 	icon_state = "shuttle2"
 
+/area/shuttle/cargo/transit
+	icon_state = "shuttle2"
+
 // CENTCOM
 
 /area/centcom

@@ -252,6 +252,14 @@
 	dock_target = "cargo_bay"
 	is_valid_destination = FALSE
 
+/obj/effect/shuttle_landmark/supply/transit
+	name = "In transit"
+	landmark_tag = "nav_cargo_transition"
+	dock_target = "cargo_bay"
+	is_valid_destination = FALSE
+
+
+
 // Pirate shuttle
 // Docking controller chooses which of our airlocks should open onto the target location.
 // Pirate ship has two airlock but let's not bother having them automatically controlled
@@ -390,10 +398,12 @@
 	name = "Cargo Shuttle"
 	default_docking_controller = "supply_shuttle"
 	waypoint_station = "nav_cargo_vessel"
+	landmark_transition = "nav_cargo_transition"
 	waypoint_offsite = "nav_cargo_start"
 	current_location = "nav_cargo_start"
 	shuttle_area = /area/shuttle/cargo/brazil
 	location = 1
+	move_time = 5
 
 /datum/shuttle/autodock/ferry/cargo/New()
 	SStrade.shuttle = src
@@ -401,10 +411,10 @@
 
 /datum/shuttle/autodock/ferry/cargo/proc/drop(drop_type)
 	var/list/floor = list()
-	for(var/turf/floor/F in get_turfs())
-		if(F.contains_dense_objects(TRUE))
+	for(var/turf/turf in get_turfs())
+		if(turf.contains_dense_objects(TRUE))
 			continue
-		floor += F
+		floor += turf
 
 	if(!length(floor))
 		return FALSE
