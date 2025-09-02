@@ -270,6 +270,12 @@ area/space/atmosalert()
 	base_turf = /turf/floor/asteroid
 
 
+/area/shuttle/cargo
+	icon_state = "shuttle"
+	name = "Cargo Shuttle"
+
+/area/shuttle/cargo/brazil
+	icon_state = "shuttle2"
 
 // CENTCOM
 

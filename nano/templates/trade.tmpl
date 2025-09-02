@@ -18,40 +18,25 @@
 						Exporter:
 				</div>
 				<div class="itemContent" style="text-align: center">
-					{{if data.export_ready}}
-						{{:helper.link("Export", 'arrowreturn-1-s', {'PRG_export' : 1}, data.export_ready && data.sending ? null : 'disabled' , null)}}
-						{{:helper.link("Fulfill", 'suitcase', {'PRG_offer_fulfill_all' : 1}, data.export_ready && data.sending ? null : 'disabled' , null)}}
-					{{else data.export_time_start}}
-						<span class="average">RECHARGING</span>
+					{{if data.shuttle}}
+						{{:helper.link("Export", 'arrowreturn-1-s', {'PRG_export' : 1}, null, null)}}
+						{{:helper.link("Fulfill", 'suitcase', {'PRG_offer_fulfill_all' : 1}, null, null)}}
 					{{else}}
-						<span class="bad">NO SENDING BEACON FOUND</span>
+						<span class="bad">UNABLE TO EXPORT WHILE SHUTTLE IS DOCKED OR IN TRANSIT</span>
 					{{/if}}
 				</div>
 			</div>
 	{{if data.prg_type == "master"}}
 		<tr>
 			<td>
-				{{if data.receiving}}
-					{{:helper.link("Receiving Beacon: " + data.receiving, null, {'PRG_receiving' : 1})}}
+				{{if data.shuttle}}
+					<span class="average">Shuttle location: off-site</span>
 				{{else}}
-					{{:helper.link("Receiving Beacon", 'link', {'PRG_receiving' : 1})}}
+					<span class="average">Shuttle location: on-site</span>
 				{{/if}}
-			<td>		
-				{{if data.sending}}
-					{{:helper.link("Sending Beacon: " + data.sending, null, {'PRG_sending' : 1})}}
-				{{else}}
-					{{:helper.link("Sending Beacon", 'link', {'PRG_sending' : 1})}}
-				{{/if}}
-			<td>
-				<div class="item" style="margin: 0px 0 0 0">
-					<div class="itemContent" style="width: 80%; margin-left: 10%">
-						{{if data.export_ready}}
-							{{:helper.displayBar(1, 0, 1, 'good')}}
-						{{else}}
-							{{:helper.displayBar(data.export_time_elapsed, 0, data.export_time_max, 'average')}}
-						{{/if}}
-					</div>
-				</div>
+				<br>
+				Shuttle status: <span class="average">{{:data.shuttle_status}}</span>
+				{{:helper.link("Launch shuttle", 'arrowreturn-1-s', {'PRG_toogle_shuttle' : 1}, null, null)}}
 	{{/if}}
 </table>
 <hr>
