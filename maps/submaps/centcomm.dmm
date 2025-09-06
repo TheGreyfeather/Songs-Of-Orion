@@ -90,6 +90,11 @@
 "aI" = (
 /turf/floor/holofloor/tiled/dark,
 /area/holodeck/source/industrial)
+"aK" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall17"
+	},
+/area/centcom/suppy)
 "aR" = (
 /obj/structure/table/bar_special,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -149,10 +154,21 @@
 /obj/structure/railing/holorailing/grey,
 /turf/open/holonofloor,
 /area/holodeck/source/wireframe)
+"by" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall5"
+	},
+/area/centcom/suppy)
 "bI" = (
 /obj/structure/cryofeed,
 /turf/floor/tiled/dark/gray_platform,
 /area/centcom/evac)
+"bV" = (
+/obj/machinery/conveyor/east{
+	id = "cargo_unload"
+	},
+/turf/shuttle/floor/mining,
+/area/centcom/suppy)
 "cg" = (
 /turf/floor/tiled/dark/gray_perforated,
 /area/holodeck/source/industrial_arena)
@@ -224,6 +240,12 @@
 /obj/structure/bed/chair/wood,
 /turf/floor/tiled/dark/gray_platform,
 /area/centcom/evac)
+"du" = (
+/obj/structure/shuttle_part/cargo{
+	icon_state = "cargoshwall9"
+	},
+/turf/space,
+/area/centcom/suppy)
 "dz" = (
 /obj/structure/lattice,
 /turf/open/holonofloor,
@@ -380,6 +402,9 @@
 /obj/effect/shuttle_landmark/pirate/internim,
 /turf/space/transit/north/shuttlespace_ns6,
 /area/space)
+"eu" = (
+/turf/shuttle/wall/cargo,
+/area/centcom/suppy)
 "ev" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -398,6 +423,11 @@
 	},
 /turf/open/holonofloor,
 /area/holodeck/source/spacebar)
+"eF" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall7"
+	},
+/area/centcom/suppy)
 "eJ" = (
 /obj/effect/step_trigger/teleporter/random{
 	affect_ghosts = 1;
@@ -838,6 +868,11 @@
 	},
 /turf/space/transit/north/shuttlespace_ns2,
 /area/space)
+"gc" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall33"
+	},
+/area/centcom/suppy)
 "gi" = (
 /turf/shuttle/wall{
 	dir = 8;
@@ -1289,6 +1324,12 @@
 	},
 /turf/wall/low/with_glass/reinforced,
 /area/shuttle/pirate)
+"ig" = (
+/obj/structure/shuttle_part/cargo{
+	icon_state = "cargoshwall8"
+	},
+/turf/space,
+/area/centcom/suppy)
 "ik" = (
 /obj/effect/shuttle_landmark/escape_pod/out/pod1,
 /turf/space,
@@ -2635,6 +2676,11 @@
 	icon_state = "wood"
 	},
 /area/wizard_station)
+"mt" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall20"
+	},
+/area/centcom/suppy)
 "mu" = (
 /obj/structure/table/woodentable,
 /turf/floor/carpet,
@@ -2731,6 +2777,11 @@
 	icon_state = "lino"
 	},
 /area/wizard_station)
+"mN" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall24"
+	},
+/area/centcom/suppy)
 "mO" = (
 /obj/item/storage/deferred/rations,
 /obj/structure/table/reinforced,
@@ -2787,6 +2838,12 @@
 	icon_state = "lino"
 	},
 /area/wizard_station)
+"nf" = (
+/obj/structure/shuttle_part/cargo{
+	icon_state = "cargoshwall38"
+	},
+/turf/space,
+/area/centcom/suppy)
 "ng" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 4;
@@ -2863,6 +2920,11 @@
 	icon_state = "wood"
 	},
 /area/wizard_station)
+"nC" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall13"
+	},
+/area/centcom/suppy)
 "nH" = (
 /obj/item/robot_parts/head,
 /obj/structure/table/glass,
@@ -2950,6 +3012,12 @@
 	icon_state = "freezerfloor"
 	},
 /area/wizard_station)
+"oj" = (
+/obj/effect/shuttle_landmark/supply/centcom,
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall18"
+	},
+/area/centcom/suppy)
 "oo" = (
 /obj/structure/flora/ausbushes/grassybush,
 /turf/floor/dummy{
@@ -3101,6 +3169,11 @@
 	},
 /turf/floor/holofloor/tiled/dark,
 /area/space)
+"rD" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall3"
+	},
+/area/centcom/suppy)
 "rE" = (
 /obj/structure/bed,
 /obj/item/bedsheet/hos,
@@ -3153,6 +3226,12 @@
 /obj/structure/railing/holorailing,
 /turf/open/holonofloor,
 /area/holodeck/source/industrial)
+"sx" = (
+/obj/structure/shuttle_part/cargo{
+	icon_state = "cargoshwall26"
+	},
+/turf/space,
+/area/centcom/suppy)
 "sA" = (
 /obj/machinery/light{
 	dir = 4
@@ -3193,6 +3272,11 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/pirate)
+"ta" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall28"
+	},
+/area/centcom/suppy)
 "td" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
@@ -3230,6 +3314,23 @@
 /obj/structure/catwalk/holo,
 /turf/floor/holofloor/plating/under,
 /area/holodeck/source/industrial)
+"th" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1380;
+	icon_state = "door_locked";
+	id_tag = "cargo_bay_door";
+	locked = 1;
+	name = "Cargo Docking Hatch";
+	req_access = list(13)
+	},
+/obj/machinery/door/blast/regular{
+	id = "QMLoaddoor";
+	name = "Supply Dock Loading Door"
+	},
+/turf/shuttle/floor/mining{
+	icon_state = "10,19"
+	},
+/area/centcom/suppy)
 "tp" = (
 /obj/structure/table/woodentable,
 /obj/item/paper_bin{
@@ -3241,6 +3342,11 @@
 	},
 /turf/floor/wood,
 /area/centcom/pirate_base)
+"ts" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall10"
+	},
+/area/centcom/suppy)
 "tv" = (
 /obj/structure/shuttle/engine/propulsion{
 	icon_state = "propulsion_r"
@@ -3260,6 +3366,17 @@
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
+"tD" = (
+/obj/structure/shuttle_part/cargo{
+	icon_state = "cargoshwall41"
+	},
+/turf/space,
+/area/centcom/suppy)
+"tG" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall32"
+	},
+/area/centcom/suppy)
 "tN" = (
 /obj/structure/table/holosteel_reinforced,
 /obj/effect/floor_decal/industrial/danger{
@@ -3298,6 +3415,11 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
+"ub" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall25"
+	},
+/area/centcom/suppy)
 "uh" = (
 /obj/item/storage/box/drinkingglasses{
 	pixel_x = 1;
@@ -3405,6 +3527,12 @@
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
+"vd" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/shuttle/floor/mining,
+/area/centcom/suppy)
 "vf" = (
 /obj/structure/railing/holorailing{
 	dir = 8
@@ -3628,6 +3756,12 @@
 /obj/structure/table/rack,
 /turf/floor/tiled/steel/gray_platform,
 /area/centcom/pirate_base)
+"xB" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/shuttle/floor/mining,
+/area/centcom/suppy)
 "xM" = (
 /obj/structure/table/holosteel_reinforced,
 /obj/effect/floor_decal/industrial/danger,
@@ -3758,6 +3892,20 @@
 	icon_state = "freezerfloor"
 	},
 /area/centcom/merc_base)
+"yJ" = (
+/obj/structure/shuttle_part/cargo{
+	icon_state = "cargoshwall34"
+	},
+/turf/space,
+/area/centcom/suppy)
+"yM" = (
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	pixel_y = 25;
+	id_tag = "supply_shuttle";
+	frequency = 1380
+	},
+/turf/shuttle/floor/mining,
+/area/centcom/suppy)
 "yQ" = (
 /obj/structure/railing/holorailing/grey,
 /obj/structure/lattice,
@@ -3806,6 +3954,12 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/tiled/dark,
 /area/holodeck/source/industrial)
+"za" = (
+/obj/machinery/conveyor/west{
+	id = "cargo_load"
+	},
+/turf/shuttle/floor/mining,
+/area/centcom/suppy)
 "zl" = (
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
@@ -3930,6 +4084,12 @@
 	},
 /turf/floor/holofloor/tiled/dark,
 /area/holodeck/source/industrial_arena)
+"AN" = (
+/obj/structure/shuttle_part/cargo{
+	icon_state = "cargoshwall12"
+	},
+/turf/space,
+/area/centcom/suppy)
 "AU" = (
 /obj/structure/window/reinforced/crescent{
 	dir = 1
@@ -4118,6 +4278,12 @@
 /obj/effect/floor_decal/industrial/danger/full,
 /turf/floor/holofloor/reinforced,
 /area/holodeck/source/industrial)
+"Do" = (
+/obj/structure/shuttle_part/cargo{
+	icon_state = "cargoshwall14"
+	},
+/turf/space,
+/area/centcom/suppy)
 "Du" = (
 /obj/structure/table/rack,
 /obj/item/tool/hammer/sledgehammer,
@@ -4154,6 +4320,11 @@
 	},
 /turf/floor/holofloor/tiled/dark,
 /area/holodeck/source/industrial_arena)
+"DH" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall6"
+	},
+/area/centcom/suppy)
 "DJ" = (
 /obj/structure/table/steel,
 /obj/item/storage/deferred/comms,
@@ -4161,6 +4332,17 @@
 	icon_state = "floor6"
 	},
 /area/shuttle/mercenary)
+"DO" = (
+/obj/machinery/conveyor/west{
+	id = "cargo_load"
+	},
+/obj/structure/plasticflaps/mining,
+/obj/machinery/door/blast/regular{
+	id = "QMLoaddoor2";
+	name = "Supply Dock Loading Door"
+	},
+/turf/shuttle/floor/mining,
+/area/centcom/suppy)
 "DS" = (
 /obj/machinery/light{
 	dir = 8;
@@ -4217,6 +4399,12 @@
 	},
 /turf/wall/dummy,
 /area/space)
+"EA" = (
+/obj/structure/shuttle_part/cargo{
+	icon_state = "cargoshwall39"
+	},
+/turf/space,
+/area/centcom/suppy)
 "ED" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
@@ -4285,6 +4473,11 @@
 	},
 /turf/floor/holofloor/reinforced,
 /area/holodeck/source/industrial)
+"EV" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall11"
+	},
+/area/centcom/suppy)
 "Fc" = (
 /turf/open/holonofloor,
 /area/holodeck/source/spacebar)
@@ -4320,6 +4513,11 @@
 /obj/item/storage/backpack/satchel/leather/withwallet,
 /turf/floor/carpet,
 /area/wizard_station)
+"FF" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall15"
+	},
+/area/centcom/suppy)
 "FQ" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/o2{
@@ -4398,6 +4596,12 @@
 "Gw" = (
 /turf/floor/holofloor/tiled/bar_dance,
 /area/holodeck/source/spacebar)
+"GG" = (
+/obj/structure/shuttle_part/cargo{
+	icon_state = "cargoshwall16"
+	},
+/turf/space,
+/area/centcom/suppy)
 "GL" = (
 /obj/structure/bed/chair/custom/holochair{
 	dir = 4
@@ -4411,6 +4615,12 @@
 	},
 /turf/floor/holofloor/reinforced,
 /area/space)
+"GP" = (
+/obj/structure/shuttle_part/cargo{
+	icon_state = "cargoshwall23"
+	},
+/turf/space,
+/area/centcom/suppy)
 "GU" = (
 /obj/item/tool/knife/ritual,
 /turf/floor/dummy{
@@ -4536,6 +4746,21 @@
 /obj/item/storage/deferred/crate/demolition,
 /turf/floor/tiled/steel/gray_platform,
 /area/centcom/pirate_base)
+"Ia" = (
+/obj/machinery/conveyor/east{
+	id = "cargo_unload"
+	},
+/obj/structure/plasticflaps/mining,
+/obj/machinery/door/blast/regular{
+	id = "QMLoaddoor2";
+	name = "Supply Dock Loading Door"
+	},
+/turf/shuttle/floor/mining,
+/area/centcom/suppy)
+"Ie" = (
+/obj/effect/shuttle_landmark/supply/transit,
+/turf/space,
+/area/space)
 "Ii" = (
 /obj/item/stool/holostool,
 /obj/effect/floor_decal/industrial/danger{
@@ -4587,6 +4812,9 @@
 	},
 /turf/floor/holofloor/tiled/bar_light,
 /area/holodeck/source/spacebar)
+"IX" = (
+/turf/shuttle/floor/mining,
+/area/centcom/suppy)
 "IZ" = (
 /turf/open/holonofloor,
 /area/holodeck/source/wireframe)
@@ -4594,6 +4822,17 @@
 /obj/structure/railing/holorailing,
 /turf/open/holonofloor,
 /area/space)
+"Jc" = (
+/obj/structure/shuttle_part/cargo{
+	icon_state = "cargoshwall36"
+	},
+/turf/space,
+/area/centcom/suppy)
+"Jg" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall27"
+	},
+/area/centcom/suppy)
 "Jj" = (
 /obj/structure/table/holosteel_reinforced,
 /obj/effect/floor_decal/industrial/danger{
@@ -4867,6 +5106,11 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/tiled/dark,
 /area/space)
+"Mh" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall31"
+	},
+/area/centcom/suppy)
 "Mp" = (
 /obj/structure/table/steel_reinforced,
 /obj/effect/floor_decal/industrial/danger,
@@ -5184,6 +5428,11 @@
 	},
 /turf/floor/wood,
 /area/centcom/pirate_base)
+"Pj" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall22"
+	},
+/area/centcom/suppy)
 "Pk" = (
 /obj/structure/table/holosteel_reinforced,
 /turf/floor/holofloor/reinforced,
@@ -5208,6 +5457,12 @@
 /obj/machinery/slotmachine,
 /turf/floor/holofloor/tiled/bar_light,
 /area/holodeck/source/spacebar)
+"Qn" = (
+/obj/structure/shuttle_part/cargo{
+	icon_state = "cargoshwall19"
+	},
+/turf/space,
+/area/centcom/suppy)
 "Qo" = (
 /obj/structure/table/rack,
 /obj/item/storage/belt/utility/full,
@@ -5227,6 +5482,12 @@
 	},
 /turf/floor/holofloor/tiled/dark,
 /area/space)
+"Qq" = (
+/obj/structure/shuttle_part/cargo{
+	icon_state = "cargoshwall40"
+	},
+/turf/space,
+/area/centcom/suppy)
 "Qw" = (
 /obj/machinery/light{
 	dir = 4
@@ -5540,6 +5801,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/floor/holofloor/tiled/bar_light,
 /area/space)
+"TK" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall30"
+	},
+/area/centcom/suppy)
 "TL" = (
 /obj/structure/bed/chair/custom/holochair,
 /obj/effect/floor_decal/industrial/danger{
@@ -5579,6 +5845,12 @@
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
+"Ua" = (
+/obj/structure/shuttle_part/cargo{
+	icon_state = "cargoshwall35"
+	},
+/turf/space,
+/area/centcom/suppy)
 "Ug" = (
 /obj/machinery/light{
 	dir = 4
@@ -5625,6 +5897,11 @@
 /obj/structure/catwalk/holo,
 /turf/floor/holofloor/plating/under,
 /area/holodeck/source/industrial)
+"UL" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall29"
+	},
+/area/centcom/suppy)
 "UP" = (
 /obj/structure/table/standard,
 /obj/item/bodybag,
@@ -5681,6 +5958,11 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/floor/holofloor/reinforced,
 /area/space)
+"Vj" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall2"
+	},
+/area/centcom/suppy)
 "Vs" = (
 /obj/structure/closet/secure_closet/pirate,
 /turf/floor/carpet,
@@ -5730,6 +6012,12 @@
 /obj/structure/table/bar_special,
 /turf/floor/holofloor/tiled/bar_light,
 /area/holodeck/source/spacebar)
+"VS" = (
+/obj/structure/shuttle_part/cargo{
+	icon_state = "cargoshwall21"
+	},
+/turf/space,
+/area/centcom/suppy)
 "Wd" = (
 /obj/structure/railing/holorailing/grey{
 	dir = 8
@@ -5791,6 +6079,12 @@
 /obj/structure/railing/holorailing/grey,
 /turf/open/holonofloor,
 /area/holodeck/source/wireframe)
+"Wz" = (
+/obj/structure/shuttle_part/cargo{
+	icon_state = "cargoshwall37"
+	},
+/turf/space,
+/area/centcom/suppy)
 "WK" = (
 /obj/structure/table/woodentable,
 /obj/item/device/lighting/toggleable/lamp{
@@ -5874,6 +6168,11 @@
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
+"XR" = (
+/turf/shuttle/wall/cargo{
+	icon_state = "cargoshwall4"
+	},
+/area/centcom/suppy)
 "XU" = (
 /obj/machinery/light{
 	dir = 4
@@ -9913,7 +10212,7 @@ aa
 aa
 aa
 aa
-aa
+Ie
 aa
 aa
 aa
@@ -10313,16 +10612,16 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+ig
+du
+AN
+Do
+GG
+Qn
+VS
+GP
+sx
+yJ
 aa
 aa
 aa
@@ -10515,16 +10814,16 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+eF
+ts
+nC
+FF
+aK
+mt
+Pj
+mN
+Jg
+Ua
 aa
 aa
 aa
@@ -10717,16 +11016,16 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+DH
+IX
+vd
+IX
+IX
+IX
+vd
+IX
+ta
+Jc
 aa
 aa
 aa
@@ -10919,16 +11218,16 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+by
+IX
+IX
+IX
+IX
+IX
+IX
+IX
+UL
+Wz
 aa
 aa
 aa
@@ -11121,16 +11420,16 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+XR
+yM
+IX
+IX
+IX
+IX
+IX
+IX
+TK
+nf
 aa
 aa
 aa
@@ -11323,16 +11622,16 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+rD
+IX
+IX
+IX
+IX
+IX
+IX
+IX
+Mh
+EA
 aa
 aa
 aa
@@ -11525,16 +11824,16 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Vj
+IX
+bV
+IX
+xB
+IX
+za
+IX
+tG
+Qq
 aa
 aa
 aa
@@ -11727,16 +12026,16 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+eu
+EV
+Ia
+th
+oj
+th
+DO
+ub
+gc
+tD
 aa
 aa
 aa
