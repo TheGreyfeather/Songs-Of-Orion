@@ -34,7 +34,7 @@
 	var/obj/machinery/filler_object/f6
 	var/welded //Placed here for simplicity, only airlocks can be welded tho
 	//Multi-tile doors
-//	dir = EAST
+	dir = EAST
 	var/width = 1
 //	var/automatic_door = FALSE//Huge memory loss???
 	var/damage_smoke = FALSE
