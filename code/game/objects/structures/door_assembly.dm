@@ -9,7 +9,7 @@
 	var/base_icon_state = ""
 	var/base_name = "Airlock"
 	var/obj/item/electronics/airlock/electronics
-	var/airlock_type = "" //the type path of the airlock once completed
+	var/airlock_type = "/orion" //the type path of the airlock once completed
 	var/glass_type = "/glass"
 	var/glass = 0 // 0 = glass can be installed. -1 = glass can't be installed. 1 = glass is already installed. Text = mineral plating is installed instead.
 	var/created_name
@@ -181,6 +181,31 @@
 		if(2)
 			name = "Near Finished "
 	name += "[glass == 1 ? "Window " : ""][istext(glass) ? "[glass] Airlock" : base_name] Assembly"
+
+/obj/structure/door_assembly/verb/rotate()
+	set name = "Rotate Airlock"
+	set category = "Object"
+	set src in oview(1)
+
+	if(config.ghost_interaction)
+		src.set_dir(turn(src.dir, 90))
+
+		return
+
+	else
+		if(ismouse(usr))
+			return
+		if(!usr || !isturf(usr.loc))
+			return
+		if(usr.stat || usr.restrained())
+			return
+		if (anchored)
+			to_chat(usr, SPAN_NOTICE("The airlock cannot be rotated while anchored!"))
+			return
+		src.set_dir(turn(src.dir, 90))
+		to_chat(usr, SPAN_NOTICE("You rotate the airlock assembly!"))
+		playsound(src,'sound/effects/bangtaper.ogg',40,1)
+		return
 
 
 /obj/structure/door_assembly/door_assembly_com
