@@ -212,25 +212,25 @@
 	base_icon_state = "wood"
 	base_name = "Command Airlock"
 	glass_type = "/glass_command"
-	airlock_type = "/command"
+	airlock_type = "/orion/com"
 
 /obj/structure/door_assembly/door_assembly_sec
 	base_icon_state = "blue"
 	base_name = "Security Airlock"
 	glass_type = "/glass_security"
-	airlock_type = "/security"
+	airlock_type = "/orion/sec"
 
 /obj/structure/door_assembly/door_assembly_eng
 	base_icon_state = "yellow"
 	base_name = "Engineering Airlock"
 	glass_type = "/glass_engineering"
-	airlock_type = "/engineering"
+	airlock_type = "/orion/eng"
 
 /obj/structure/door_assembly/door_assembly_min
 	base_icon_state = "magenta"
 	base_name = "Expedition Airlock"
 	glass_type = "/glass_mining"
-	airlock_type = "/mining"
+	airlock_type = "/orion/exp"
 /*
 /obj/structure/door_assembly/door_assembly_atmo
 	base_icon_state = "atmo"
@@ -242,7 +242,7 @@
 	base_icon_state = "cyan"
 	base_name = "HR Airlock"
 	glass_type = "/glass_research"
-	airlock_type = "/research"
+	airlock_type = "/orion/hr"
 /*
 /obj/structure/door_assembly/door_assembly_science
 	base_icon_state = "sci"
@@ -254,11 +254,11 @@
 	base_icon_state = "white"
 	base_name = "Medical Airlock"
 	glass_type = "/glass_medical"
-	airlock_type = "/medical"
+	airlock_type = "/orion/med"
 
 /obj/structure/door_assembly/door_assembly_mai
 	base_name = "Maintenance Airlock"
-	airlock_type = "/maintenance"
+	airlock_type = "/orion"
 /*
 /obj/structure/door_assembly/door_assembly_maint_cargo
 	base_icon_state = "maimin"
