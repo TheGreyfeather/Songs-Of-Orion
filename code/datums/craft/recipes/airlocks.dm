@@ -27,14 +27,14 @@
 
 
 /datum/craft_recipe/airlock/assembly/mining
-	name = "mining airlock assembly"
+	name = "expedition airlock assembly"
 	result = /obj/structure/door_assembly/door_assembly_min
 
-
+/*
 /datum/craft_recipe/airlock/assembly/atmospherics
 	name = "atmospherics airlock assembly"
 	result = /obj/structure/door_assembly/door_assembly_atmo
-
+*/
 
 /datum/craft_recipe/airlock/assembly/research
 	name = "research airlock assembly"
@@ -45,7 +45,7 @@
 	name = "medical airlock assembly"
 	result = /obj/structure/door_assembly/door_assembly_med
 
-
+/*
 /datum/craft_recipe/airlock/assembly/maintenance
 	name = "maintenance airlock assembly"
 	result = /obj/structure/door_assembly/door_assembly_mai
@@ -75,7 +75,7 @@
 	steps = list(
 		list(CRAFT_MATERIAL, 10, MATERIAL_PLASTEEL)
 	)
-
+*/
 /datum/craft_recipe/airlock/assembly/blast_door
 	name = "blast door assembly"
 	result = /obj/machinery/door/blast/regular
@@ -103,8 +103,36 @@
 
 /datum/craft_recipe/airlock/assembly/multitile
 	name = "multi-tile airlock assembly"
-	result = /obj/structure/door_assembly/multi_tile
+	result = /obj/structure/door_assembly/multi_tile/orion
 	steps = list(
 		list(CRAFT_MATERIAL, 20, MATERIAL_STEEL),
 	)
 
+/datum/craft_recipe/airlock/assembly/multitile/command
+	name = "multi-tile command airlock assembly"
+	result = /obj/structure/door_assembly/multi_tile/orion/com
+
+
+/datum/craft_recipe/airlock/assembly/multitile/security
+	name = "multi-tile security airlock assembly"
+	result = /obj/structure/door_assembly/multi_tile/orion/sec
+
+
+/datum/craft_recipe/airlock/assembly/multitile/engineering
+	name = "multi-tile engineering airlock assembly"
+	result = /obj/structure/door_assembly/multi_tile/orion/eng
+
+
+/datum/craft_recipe/airlock/assembly/multitile/mining
+	name = "multi-tile expedition airlock assembly"
+	result = /obj/structure/door_assembly/multi_tile/orion/exp
+
+
+/datum/craft_recipe/airlock/assembly/multitile/hr
+	name = "multi-tile HR airlock assembly"
+	result = /obj/structure/door_assembly/multi_tile/orion/hr
+
+
+/datum/craft_recipe/airlock/assembly/multitile/medical
+	name = "multi-tile medical airlock assembly"
+	result = /obj/structure/door_assembly/multi_tile/orion/med

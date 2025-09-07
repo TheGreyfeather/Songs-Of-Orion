@@ -1,6 +1,6 @@
 /obj/structure/door_assembly
 	name = "airlock assembly"
-	icon = 'icons/obj/doors/door_assembly.dmi'
+	icon = 'icons/obj/doors/door_assembly_astra.dmi'
 	icon_state = "door_as_0"
 	anchored = FALSE
 	density = TRUE
@@ -9,14 +9,18 @@
 	var/base_icon_state = ""
 	var/base_name = "Airlock"
 	var/obj/item/electronics/airlock/electronics
-	var/airlock_type = "" //the type path of the airlock once completed
+	var/airlock_type = "/orion" //the type path of the airlock once completed
 	var/glass_type = "/glass"
 	var/glass = 0 // 0 = glass can be installed. -1 = glass can't be installed. 1 = glass is already installed. Text = mineral plating is installed instead.
 	var/created_name
-
+	dir = EAST
 /obj/structure/door_assembly/Initialize()
 	. = ..()
 	update_state()
+
+/obj/structure/door_assembly/Move(NewLoc, Dir = 0, step_x = 0, step_y = 0, var/glide_size_override = 0)
+	. = ..()
+
 
 /obj/structure/door_assembly/attackby(obj/item/I, mob/user)
 
@@ -178,61 +182,84 @@
 			name = "Near Finished "
 	name += "[glass == 1 ? "Window " : ""][istext(glass) ? "[glass] Airlock" : base_name] Assembly"
 
+/obj/structure/door_assembly/verb/rotate()
+	set name = "Rotate Airlock"
+	set category = "Object"
+	set src in oview(1)
+
+	if(config.ghost_interaction)
+		src.set_dir(turn(src.dir, 90))
+
+		return
+
+	else
+		if(ismouse(usr))
+			return
+		if(!usr || !isturf(usr.loc))
+			return
+		if(usr.stat || usr.restrained())
+			return
+		if (anchored)
+			to_chat(usr, SPAN_NOTICE("The airlock cannot be rotated while anchored!"))
+			return
+		src.set_dir(turn(src.dir, 90))
+		to_chat(usr, SPAN_NOTICE("You rotate the airlock assembly!"))
+		playsound(src,'sound/effects/bangtaper.ogg',40,1)
+		return
+
 
 /obj/structure/door_assembly/door_assembly_com
-	base_icon_state = "com"
+	base_icon_state = "wood"
 	base_name = "Command Airlock"
 	glass_type = "/glass_command"
-	airlock_type = "/command"
+	airlock_type = "/orion/com"
 
 /obj/structure/door_assembly/door_assembly_sec
-	base_icon_state = "sec"
+	base_icon_state = "blue"
 	base_name = "Security Airlock"
 	glass_type = "/glass_security"
-	airlock_type = "/security"
+	airlock_type = "/orion/sec"
 
 /obj/structure/door_assembly/door_assembly_eng
-	base_icon_state = "eng"
+	base_icon_state = "yellow"
 	base_name = "Engineering Airlock"
 	glass_type = "/glass_engineering"
-	airlock_type = "/engineering"
+	airlock_type = "/orion/eng"
 
 /obj/structure/door_assembly/door_assembly_min
-	base_icon_state = "ming"
-	base_name = "Mining Airlock"
+	base_icon_state = "magenta"
+	base_name = "Expedition Airlock"
 	glass_type = "/glass_mining"
-	airlock_type = "/mining"
-
+	airlock_type = "/orion/exp"
+/*
 /obj/structure/door_assembly/door_assembly_atmo
 	base_icon_state = "atmo"
 	base_name = "Atmospherics Airlock"
 	glass_type = "/glass_atmos"
 	airlock_type = "/atmos"
-
+*/
 /obj/structure/door_assembly/door_assembly_research
-	base_icon_state = "res"
-	base_name = "Research Airlock"
+	base_icon_state = "cyan"
+	base_name = "HR Airlock"
 	glass_type = "/glass_research"
-	airlock_type = "/research"
-
+	airlock_type = "/orion/hr"
+/*
 /obj/structure/door_assembly/door_assembly_science
 	base_icon_state = "sci"
 	base_name = "Science Airlock"
 	glass_type = "/glass_science"
 	airlock_type = "/science"
-
+*/
 /obj/structure/door_assembly/door_assembly_med
-	base_icon_state = "med"
+	base_icon_state = "white"
 	base_name = "Medical Airlock"
 	glass_type = "/glass_medical"
-	airlock_type = "/medical"
+	airlock_type = "/orion/med"
 
 /obj/structure/door_assembly/door_assembly_mai
-	base_icon_state = "mai"
 	base_name = "Maintenance Airlock"
-	airlock_type = "/maintenance"
-	glass = -1
-
+	airlock_type = "/orion"
+/*
 /obj/structure/door_assembly/door_assembly_maint_cargo
 	base_icon_state = "maimin"
 	base_name = "Maintenance Hatch"
@@ -310,6 +337,7 @@
 	base_name = "High Security Airlock"
 	airlock_type = "/highsecurity"
 	glass = -1
+*/
 
 /obj/structure/door_assembly/multi_tile
 	icon = 'icons/obj/doors/door_assembly2x1.dmi'
