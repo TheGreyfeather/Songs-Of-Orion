@@ -173,7 +173,7 @@
 	selection_color = "#6a817a"
 	wage = WAGE_LABOUR_DUMB //RIP
 	also_known_languages = list(LANGUAGE_CYRILLIC = 20, LANGUAGE_SERBIAN = 15)
-	alt_titles = list("Brother", "Brotherhood Worker", "Brotherhood Orderly", "Nursing Assistant", "Clinic Volunteer")
+	alt_titles = list("Brother", "Brotherhood Worker", "Brotherhood Orderly", "Nursing Assistant", "Clinic Volunteer", "Sister")
 
 	outfit_type = /decl/hierarchy/outfit/job/medical/volunteer
 	access = list(
