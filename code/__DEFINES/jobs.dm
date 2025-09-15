@@ -1,15 +1,15 @@
 #define ASSISTANT_TITLE "Vagabond"
 
 //Jobs depatment lists for use in constant expressions
-#define JOBS_SECURITY "Ironhammer Commander","Ironhammer Gunnery Sergeant","Ironhammer Inspector","Ironhammer Medical Specialist","Ironhammer Operative"
-#define JOBS_COMMAND "Captain","First Officer","Ironhammer Commander","Guild Merchant","Technomancer Exultant","Moebius Biolab Officer","Moebius Expedition Overseer","NeoTheology Preacher"
-#define JOBS_ENGINEERING "Technomancer Exultant","Technomancer"
-#define JOBS_MEDICAL "Moebius Biolab Officer","Moebius Doctor","Moebius Psychiatrist","Moebius Chemist","Moebius Paramedic","Moebius Bio-Engineer"
-#define JOBS_SCIENCE "Moebius Expedition Overseer","Moebius Scientist","Moebius Roboticist"
-#define JOBS_MOEBIUS "Moebius Biolab Officer","Moebius Doctor","Moebius Psychiatrist","Moebius Chemist","Moebius Paramedic","Moebius Bio-Engineer","Moebius Expedition Overseer","Moebius Scientist","Moebius Roboticist"
-#define JOBS_CARGO "Guild Merchant","Guild Technician","Guild Miner",
-#define JOBS_CIVILIAN "Club Manager","Club Worker","Club Artist",ASSISTANT_TITLE
-#define JOBS_CHURCH	"NeoTheology Preacher","NeoTheology Acolyte","NeoTheology Agrolyte","NeoTheology Custodian"
+#define JOBS_SECURITY "Director of Asset Denial","Deputy Solar Marshal","Search And Rescue Specialist","Security Officer"
+#define JOBS_COMMAND "Captain","First Officer","Director of Asset Denial","Guild Merchant","Chief Engineer","Brotherhood Coordinator","Human Resources Officer","Syndicate Logistics Officer"
+#define JOBS_ENGINEERING "Chief Engineer","Space Engineer","EVA Foremxn","EVA Reclaimation Personnel"
+#define JOBS_MEDICAL "Brotherhood Coordinator","Brotherhood Doctor","Brotherhood Volunteer"
+#define JOBS_SCIENCE "Human Resources Officer","HR Biotechnician","HR WAGIE"
+#define JOBS_MOEBIUS "Human Resources Officer"
+#define JOBS_CARGO "Syndicate Logistics Officer","Syndicate Hacker","Syndicate Agent"
+#define JOBS_CIVILIAN ASSISTANT_TITLE
+#define JOBS_CHURCH	"NeoTheology Preacher"
 #define JOBS_NONHUMAN "AI","Robot","pAI"
 #define CREDITS "&cent;"
 #define CREDS "&cent;"
@@ -20,7 +20,7 @@
 #define DEPARTMENT_ENGINEERING	"Engineering"
 #define DEPARTMENT_SCIENCE	"Science"
 #define DEPARTMENT_SECURITY "Security"
-#define DEPARTMENT_GUILD "Guild"
+#define DEPARTMENT_GUILD "Syndicate"
 #define DEPARTMENT_CIVILIAN	"Civilian"
 #define DEPARTMENT_CHURCH	"Church"
 #define DEPARTMENT_OFFSHIP "Offship"
