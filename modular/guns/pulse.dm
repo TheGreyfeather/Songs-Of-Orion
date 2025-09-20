@@ -31,7 +31,7 @@
 		)
 
 	spawn_tags = SPAWN_TAG_FS_PROJECTILE
-	gun_parts = list(/obj/item/part/gun/frame/g22 = 1, /obj/item/part/gun/modular/grip/rubber = 1, /obj/item/part/gun/modular/mechanism/smg = 1, /obj/item/part/gun/modular/barrel/clrifle = 1)
+	gun_parts = list(/obj/item/part/gun/frame/g11 = 1, /obj/item/part/gun/modular/grip/rubber = 1, /obj/item/part/gun/modular/mechanism/smg = 1, /obj/item/part/gun/modular/barrel/clrifle = 1)
 
 
 /obj/item/gun/projectile/automatic/pulse/update_icon()
