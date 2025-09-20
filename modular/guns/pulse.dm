@@ -3,9 +3,9 @@
 	desc = "A boxy caseless longarm used by security forces."
 	description_antag = "A caseless air-cooled pulse action automatic rifle. \
 						The \"G22\" is a boxy mass of glass reinforced plastics and plasteel common around the galaxy. Warranty void if action is opened."
-	icon = 'modular/guns/icons/g22.dmi'
-	icon_state = "g22"
-	item_state = "g22"
+	icon = 'modular/guns/icons/hk/g11.dmi'
+	icon_state = "g11"
+	item_state = "g11"
 	w_class = ITEM_SIZE_BULKY
 	ammo_mag = "ih_sol"
 	load_method = MAGAZINE
@@ -43,8 +43,8 @@
 	update_wear_icon()
 
 
-/obj/item/part/gun/frame/g22
-	name = "G22 frame"
+/obj/item/part/gun/frame/g11
+	name = "Pulse rifle frame"
 	desc = "A common pulse rifle frame."
 	icon_state = "frame_ihbullpup"
 	resultvars = list(/obj/item/gun/projectile/automatic/pulse)

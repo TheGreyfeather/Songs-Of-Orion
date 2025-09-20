@@ -1,4 +1,4 @@
-/obj/item/gun/projectile/selfload/basic
+/obj/item/gun/projectile/selfload
 	name = "pistol"
 	desc = "A semi-automatic handgun. A trimmed down form of competition pistols, but not by much. Takes detatchable pistol magainzes."
 	icon = 'modular/guns/icons/pistol.dmi'
@@ -51,6 +51,7 @@
 
 	icon_state = iconstring
 	set_item_state(itemstring)
+
 /obj/item/part/gun/frame/clarissa
 	name = "Clarissa frame"
 	desc = "A Clarissa pistol frame. Concealable yet anemic yet fast."
