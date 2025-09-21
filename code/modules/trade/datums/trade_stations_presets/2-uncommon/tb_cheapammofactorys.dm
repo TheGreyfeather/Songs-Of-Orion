@@ -74,7 +74,7 @@
 		),
 		"Shotgun shells" = list(
 			/obj/item/ammo_magazine/ammobox/shotgun = custom_good_name("ammunition box, slug"),
-			/obj/item/ammo_magazine/ammobox/shotgun/buckshot = custom_good_name("ammunition box, buckshot"),
+			/obj/item/ammo_magazine/ammobox/shotgun/pellet = custom_good_name("ammunition box, buckshot"),
 			/obj/item/ammo_magazine/ammobox/shotgun/beanbag = custom_good_name("ammunition box, beanbag"),
 			/obj/item/ammo_magazine/ammobox/shotgun/blanks = custom_good_name("ammunition box, blank"),
 			/obj/item/ammo_magazine/ammobox/shotgun/flashshells = custom_good_name("ammunition box (flash)"),
