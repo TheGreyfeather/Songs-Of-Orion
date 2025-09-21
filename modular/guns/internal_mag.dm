@@ -155,13 +155,13 @@ Actual weapons below
 	damage_multiplier = 1.3
 	penetration_multiplier = 0.8
 	recoil_buildup = 2.5
-
+*/
 //3D printed pistol based on slaughtomatic code
 /obj/item/gun/projectile/internalmag/printed
 	name = "printed pistol"
 	desc = "A dangerous and fragile handgun made of extruded plastic and sheet metal, a desperate weapon for desperate people. Make it count."
 	description_antag = "A disposable handgun found all over the net, every alley and backwater where someone needs to be shot."
-	icon = 'icons/obj/guns/projectile/printed.dmi'
+	icon = 'modular/guns/icons/printed.dmi'
 	icon_state = "printed"
 	item_state = "printed"
 	ammo_type = /obj/item/ammo_casing/pistol
@@ -169,36 +169,50 @@ Actual weapons below
 	max_shells = 8
 	matter = list(MATERIAL_STEEL = 1, MATERIAL_PLASTIC = 9)
 	price_tag = 200
-	fire_sound = 'sound/weapons/guns/fire/cal/35revolver.ogg'
+	fire_sound = 'sound/weapons/guns/fire/cal/35pistol.ogg'
 	damage_multiplier = 0.9
 	penetration_multiplier = 1.2
-	recoil_buildup = 6
+	init_recoil = HANDGUN_RECOIL(1)
 	rarity_value = 40
 	gun_parts = list(/obj/item/stack/material/plastic = 2)
 	safety = FALSE
-	var/list/possible_colors = list("violet", "white", "blue", "green", "orange", "red" )
+	var/list/possible_colors = list("blue", "orange", "green", "red", "white", "violet" )
 	var/choosen_color = ""
 	damage_multiplier = 0.7
 	penetration_multiplier = 0.2
 	init_recoil = HANDGUN_RECOIL(1.6)
 
-
 /obj/item/gun/projectile/internalmag/printed/Initialize()
 	. = ..()
+
 	restrict_safety = TRUE // We need safty switch but we can not use him
 
 	choosen_color = pick(possible_colors)
 	update_icon()
 
+
 /obj/item/gun/projectile/internalmag/printed/update_icon()
 	..()
 
-	var/iconstring = initial(icon_state)
-	var/itemstring = "_" + choosen_color
+	var/iconstring = initial(icon_state) + "_" + choosen_color
 
-	icon_state = iconstring + itemstring
-	set_item_state(itemstring)
+	var/itemstring = ""
 
+	if (item_suffix)
+		itemstring += "[item_suffix]"
+
+	if (bolt_open)
+		iconstring += "_open"
+	else
+		iconstring += "_closed"
+
+	wielded_item_state = "_double_" + choosen_color
+
+	icon_state = iconstring
+	set_item_state(itemstring + "_" + choosen_color)
+
+
+/*
 //SPAS-12
 /obj/item/gun/projectile/internalmag/spas
 	name = "relic scattergun"
@@ -271,3 +285,4 @@ Actual weapons below
 	penetration_multiplier = 0.5
 	init_recoil = RIFLE_RECOIL(1.2)
 */
+
