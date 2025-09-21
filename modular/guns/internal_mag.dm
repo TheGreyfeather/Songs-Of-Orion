@@ -35,6 +35,8 @@ Yes, this really was the very first code written for Braking Point that has been
 	bulletinsert_sound = 'sound/weapons/guns/interact/rev_magin.ogg'
 	var/bolt_open = 0
 	var/item_suffix = ""
+	var/bolt_open_sound = 'sound/weapons/guns/interact/hpistol_cock.ogg'
+	var/bolt_closed_sound = 'sound/weapons/guns/interact/rifle_boltforward.ogg'
 
 /obj/item/gun/projectile/internalmag/update_icon()
 	..()
@@ -64,13 +66,13 @@ Yes, this really was the very first code written for Braking Point that has been
 	bolt_act(user)
 
 /obj/item/gun/projectile/internalmag/proc/bolt_act(mob/living/user)
-	playsound(src.loc, 'sound/weapons/guns/interact/hpistol_cock.ogg', 45, 1)
+	playsound(src.loc, bolt_open_sound, 55, 1)
 	bolt_open = !bolt_open
 	if(bolt_open)
 		to_chat(user, SPAN_NOTICE("You work the action open."))
 	else
 		to_chat(user, SPAN_NOTICE("You close the action."))
-		playsound(src.loc, 'sound/weapons/guns/interact/rifle_boltforward.ogg', 65, 1)
+		playsound(src.loc, bolt_closed_sound, 65, 1)
 		bolt_open = 0
 	add_fingerprint(user)
 	update_icon()
@@ -181,6 +183,8 @@ Actual weapons below
 	damage_multiplier = 0.7
 	penetration_multiplier = 0.2
 	init_recoil = HANDGUN_RECOIL(1.6)
+	bolt_open_sound = 'sound/weapons/guns/interact/pistol_magin.ogg'
+	bolt_closed_sound = 'sound/weapons/guns/interact/smg_cock.ogg'
 
 /obj/item/gun/projectile/internalmag/printed/Initialize()
 	. = ..()
@@ -212,7 +216,7 @@ Actual weapons below
 	set_item_state(itemstring + "_" + choosen_color)
 
 
-/*
+
 //SPAS-12
 /obj/item/gun/projectile/internalmag/spas
 	name = "relic scattergun"
@@ -220,7 +224,7 @@ Actual weapons below
 	description_antag = "A rare \"SPAS\" assault shotgun, expensive even as a copy of a copy. Would be more useful if anyone knew how to use it."
 	description_info = "Pistols put holes in people. Rifles put holes through people. \
 			Shotguns will physically remove a chunk of shit from your opponent and throw that shit on the floor."
-	icon = 'icons/obj/guns/projectile/spas.dmi'
+	icon = 'modular/guns/icons/spas.dmi'
 	icon_state = "spas"
 	item_state = "spas"
 	max_shells = 7
@@ -239,7 +243,8 @@ Actual weapons below
 	damage_multiplier = 0.9
 	penetration_multiplier = 0.5
 	init_recoil = RIFLE_RECOIL(2.8)
-
+	bolt_open_sound = 'sound/weapons/guns/interact/rifle_boltback.ogg'
+/*
 /obj/item/gun/projectile/internalmag/hmrifle
 	name = "craftmade rifle"
 	desc = "A dangerous makeshift rifle made from scraps of tools and gun parts."
