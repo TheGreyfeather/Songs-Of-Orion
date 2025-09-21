@@ -227,7 +227,7 @@
 //// SHOTGUN ////
 
 /obj/item/ammo_magazine/ammobox/shotgun
-	name = "ammunition box, shotshells"
+	name = "shotgun shell box, "
 	icon_state = "box_shot"
 	matter = list(MATERIAL_STEEL = 10)
 	w_class = ITEM_SIZE_BULKY
@@ -263,7 +263,7 @@
 	rarity_value = 5
 	spawn_tags = SPAWN_TAG_AMMO_SHOTGUN_COMMON
 
-/obj/item/ammo_magazine/ammobox/shotgun/buckshot
+/obj/item/ammo_magazine/ammobox/shotgun/pellet
 	ammo_type = /obj/item/ammo_casing/shotgun/pellet
 	rarity_value = 13.33
 
