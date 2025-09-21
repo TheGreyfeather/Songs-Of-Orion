@@ -114,6 +114,8 @@ Actual weapons below
 	price_tag = 1500
 	damage_multiplier = 1.5
 	penetration_multiplier = 1.5
+	gun_parts = list(/obj/item/part/gun = 4, /obj/item/part/gun/modular/grip/wood = 1, /obj/item/part/gun/modular/mechanism/pistol = 1, /obj/item/part/gun/modular/barrel/pistol = 1)
+	can_dual = TRUE
 
 
 /*/SAR Tround revolver, though trounds themselves were cut for simplicity.
@@ -185,6 +187,8 @@ Actual weapons below
 	init_recoil = HANDGUN_RECOIL(1.6)
 	bolt_open_sound = 'sound/weapons/guns/interact/pistol_magin.ogg'
 	bolt_closed_sound = 'sound/weapons/guns/interact/smg_cock.ogg'
+	gun_parts = list(/obj/item/part/gun = 4, /obj/item/part/gun/modular/barrel/pistol/steel = 1)
+
 
 /obj/item/gun/projectile/internalmag/printed/Initialize()
 	. = ..()
@@ -244,6 +248,9 @@ Actual weapons below
 	penetration_multiplier = 0.5
 	init_recoil = RIFLE_RECOIL(2.8)
 	bolt_open_sound = 'sound/weapons/guns/interact/rifle_boltback.ogg'
+	gun_parts = list(/obj/item/part/gun = 4, /obj/item/part/gun/modular/grip/black = 1, /obj/item/part/gun/modular/mechanism/shotgun = 1, /obj/item/part/gun/modular/barrel/shotgun = 1)
+	can_dual = FALSE
+
 /*
 /obj/item/gun/projectile/internalmag/hmrifle
 	name = "craftmade rifle"
