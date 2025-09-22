@@ -1063,7 +1063,7 @@
 					/obj/item/ammo_magazine/smg = 3,
 					/obj/item/ammo_magazine/ammobox/pistol = 5,
 					/obj/item/ammo_magazine/ammobox/shotgun = 3,
-					/obj/item/ammo_magazine/ammobox/shotgun/buckshot = 3,
+					/obj/item/ammo_magazine/ammobox/shotgun/pellet = 3,
 					/obj/item/tool/knife/tacknife = 5,
 					/obj/item/storage/box/smokes = 3)
 
@@ -1083,7 +1083,7 @@
 					/obj/item/ammo_magazine/smg = 400,
 					/obj/item/ammo_magazine/ammobox/pistol = 500,
 					/obj/item/ammo_magazine/ammobox/shotgun = 600,
-					/obj/item/ammo_magazine/ammobox/shotgun/buckshot = 600,
+					/obj/item/ammo_magazine/ammobox/shotgun/pellet = 600,
 					/obj/item/tool/knife/tacknife = 300,
 					/obj/item/storage/box/smokes = 200,
 					/obj/item/ammo_magazine/pistol = 300,)
