@@ -542,15 +542,14 @@
 /turf/floor/tiled/techmaint_cargo,
 /area/eris/maintenance/disposal)
 "ayv" = (
-/obj/structure/table/orion,
-/obj/item/computer_hardware/hard_drive/portable/design/medical/viscera{
-	pixel_x = -5;
-	pixel_y = 2
+/obj/machinery/telecomms/processor/preset_four,
+/turf/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 180;
+	oxygen = 0;
+	temperature = 200
 	},
-/obj/spawner/medical/low_chance,
-/obj/structure/salvageable/wall_panel/wheat,
-/turf/floor/tiled/white/panels,
-/area/eris/medical/surgery)
+/area/eris/command/tcommsat/chamber)
 "ayA" = (
 /obj/machinery/suit_storage_unit/standard_unit,
 /turf/floor/tiled/steel/techfloor_grid,
@@ -1669,6 +1668,16 @@
 	},
 /turf/wall/untinted/orion/window/reinforced,
 /area/eris/engineering/foyer)
+"buu" = (
+/obj/structure/closet/secure_closet/personal/astra/nt_doctor{
+	pixel_y = 12
+	},
+/obj/machinery/light{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/floor/tiled/white/panels,
+/area/eris/medical/chemstor)
 "buy" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -3016,15 +3025,6 @@
 	},
 /turf/floor/reinforced,
 /area/eris/rnd/mixing)
-"cAF" = (
-/obj/machinery/telecomms/processor/preset_four,
-/turf/floor/bluegrid{
-	name = "Server Base";
-	nitrogen = 180;
-	oxygen = 0;
-	temperature = 200
-	},
-/area/eris/command/tcommsat/chamber)
 "cAL" = (
 /obj/spawner/scrap/low_chance,
 /obj/spawner/scrap/low_chance,
@@ -4676,14 +4676,12 @@
 /turf/wall/untinted/orion/window/reinforced,
 /area/space)
 "dRR" = (
-/obj/spawner/mob/roaches/cluster/low_chance,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/structure/closet/secure_closet/personal/astra/nt_sec{
+	dir = 4
 	},
-/turf/floor/tiled/white/techfloor,
-/area/eris/quartermaster/office)
+/obj/item/clothing/suit/armor/vest/toggle,
+/turf/floor/tiled/white/panels,
+/area/eris/security)
 "dSe" = (
 /obj/effect/floor_decal/ss13/l16,
 /obj/machinery/light/wall{
@@ -4749,6 +4747,9 @@
 /obj/structure/closet/secure_closet/reinforced/astra/locker/med{
 	pixel_y = 12
 	},
+/obj/item/tank/anesthetic,
+/obj/item/tank/anesthetic,
+/obj/item/tool/wrench,
 /turf/floor/tiled/white,
 /area/eris/medical/surgery)
 "dVm" = (
@@ -5335,6 +5336,9 @@
 /area/eris/crew_quarters/toilet/public)
 "erP" = (
 /obj/machinery/bodyscanner,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/floor/tiled/white/brown_platform,
 /area/eris/medical/medbay)
 "ess" = (
@@ -7442,6 +7446,10 @@
 /obj/item/modular_computer/tablet/moebius,
 /obj/structure/closet/secure_closet/reinforced/astra/locker/med{
 	pixel_y = 12
+	},
+/obj/machinery/light{
+	dir = 1;
+	pixel_y = 32
 	},
 /turf/floor/tiled/white/panels,
 /area/eris/medical/chemstor)
@@ -10178,6 +10186,7 @@
 	},
 /obj/landmark/join/start/greytide,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/light,
 /turf/floor/tiled/white/brown_perforated,
 /area/eris/hallway/main{
 	name = "skybridge"
@@ -11504,9 +11513,10 @@
 /turf/floor/tiled/steel/techfloor_grid,
 /area/eris/hallway/side/eschangarb)
 "jNU" = (
-/obj/structure/closet/secure_closet/astra/anesthetics{
+/obj/structure/table/rack/shelf{
 	pixel_y = 12
 	},
+/obj/item/tank/anesthetic,
 /turf/floor/tiled/white,
 /area/eris/medical/surgery)
 "jOs" = (
@@ -14088,7 +14098,7 @@
 /turf/floor/tiled/white/cargo,
 /area/eris/engineering/workshop)
 "mjH" = (
-/obj/structure/closet/secure_closet/medicine,
+/obj/structure/closet/secure_closet/astra/medicine,
 /obj/machinery/camera/network/medbay,
 /turf/floor/tiled/white,
 /area/eris/medical/medbay)
@@ -15052,6 +15062,7 @@
 /obj/spawner/scrap/low_chance,
 /obj/item/trash/cigbutt/dromedaryco,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/light,
 /turf/floor/tiled/white/brown_perforated,
 /area/eris/hallway/main{
 	name = "skybridge"
@@ -20577,7 +20588,7 @@
 /turf/floor/plating/under,
 /area/eris/engineering/engine_monitoring)
 "rGJ" = (
-/obj/structure/table/rack/shelf,
+/obj/structure/closet/secure_closet/freezer/astra/blood,
 /turf/floor/tiled/white,
 /area/eris/medical/surgery)
 "rGO" = (
@@ -22277,7 +22288,6 @@
 /area/eris/maintenance)
 "sWi" = (
 /obj/structure/table/orion,
-/obj/spawner/medical/low_chance,
 /obj/structure/salvageable/wall_panel/wheat,
 /turf/floor/tiled/white/panels,
 /area/eris/medical/surgery)
@@ -25782,6 +25792,10 @@
 	pixel_y = 2
 	},
 /obj/structure/salvageable/wall_panel/wheat,
+/obj/item/computer_hardware/hard_drive/portable/design/medical/viscera{
+	pixel_x = -5;
+	pixel_y = 2
+	},
 /turf/floor/tiled/white/panels,
 /area/eris/medical/surgery)
 "vZX" = (
@@ -26099,7 +26113,6 @@
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
 	},
-/obj/item/clothing/suit/armor/vest/detective,
 /turf/floor/tiled/white/panels,
 /area/eris/security)
 "wlo" = (
@@ -26841,9 +26854,6 @@
 /turf/floor/tiled/techmaint_perforated,
 /area/eris/maintenance)
 "wRo" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/structure/closet/secure_closet/reinforced/astra/locker/med{
 	pixel_y = 12
 	},
@@ -28292,13 +28302,6 @@
 	},
 /turf/floor/tiled/white/techfloor,
 /area/eris/medical/surgery)
-"ydW" = (
-/obj/structure/closet/secure_closet/personal/astra/nt_sec{
-	dir = 4
-	},
-/obj/item/clothing/suit/armor/vest/toggle,
-/turf/floor/tiled/white/panels,
-/area/eris/security)
 "yeL" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 0
@@ -34683,7 +34686,7 @@ brU
 tJd
 jDH
 fOA
-cAF
+ayv
 seP
 seP
 seP
@@ -37136,7 +37139,7 @@ rTQ
 hDw
 mpS
 vlN
-dRR
+kTu
 kTu
 qqE
 bcV
@@ -61587,7 +61590,7 @@ tNO
 yhW
 aCA
 kEM
-ayv
+sWi
 myT
 ydQ
 hLA
@@ -62803,7 +62806,7 @@ ygC
 mEI
 rty
 ibG
-ijI
+buu
 hoV
 svt
 neD
@@ -62818,8 +62821,8 @@ mGQ
 uHO
 uvM
 aXr
-ydW
-ydW
+dRR
+dRR
 oAS
 ccO
 qJT
