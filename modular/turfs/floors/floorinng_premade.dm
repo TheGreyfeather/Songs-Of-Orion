@@ -183,7 +183,7 @@
 	icon_base = "wood"
 	damage_temperature = T0C+200
 	descriptor = "planks"
-	build_type = /obj/item/stack/tile/wood
+	build_type = /obj/item/stack/tile/wood2
 	flags = TURF_CAN_BREAK | TURF_CAN_BURN | TURF_IS_FRAGILE | TURF_REMOVE_SCREWDRIVER | TURF_HIDES_THINGS
 
 /turf/floor/tiled/orion/wood
@@ -196,7 +196,7 @@
 	name = "decking"
 	icon_base = "techfloor"
 	icon = 'modular/turfs/floors/icons/tech.dmi'
-	build_type = /obj/item/stack/tile/orion/wood
+	build_type = /obj/item/stack/tile/orion/
 	footstep_sound = "floor"
 
 	floor_smooth = SMOOTH_WHITELIST

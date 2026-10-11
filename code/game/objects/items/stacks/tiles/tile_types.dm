@@ -63,8 +63,9 @@
 	desc = "A device that makes wood floor tiles."
 	uses_charge = 1
 	charge_costs = list(250)
-	stacktype = /obj/item/stack/tile/wood
-	build_type = /obj/item/stack/tile/wood
+	icon_state = "tile_wood2"
+	stacktype = /obj/item/stack/tile/wood2
+	build_type = /obj/item/stack/tile/wood2
 	spawn_frequency = 0
 
 /*
@@ -535,7 +536,7 @@
 	icon_state = "tile_derelict4"
 
 ////ORION/ASTRA
-/obj/item/stack/tile/orion/wood
+/obj/item/stack/tile/wood2
 	name = "wood floor tile"
 	singular_name = "wood floor tile"
 	desc = "An easy to fit wooden floor tile."
@@ -543,19 +544,12 @@
 	force = WEAPON_FORCE_NORMAL
 	throwforce = WEAPON_FORCE_NORMAL
 	flags = 0
+	dropped_sound = 'sound/items/drop_sounds/woodweapon.ogg'
 
 /obj/item/stack/tile/orion/wood/full
 	amount = 60
-	dropped_sound = 'sound/items/drop_sounds/woodweapon.ogg'
 
-/obj/item/stack/tile/orion/wood/cyborg
-	name = "wood floor tile synthesizer"
-	desc = "A device that makes wood floor tiles."
-	uses_charge = 1
-	charge_costs = list(250)
-	stacktype = /obj/item/stack/tile/orion/wood
-	build_type = /obj/item/stack/tile/orion/wood
-	spawn_frequency = 0
+
 
 /obj/item/stack/tile/floor/orion
 	name = "decking"
