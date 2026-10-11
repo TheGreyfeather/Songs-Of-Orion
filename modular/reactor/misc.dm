@@ -159,7 +159,7 @@
 	refill_reagent = "uranium"
 	matter = list(MATERIAL_STEEL = 10, MATERIAL_URANIUM = 10)
 
-/obj/item/fuel_rod/hotdog/New()
+/obj/item/fuel_rod/hotdog/Initialize()
 	desc = "Raw uranium ingots splinted into a fuel rod using rebar. Unstable."
 	specific_heat = 28 * (rand(0.7, 2))
 	molar_mass = 0.235 + (rand(-0.015, 0.030))
@@ -321,13 +321,12 @@
 			prot = TRUE
 		else if(H.gloves)
 			var/obj/item/clothing/gloves/G = H.gloves
-			if(G.siemens_coefficient)
-				if(G.siemens_coefficient < 0.5)
-					prot = TRUE
+			if(G.siemens_coefficient <= 0.5)
+				prot = TRUE
 	else
 		prot = TRUE
 
-	if(!prot)
+	if(prot == FALSE)
 		var/target_zone
 		target_zone = pick(BP_L_ARM, BP_R_ARM)
 		to_chat(user, "You try to grab a molten nuclear fuel rod. Suboptimal.")
@@ -335,8 +334,9 @@
 		playsound(loc, 'sound/items/welder2.ogg', 50, 1)
 		H.emote("painscream")
 		return
-	if(prot)
+	else
 		H.put_in_hands(src)
+		return
 
 //Rods spark and irradiate slightly more when thrown
 /obj/item/fuel_rod/throw_impact(atom/hit_atom, speed)
