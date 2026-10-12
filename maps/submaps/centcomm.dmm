@@ -15,6 +15,15 @@
 	},
 /turf/wall/dummy,
 /area/space)
+"ae" = (
+/obj/machinery/trade_beacon/receiving,
+/obj/machinery/trade_beacon/sending,
+/turf/space,
+/area/centcom/trade_beacon)
+"af" = (
+/obj/structure/table/rack/shelf,
+/turf/shuttle/floor/mining,
+/area/centcom/suppy)
 "ag" = (
 /obj/structure/window/reinforced/crescent{
 	dir = 4
@@ -28,6 +37,19 @@
 /obj/structure/railing/holorailing,
 /turf/open/holonofloor,
 /area/holodeck/source/industrial_arena)
+"ai" = (
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	pixel_y = 25;
+	frequency = 1380;
+	id_tag = "supply_shuttle"
+	},
+/obj/structure/table/rack/shelf,
+/turf/shuttle/floor/mining,
+/area/centcom/suppy)
+"aj" = (
+/obj/structure/table/rack,
+/turf/shuttle/floor/mining,
+/area/centcom/suppy)
 "an" = (
 /obj/structure/railing/holorailing/grey{
 	dir = 4
@@ -42,15 +64,14 @@
 /area/holodeck/source/industrial)
 "at" = (
 /obj/structure/cryofeed{
-	dir = 4;
-	icon_state = "cryo_rear"
+	dir = 4
 	},
 /turf/floor/tiled/dark/gray_platform,
 /area/centcom/evac)
 "au" = (
 /obj/machinery/cryopod{
-	dir = 4;
-	icon_state = "cryopod_0"
+	icon_state = "cryopod_0";
+	dir = 4
 	},
 /turf/floor/tiled/dark/gray_platform,
 /area/centcom/evac)
@@ -62,9 +83,7 @@
 /area/space)
 "aw" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /obj/item/device/scanner/price,
 /obj/item/device/scanner/price,
@@ -217,19 +236,17 @@
 /area/centcom/evac)
 "dk" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "escape_pod_1_recovery";
 	pixel_x = 25;
-	pixel_y = 0;
+	frequency = 1380;
 	req_one_access = list(13);
-	tag_door = "escape_pod_1_recovery_hatch"
+	tag_door = "escape_pod_1_recovery_hatch";
+	id_tag = "escape_pod_1_recovery"
 	},
 /turf/floor/tiled/dark/golden,
 /area/centcom/evac)
 "dl" = (
 /obj/item/modular_computer/console{
-	dir = 4;
-	icon_state = "console"
+	dir = 4
 	},
 /turf/floor/tiled/dark/golden,
 /area/centcom/evac)
@@ -258,12 +275,12 @@
 /area/centcom/pirate_base)
 "dK" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "escape_pod_1_recovery_hatch";
-	locked = 1;
 	name = "Recovery Shuttle Dock";
-	req_access = list(13)
+	icon_state = "door_locked";
+	frequency = 1380;
+	locked = 1;
+	req_access = list(13);
+	id_tag = "escape_pod_1_recovery_hatch"
 	},
 /turf/floor/tiled/steel/techfloor_grid,
 /area/centcom/evac)
@@ -281,8 +298,8 @@
 /area/centcom/evac)
 "dO" = (
 /turf/shuttle/wall{
-	dir = 4;
-	icon_state = "diagonalWall3"
+	icon_state = "diagonalWall3";
+	dir = 4
 	},
 /area/shuttle/pirate)
 "dP" = (
@@ -302,19 +319,18 @@
 /area/space)
 "dT" = (
 /obj/structure/bed/chair/wood{
-	dir = 1;
-	icon_state = "wooden_chair"
+	dir = 1
 	},
 /turf/floor/tiled/dark/gray_platform,
 /area/centcom/evac)
 "dU" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "escape_pod_2_recovery_hatch";
-	locked = 1;
 	name = "Recovery Shuttle Dock";
-	req_access = list(13)
+	icon_state = "door_locked";
+	frequency = 1380;
+	locked = 1;
+	req_access = list(13);
+	id_tag = "escape_pod_2_recovery_hatch"
 	},
 /turf/floor/tiled/steel/techfloor_grid,
 /area/centcom/evac)
@@ -341,10 +357,10 @@
 /area/centcom/evac)
 "eb" = (
 /turf/wall/dummy{
+	name = "Shuttle Bay Blast Door";
 	desc = "That looks like it doesn't open easily.";
 	icon = 'icons/obj/doors/rapid_pdoor.dmi';
-	icon_state = "pdoor1";
-	name = "Shuttle Bay Blast Door"
+	icon_state = "pdoor1"
 	},
 /area/space)
 "ec" = (
@@ -364,9 +380,7 @@
 /area/space)
 "eg" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /obj/structure/uplink/mercenary,
 /obj/structure/sign/faction/serbian{
@@ -387,8 +401,8 @@
 "ep" = (
 /turf/space,
 /turf/shuttle/wall{
-	dir = 8;
-	icon_state = "diagonalWall3"
+	icon_state = "diagonalWall3";
+	dir = 8
 	},
 /area/shuttle/mercenary)
 "eq" = (
@@ -407,12 +421,11 @@
 /area/centcom/suppy)
 "ev" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdownside";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/space/transit/north/shuttlespace_ns14,
 /area/space)
@@ -430,195 +443,195 @@
 /area/centcom/suppy)
 "eJ" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space/transit/north/shuttlespace_ns15,
 /area/space)
 "eK" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space/transit/north/shuttlespace_ns9,
 /area/space)
 "eL" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space/transit/north/shuttlespace_ns5,
 /area/space)
 "eM" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space/transit/north/shuttlespace_ns12,
 /area/space)
 "eN" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space/transit/north/shuttlespace_ns8,
 /area/space)
 "eO" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space/transit/north/shuttlespace_ns3,
 /area/space)
 "eP" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space/transit/north/shuttlespace_ns6,
 /area/space)
 "eQ" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space/transit/north/shuttlespace_ns7,
 /area/space)
 "eR" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space/transit/north/shuttlespace_ns4,
 /area/space)
 "eS" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space/transit/north/shuttlespace_ns14,
 /area/space)
 "eT" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space/transit/north/shuttlespace_ns1,
 /area/space)
 "eU" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space/transit/north/shuttlespace_ns11,
 /area/space)
 "eV" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space/transit/north/shuttlespace_ns13,
 /area/space)
 "eW" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space/transit/north/shuttlespace_ns2,
 /area/space)
 "eX" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space/transit/north/shuttlespace_ns10,
@@ -682,113 +695,112 @@
 /area/space)
 "fp" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space,
 /area/space)
 "fq" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
 	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
+	direction = 4;
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns12,
 /area/space)
 "fr" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
 	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
+	direction = 4;
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns7,
 /area/space)
 "fs" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
 	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
+	direction = 4;
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns9,
 /area/space)
 "ft" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
 	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
+	direction = 4;
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns4,
 /area/space)
 "fu" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
 	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
+	direction = 4;
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns6,
 /area/space)
 "fv" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
 	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
+	direction = 4;
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns10,
 /area/space)
 "fw" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
 	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
+	direction = 4;
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns3,
 /area/space)
 "fx" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
 	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
+	direction = 4;
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns14,
 /area/space)
 "fy" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
 	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
+	direction = 4;
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns11,
 /area/space)
 "fC" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns7,
 /area/space)
 "fD" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 8;
 	name = "thrower_escapeshuttletop(left)";
-	tiles = 0
+	direction = 8;
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns11,
 /area/space)
@@ -798,73 +810,65 @@
 /area/space)
 "fF" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns6,
 /area/space)
 "fL" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns5,
 /area/space)
 "fO" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns4,
 /area/space)
 "fP" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns3,
 /area/space)
 "fQ" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns10,
 /area/space)
 "fR" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns15,
 /area/space)
 "fW" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space,
 /area/space)
 "ga" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns2,
 /area/space)
@@ -875,131 +879,124 @@
 /area/centcom/suppy)
 "gi" = (
 /turf/shuttle/wall{
-	dir = 8;
-	icon_state = "diagonalWall3"
+	icon_state = "diagonalWall3";
+	dir = 8
 	},
 /area/space)
 "gn" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns1,
 /area/space)
 "gp" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
 	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
+	direction = 4;
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns15,
 /area/space)
 "gu" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns14,
 /area/space)
 "gx" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
 	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
+	direction = 4;
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns1,
 /area/space)
 "gy" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
 	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
+	direction = 4;
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns5,
 /area/space)
 "gz" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
 	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
+	direction = 4;
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns13,
 /area/space)
 "gI" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns13,
 /area/space)
 "gJ" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
 	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
+	direction = 4;
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns2,
 /area/space)
 "gK" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 8;
 	name = "thrower_escapeshuttletop(left)";
-	tiles = 0
+	direction = 8;
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns12,
 /area/space)
 "gN" = (
 /obj/structure/table/glass,
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/centcom/merc_base)
 "gS" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns12,
 /area/space)
 "gU" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns11,
 /area/space)
 "gV" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns9,
 /area/space)
 "gW" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns8,
 /area/space)
@@ -1008,23 +1005,21 @@
 /area/centcom/merc_base)
 "ha" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdownside";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/space/transit/north/shuttlespace_ns7,
 /area/space)
 "hb" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdownside";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/space/transit/north/shuttlespace_ns15,
 /area/space)
@@ -1054,7 +1049,6 @@
 /obj/structure/table/reinforced,
 /obj/machinery/chem_heater,
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
@@ -1065,57 +1059,55 @@
 /area/centcom/merc_base)
 "hi" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
 	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
+	direction = 4;
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space/transit/north/shuttlespace_ns8,
 /area/space)
 "hj" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space,
 /area/space)
 "hk" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space,
@@ -1134,8 +1126,8 @@
 /obj/structure/bed/chair/comfy/black,
 /obj/landmark/storyevent/merc_spawn,
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/centcom/merc_base)
 "hq" = (
@@ -1207,7 +1199,6 @@
 "hF" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Barracks";
-	opacity = 1;
 	req_access = list(150)
 	},
 /turf/floor/dummy{
@@ -1225,8 +1216,8 @@
 /area/centcom/merc_base)
 "hJ" = (
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/centcom/merc_base)
 "hK" = (
@@ -1244,8 +1235,8 @@
 	pixel_y = 32
 	},
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/centcom/merc_base)
 "hM" = (
@@ -1275,8 +1266,8 @@
 	prices = list()
 	},
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/centcom/merc_base)
 "hU" = (
@@ -1291,9 +1282,9 @@
 /area/centcom/merc_base)
 "hX" = (
 /obj/machinery/button/remote/blast_door{
-	id = "pirateshutters_right";
 	name = "remote shutter control";
 	pixel_x = -25;
+	id = "pirateshutters_right";
 	req_access = list(145)
 	},
 /turf/floor/wood,
@@ -1310,17 +1301,17 @@
 "ic" = (
 /turf/space,
 /turf/shuttle/wall{
-	dir = 1;
-	icon_state = "diagonalWall3"
+	icon_state = "diagonalWall3";
+	dir = 1
 	},
 /area/shuttle/mercenary)
 "if" = (
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "pirateshutters_right";
 	name = "Outer Airlock";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "pirateshutters_right"
 	},
 /turf/wall/low/with_glass/reinforced,
 /area/shuttle/pirate)
@@ -1380,23 +1371,23 @@
 /area/centcom/merc_base)
 "it" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space,
@@ -1434,14 +1425,12 @@
 /obj/item/reagent_containers/syringe/large,
 /obj/structure/table/rack,
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
 "iA" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Kitchen";
-	opacity = 1;
 	req_access = list(150)
 	},
 /turf/floor/dummy{
@@ -1459,14 +1448,13 @@
 	},
 /obj/item/toy/plushie/fumo,
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/centcom/merc_base)
 "iH" = (
 /obj/machinery/button/remote/blast_door{
-	id = "syndieshutters";
 	name = "remote shutter control";
+	id = "syndieshutters";
 	req_access = list(150)
 	},
 /obj/structure/table/reinforced,
@@ -1503,8 +1491,8 @@
 	},
 /obj/landmark/storyevent/merc_spawn,
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/centcom/merc_base)
 "iQ" = (
@@ -1517,7 +1505,6 @@
 /obj/item/reagent_containers/glass/beaker/vial,
 /obj/structure/table/reinforced,
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
@@ -1553,8 +1540,8 @@
 	prices = list()
 	},
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/centcom/merc_base)
 "jb" = (
@@ -1575,9 +1562,7 @@
 /area/centcom/evac)
 "jg" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /obj/structure/table/reinforced,
 /obj/item/storage/deferred/rations,
@@ -1591,8 +1576,8 @@
 "jj" = (
 /obj/machinery/vending/coffee,
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/centcom/merc_base)
 "jk" = (
@@ -1612,12 +1597,6 @@
 /obj/structure/catwalk,
 /turf/open/holonofloor,
 /area/holodeck/source/industrial_arena)
-"jq" = (
-/turf/floor/dummy{
-	dir = 2;
-	icon_state = "dark"
-	},
-/area/centcom/merc_base)
 "jr" = (
 /turf/space,
 /turf/shuttle/wall{
@@ -1636,8 +1615,8 @@
 "jt" = (
 /turf/space,
 /turf/shuttle/wall{
-	dir = 4;
-	icon_state = "diagonalWall3"
+	icon_state = "diagonalWall3";
+	dir = 4
 	},
 /area/shuttle/mercenary)
 "jv" = (
@@ -1645,7 +1624,6 @@
 	dir = 8
 	},
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/centcom/merc_base)
@@ -1687,17 +1665,14 @@
 	},
 /obj/item/soap/syndie,
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/centcom/merc_base)
 "jG" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Bathroom";
-	opacity = 1
+	name = "Bathroom"
 	},
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/centcom/merc_base)
@@ -1720,9 +1695,7 @@
 	pixel_x = -25
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /turf/shuttle/floor{
 	icon_state = "floor6"
@@ -1730,7 +1703,6 @@
 /area/shuttle/mercenary)
 "jL" = (
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/centcom/merc_base)
@@ -1739,7 +1711,6 @@
 	dir = 1
 	},
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/centcom/merc_base)
@@ -1789,22 +1760,19 @@
 /obj/item/reagent_containers/glass/beaker/large,
 /obj/item/reagent_containers/glass/beaker/large,
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
 "jV" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /turf/space,
 /area/space)
@@ -1818,9 +1786,8 @@
 /area/shuttle/mercenary)
 "jZ" = (
 /obj/machinery/flasher{
-	id = "syndieflash";
-	pixel_x = 0;
-	pixel_y = 28
+	pixel_y = 28;
+	id = "syndieflash"
 	},
 /obj/machinery/light/small{
 	dir = 1
@@ -1835,17 +1802,17 @@
 /area/space)
 "kb" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1331;
-	id_tag = "pirate_shuttle_outer";
 	name = "Ship External Access";
-	req_access = list(145)
+	frequency = 1331;
+	req_access = list(145);
+	id_tag = "pirate_shuttle_outer"
 	},
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "pirateshutters_left";
 	name = "Outer Airlock";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "pirateshutters_left"
 	},
 /obj/machinery/shield_diffuser,
 /turf/shuttle/plating,
@@ -1881,8 +1848,8 @@
 "kj" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1331;
-	id_tag = "merc_base_hatch_outer";
-	req_access = list(150)
+	req_access = list(150);
+	id_tag = "merc_base_hatch_outer"
 	},
 /turf/floor/dummy{
 	icon_state = "dark"
@@ -1890,17 +1857,16 @@
 /area/centcom/merc_base)
 "kk" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1331;
-	id_tag = "merc_base";
 	name = "mercenary port controller";
-	pixel_x = 0;
 	pixel_y = 30;
+	frequency = 1331;
 	req_access = list(0);
 	req_one_access = list(13);
+	tag_exterior_door = "merc_base_hatch_outer";
+	tag_interior_door = "merc_base_hatch";
 	tag_airpump = "merc_base_pump";
 	tag_chamber_sensor = "merc_base_sensor";
-	tag_exterior_door = "merc_base_hatch_outer";
-	tag_interior_door = "merc_base_hatch"
+	id_tag = "merc_base"
 	},
 /turf/floor/dummy{
 	icon_state = "dark"
@@ -1913,19 +1879,18 @@
 	id_tag = "merc_shuttle_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1331;
-	id_tag = "merc_shuttle";
 	name = "mercenary shuttle controller";
-	pixel_x = 0;
 	pixel_y = 30;
+	frequency = 1331;
 	req_access = list(0);
 	req_one_access = list(13);
+	tag_exterior_door = "merc_shuttle_outer";
+	tag_interior_door = "merc_shuttle_inner";
 	tag_airpump = "merc_shuttle_pump";
 	tag_chamber_sensor = "merc_shuttle_sensor_chamber";
-	tag_exterior_door = "merc_shuttle_outer";
 	tag_exterior_sensor = "merc_shuttle_sensor_exterior";
-	tag_interior_door = "merc_shuttle_inner";
-	tag_interior_sensor = "merc_shuttle_sensor_interior"
+	tag_interior_sensor = "merc_shuttle_sensor_interior";
+	id_tag = "merc_shuttle"
 	},
 /turf/shuttle/floor{
 	icon_state = "floor6"
@@ -1936,10 +1901,10 @@
 	dir = 1
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1331;
-	id_tag = "merc_shuttle_sensormerc_shuttle_sensor_chamber";
 	pixel_x = 8;
-	pixel_y = 25
+	pixel_y = 25;
+	frequency = 1331;
+	id_tag = "merc_shuttle_sensormerc_shuttle_sensor_chamber"
 	},
 /obj/machinery/light/small{
 	dir = 1
@@ -1960,18 +1925,17 @@
 /area/shuttle/mercenary)
 "ko" = (
 /obj/machinery/door/airlock/external{
-	density = 1;
-	frequency = 1331;
-	id_tag = "merc_shuttle_outer";
 	name = "Ship External Access";
-	req_access = list(150)
+	frequency = 1331;
+	req_access = list(150);
+	id_tag = "merc_shuttle_outer"
 	},
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "serbianmerc";
 	name = "Outer Airlock";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "serbianmerc"
 	},
 /turf/shuttle/plating,
 /area/shuttle/mercenary)
@@ -1988,8 +1952,8 @@
 /area/shuttle/mercenary)
 "kr" = (
 /obj/machinery/door/window{
-	dir = 2;
 	name = "Seating";
+	dir = 2;
 	req_access = list(150)
 	},
 /turf/shuttle/floor{
@@ -1999,8 +1963,8 @@
 "ks" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1331;
-	id_tag = "merc_base_hatch";
-	req_access = list(150)
+	req_access = list(150);
+	id_tag = "merc_base_hatch"
 	},
 /turf/floor/dummy{
 	icon_state = "dark"
@@ -2013,7 +1977,6 @@
 	id = "serbianmerc"
 	},
 /obj/machinery/door/window{
-	dir = 4;
 	name = "Blast Door Control";
 	req_access = list(150)
 	},
@@ -2050,10 +2013,10 @@
 /area/centcom/merc_base)
 "kx" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1331;
-	id_tag = "merc_base_hatch_outer";
 	name = "Merc External Airlock";
-	req_access = list(150)
+	frequency = 1331;
+	req_access = list(150);
+	id_tag = "merc_base_hatch_outer"
 	},
 /turf/floor/dummy{
 	icon_state = "dark"
@@ -2067,8 +2030,8 @@
 /area/shuttle/mercenary)
 "kz" = (
 /obj/machinery/door/window{
-	dir = 1;
 	name = "Cell";
+	dir = 1;
 	req_access = list(150)
 	},
 /obj/item/device/radio/intercom/syndicate{
@@ -2081,9 +2044,7 @@
 /area/shuttle/mercenary)
 "kA" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /turf/shuttle/floor{
 	icon_state = "floor6"
@@ -2091,10 +2052,10 @@
 /area/shuttle/mercenary)
 "kC" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1331;
-	id_tag = "merc_shuttle_inner";
 	name = "Ship External Access";
-	req_access = list(0)
+	frequency = 1331;
+	req_access = list(0);
+	id_tag = "merc_shuttle_inner"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/shuttle/floor{
@@ -2125,10 +2086,9 @@
 	dir = 8
 	},
 /obj/machinery/button/flasher{
-	id = "syndieflash";
 	name = "Flasher";
 	pixel_x = 27;
-	pixel_y = 0
+	id = "syndieflash"
 	},
 /turf/shuttle/floor{
 	icon_state = "floor6"
@@ -2145,17 +2105,16 @@
 /area/shuttle/mercenary)
 "kL" = (
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1331;
-	master_tag = "merc_shuttle";
 	name = "interior access button";
 	pixel_x = 25;
 	pixel_y = 25;
-	req_access = list(150)
+	frequency = 1331;
+	command = "cycle_interior";
+	req_access = list(150);
+	master_tag = "merc_shuttle"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 9;
-	icon_state = "intact"
+	dir = 9
 	},
 /turf/shuttle/floor{
 	icon_state = "floor6"
@@ -2169,17 +2128,17 @@
 /area/space)
 "kN" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1331;
-	id_tag = "pirate_shuttle_outer";
 	name = "Ship External Access";
-	req_access = list(145)
+	frequency = 1331;
+	req_access = list(145);
+	id_tag = "pirate_shuttle_outer"
 	},
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "pirateshutters_right";
 	name = "Outer Airlock";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "pirateshutters_right"
 	},
 /obj/machinery/shield_diffuser,
 /turf/shuttle/plating,
@@ -2223,7 +2182,6 @@
 /area/shuttle/mercenary)
 "kU" = (
 /obj/machinery/door/window{
-	dir = 4;
 	name = "Brig";
 	req_access = list(150)
 	},
@@ -2233,11 +2191,11 @@
 /area/shuttle/mercenary)
 "kV" = (
 /obj/machinery/door/window{
-	base_state = "right";
-	dir = 8;
-	icon_state = "right";
 	name = "Preparation";
-	req_access = list(150)
+	icon_state = "right";
+	dir = 8;
+	req_access = list(150);
+	base_state = "right"
 	},
 /turf/shuttle/floor{
 	icon_state = "floor6"
@@ -2256,11 +2214,10 @@
 /area/shuttle/mercenary)
 "kZ" = (
 /obj/machinery/door/window{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
 	name = "Brig";
-	req_access = list(150)
+	icon_state = "right";
+	req_access = list(150);
+	base_state = "right"
 	},
 /turf/shuttle/floor{
 	icon_state = "floor6"
@@ -2268,10 +2225,8 @@
 /area/shuttle/mercenary)
 "la" = (
 /obj/machinery/door/window{
-	base_state = "left";
-	dir = 8;
-	icon_state = "left";
 	name = "Preparation";
+	dir = 8;
 	req_access = list(150)
 	},
 /turf/shuttle/floor{
@@ -2281,9 +2236,7 @@
 "lc" = (
 /obj/machinery/sleeper,
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /turf/shuttle/floor{
 	icon_state = "floor3"
@@ -2315,9 +2268,7 @@
 /area/holodeck/source/texas)
 "lh" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /obj/item/device/radio/intercom/syndicate{
 	dir = 4;
@@ -2386,7 +2337,6 @@
 /area/shuttle/mercenary)
 "lt" = (
 /obj/machinery/door/window{
-	dir = 4;
 	name = "Infirmary";
 	req_access = list(150)
 	},
@@ -2405,11 +2355,10 @@
 /area/shuttle/mercenary)
 "ly" = (
 /obj/machinery/door/window{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
 	name = "Infirmary";
-	req_access = list(150)
+	icon_state = "right";
+	req_access = list(150);
+	base_state = "right"
 	},
 /turf/shuttle/floor{
 	icon_state = "floor3"
@@ -2417,8 +2366,8 @@
 /area/shuttle/mercenary)
 "lz" = (
 /obj/machinery/door/window{
-	dir = 8;
 	name = "Tool Storage";
+	dir = 8;
 	req_access = list(150)
 	},
 /turf/shuttle/floor{
@@ -2446,9 +2395,7 @@
 /area/shuttle/mercenary)
 "lE" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /obj/structure/reagent_dispensers/fueltank/huge,
 /turf/shuttle/floor{
@@ -2457,8 +2404,8 @@
 /area/shuttle/mercenary)
 "lF" = (
 /obj/machinery/door/window{
-	dir = 1;
 	name = "Secure Storage";
+	dir = 1;
 	req_access = list(150)
 	},
 /turf/shuttle/floor{
@@ -2480,10 +2427,9 @@
 /area/centcom/merc_base)
 "lI" = (
 /obj/machinery/button/remote/blast_door{
-	id = "syndieshutters_telebay";
 	name = "remote shutter control";
-	pixel_x = 0;
 	pixel_y = -25;
+	id = "syndieshutters_telebay";
 	req_access = list(150)
 	},
 /obj/structure/bed/chair{
@@ -2512,8 +2458,8 @@
 /area/shuttle/mercenary)
 "lN" = (
 /obj/machinery/door/window{
-	dir = 1;
 	name = "Surgery";
+	dir = 1;
 	req_access = list(150)
 	},
 /turf/shuttle/floor{
@@ -2556,8 +2502,8 @@
 /area/shuttle/mercenary)
 "lU" = (
 /obj/machinery/door/blast/regular{
-	id = "syndieshutters_telebay";
-	name = "Outer Airlock"
+	name = "Outer Airlock";
+	id = "syndieshutters_telebay"
 	},
 /turf/shuttle/plating,
 /area/shuttle/mercenary)
@@ -2649,8 +2595,8 @@
 	},
 /obj/effect/decal/cleanable/cobweb,
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "mp" = (
@@ -2658,22 +2604,22 @@
 	name = "Forbidden Knowledge"
 	},
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "mq" = (
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "mr" = (
 /obj/machinery/librarycomp,
 /obj/structure/table/woodentable,
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "mt" = (
@@ -2695,13 +2641,11 @@
 	pixel_y = 8
 	},
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/wizard_station)
 "mx" = (
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/wizard_station)
@@ -2710,7 +2654,6 @@
 	pixel_y = 28
 	},
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/wizard_station)
@@ -2731,11 +2674,9 @@
 /area/wizard_station)
 "mD" = (
 /obj/machinery/shower{
-	dir = 8;
-	icon_state = "shower"
+	dir = 8
 	},
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/wizard_station)
@@ -2751,8 +2692,8 @@
 	name = "bookcase (Tactics)"
 	},
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "mI" = (
@@ -2762,8 +2703,8 @@
 	pixel_x = 22
 	},
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "mL" = (
@@ -2798,8 +2739,8 @@
 "mT" = (
 /obj/structure/bookcase,
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "mU" = (
@@ -2821,8 +2762,8 @@
 /obj/structure/table/woodentable,
 /obj/machinery/chemical_dispenser/soda,
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "mY" = (
@@ -2846,49 +2787,47 @@
 /area/centcom/suppy)
 "ng" = (
 /obj/structure/bed/chair/wood/wings{
-	dir = 4;
-	icon_state = "wooden_chair_wings"
+	dir = 4
 	},
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "nj" = (
 /obj/structure/bed/chair/wood/wings{
-	dir = 8;
-	icon_state = "wooden_chair_wings"
+	dir = 8
 	},
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "nk" = (
 /obj/item/target,
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/wizard_station)
 "nl" = (
 /obj/item/target/syndicate,
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/wizard_station)
 "nm" = (
 /obj/item/target/alien,
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/wizard_station)
 "nn" = (
 /turf/wall/dummy/fakeglass{
-	dir = 1;
-	icon_state = "fakewindows2"
+	icon_state = "fakewindows2";
+	dir = 1
 	},
 /area/wizard_station)
 "np" = (
@@ -2900,8 +2839,8 @@
 /area/wizard_station)
 "nu" = (
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/wizard_station)
 "nv" = (
@@ -2916,8 +2855,8 @@
 /obj/structure/table/woodentable,
 /obj/item/device/megaphone,
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "nC" = (
@@ -2929,8 +2868,8 @@
 /obj/item/robot_parts/head,
 /obj/structure/table/glass,
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/wizard_station)
 "nI" = (
@@ -2939,8 +2878,8 @@
 	pixel_x = 22
 	},
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/wizard_station)
 "nL" = (
@@ -2952,39 +2891,36 @@
 /area/centcom/merc_base)
 "nR" = (
 /turf/wall/dummy/fakeglass{
-	dir = 8;
-	icon_state = "fakewindows"
+	dir = 8
 	},
 /area/wizard_station)
 "nS" = (
 /turf/wall/dummy/fakeglass{
-	dir = 8;
-	icon_state = "fakewindows2"
+	icon_state = "fakewindows2";
+	dir = 8
 	},
 /area/wizard_station)
 "nT" = (
 /turf/wall/dummy/fakeglass{
-	dir = 1;
-	icon_state = "fakewindows"
+	dir = 1
 	},
 /area/wizard_station)
 "nU" = (
 /turf/wall/dummy/fakeglass{
-	dir = 4;
-	icon_state = "fakewindows"
+	dir = 4
 	},
 /area/wizard_station)
 "oa" = (
 /obj/item/remains/human,
 /turf/floor/dummy{
-	icon_state = "lava";
-	name = "plating"
+	name = "plating";
+	icon_state = "lava"
 	},
 /area/wizard_station)
 "ob" = (
 /turf/floor/dummy{
-	icon_state = "lava";
-	name = "plating"
+	name = "plating";
+	icon_state = "lava"
 	},
 /area/wizard_station)
 "oc" = (
@@ -2994,21 +2930,20 @@
 /area/wizard_station)
 "oe" = (
 /turf/floor/dummy{
-	icon_state = "grass0";
-	name = "grass"
+	name = "grass";
+	icon_state = "grass0"
 	},
 /area/wizard_station)
 "of" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/floor/dummy{
-	icon_state = "grass0";
-	name = "grass"
+	name = "grass";
+	icon_state = "grass0"
 	},
 /area/wizard_station)
 "og" = (
 /obj/effect/decal/cleanable/blood,
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/wizard_station)
@@ -3021,31 +2956,29 @@
 "oo" = (
 /obj/structure/flora/ausbushes/grassybush,
 /turf/floor/dummy{
-	icon_state = "grass0";
-	name = "grass"
+	name = "grass";
+	icon_state = "grass0"
 	},
 /area/wizard_station)
 "ow" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdown";
-	tiles = 0
+	tiles = 0;
+	affect_ghosts = 1
 	},
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 6;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 6
 	},
 /turf/space,
@@ -3056,11 +2989,11 @@
 	start_pressure = 740.5
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1331;
-	id_tag = "merc_shuttle_sensor_interior";
 	name = "merc shuttle interior sensor";
 	pixel_x = 8;
-	pixel_y = 25
+	pixel_y = 25;
+	frequency = 1331;
+	id_tag = "merc_shuttle_sensor_interior"
 	},
 /turf/shuttle/floor{
 	icon_state = "floor6"
@@ -3109,8 +3042,8 @@
 /area/holodeck/source/wireframe)
 "pO" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	name = "thrower_leftnostop"
+	name = "thrower_leftnostop";
+	affect_ghosts = 1
 	},
 /turf/space,
 /area/space)
@@ -3143,12 +3076,12 @@
 "rl" = (
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
-	prices = list();
-	products = list(/obj/item/storage/fancy/cigarettes=10,/obj/item/storage/box/matches=10,/obj/item/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)
+	products = list(/obj/item/storage/fancy/cigarettes=10, /obj/item/storage/box/matches=10, /obj/item/flame/lighter/zippo=4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana=2);
+	prices = list()
 	},
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/centcom/merc_base)
 "rt" = (
@@ -3250,7 +3183,6 @@
 "sN" = (
 /obj/item/caution,
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/wizard_station)
@@ -3261,9 +3193,9 @@
 /area/shuttle/pirate)
 "sT" = (
 /obj/machinery/button/remote/blast_door{
-	id = "pirateshutters_front";
 	name = "remote shutter control";
 	pixel_x = 25;
+	id = "pirateshutters_front";
 	req_access = list(145)
 	},
 /obj/structure/table/reinforced,
@@ -3291,10 +3223,10 @@
 /area/space)
 "te" = (
 /obj/machinery/button/remote/blast_door{
-	id = "pirateshutters_left";
 	name = "remote shutter control";
 	pixel_x = -25;
 	pixel_y = 25;
+	id = "pirateshutters_left";
 	req_access = list(145)
 	},
 /turf/shuttle/floor{
@@ -3316,16 +3248,16 @@
 /area/holodeck/source/industrial)
 "th" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "cargo_bay_door";
-	locked = 1;
 	name = "Cargo Docking Hatch";
-	req_access = list(13)
+	icon_state = "door_locked";
+	frequency = 1380;
+	locked = 1;
+	req_access = list(13);
+	id_tag = "cargo_bay_door"
 	},
 /obj/machinery/door/blast/regular{
-	id = "QMLoaddoor";
-	name = "Supply Dock Loading Door"
+	name = "Supply Dock Loading Door";
+	id = "QMLoaddoor"
 	},
 /turf/shuttle/floor/mining{
 	icon_state = "10,19"
@@ -3407,9 +3339,7 @@
 /obj/item/storage/belt/utility/full,
 /obj/item/tool/multitool,
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /turf/shuttle/floor{
 	icon_state = "floor6"
@@ -3469,8 +3399,8 @@
 "uC" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/shoes/sandal/marisa{
-	desc = "A set of fancy shoes that are as functional as they are comfortable.";
-	name = "Gentlemans Shoes"
+	name = "Gentlemans Shoes";
+	desc = "A set of fancy shoes that are as functional as they are comfortable."
 	},
 /obj/item/staff/gentcane,
 /turf/floor/dummy{
@@ -3618,9 +3548,9 @@
 "wh" = (
 /obj/structure/table/woodentable,
 /obj/item/device/lighting/toggleable/lamp/green{
-	on = 0;
 	pixel_x = -3;
-	pixel_y = 8
+	pixel_y = 8;
+	on = 0
 	},
 /obj/item/reagent_containers/food/drinks/flask/barflask,
 /obj/item/device/radio/intercom/syndicate{
@@ -3649,12 +3579,11 @@
 /area/shuttle/mercenary)
 "wo" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdownside";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/space/transit/north/shuttlespace_ns13,
 /area/space)
@@ -3880,7 +3809,6 @@
 "yF" = (
 /obj/structure/sink{
 	dir = 8;
-	icon_state = "sink";
 	pixel_x = -12;
 	pixel_y = 2
 	},
@@ -3888,7 +3816,6 @@
 	pixel_x = -28
 	},
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/centcom/merc_base)
@@ -3897,14 +3824,6 @@
 	icon_state = "cargoshwall34"
 	},
 /turf/space,
-/area/centcom/suppy)
-"yM" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	pixel_y = 25;
-	id_tag = "supply_shuttle";
-	frequency = 1380
-	},
-/turf/shuttle/floor/mining,
 /area/centcom/suppy)
 "yQ" = (
 /obj/structure/railing/holorailing/grey,
@@ -3963,8 +3882,8 @@
 "zl" = (
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
-	prices = list();
-	products = list(/obj/item/storage/fancy/cigarettes=10,/obj/item/storage/box/matches=10,/obj/item/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)
+	products = list(/obj/item/storage/fancy/cigarettes=10, /obj/item/storage/box/matches=10, /obj/item/flame/lighter/zippo=4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana=2);
+	prices = list()
 	},
 /turf/floor/wood,
 /area/centcom/pirate_base)
@@ -3981,9 +3900,9 @@
 /area/shuttle/mercenary)
 "zE" = (
 /obj/machinery/button/remote/blast_door{
-	id = "syndieshutters_infirmary";
 	name = "remote shutter control";
-	pixel_x = -25
+	pixel_x = -25;
+	id = "syndieshutters_infirmary"
 	},
 /obj/structure/mopbucket,
 /obj/item/mop,
@@ -3993,8 +3912,8 @@
 /area/shuttle/mercenary)
 "zK" = (
 /turf/shuttle/wall{
-	dir = 1;
-	icon_state = "diagonalWall3"
+	icon_state = "diagonalWall3";
+	dir = 1
 	},
 /area/shuttle/pirate)
 "zM" = (
@@ -4108,12 +4027,11 @@
 /area/centcom/merc_base)
 "Bc" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdownside";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/space/transit/north/shuttlespace_ns12,
 /area/space)
@@ -4199,11 +4117,11 @@
 /area/centcom/pirate_base)
 "BR" = (
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "pirateshutters_left";
 	name = "Outer Airlock";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "pirateshutters_left"
 	},
 /turf/wall/low/with_glass/reinforced,
 /area/shuttle/pirate)
@@ -4338,16 +4256,14 @@
 	},
 /obj/structure/plasticflaps/mining,
 /obj/machinery/door/blast/regular{
-	id = "QMLoaddoor2";
-	name = "Supply Dock Loading Door"
+	name = "Supply Dock Loading Door";
+	id = "QMLoaddoor2"
 	},
 /turf/shuttle/floor/mining,
 /area/centcom/suppy)
 "DS" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /turf/shuttle/floor{
 	icon_state = "floor6"
@@ -4371,12 +4287,11 @@
 /area/holodeck/source/industrial)
 "Ej" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdownside";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/space/transit/north/shuttlespace_ns11,
 /area/space)
@@ -4430,8 +4345,8 @@
 	},
 /obj/structure/table/glass,
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/centcom/merc_base)
 "EN" = (
@@ -4456,8 +4371,8 @@
 /obj/structure/table/glass,
 /obj/item/reagent_containers/food/drinks/mug/serb,
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/centcom/merc_base)
 "ER" = (
@@ -4585,11 +4500,11 @@
 /area/space)
 "Gt" = (
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "pirateshutters_front";
 	name = "Outer Airlock";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "pirateshutters_front"
 	},
 /turf/wall/low/with_glass/reinforced,
 /area/shuttle/pirate)
@@ -4624,15 +4539,14 @@
 "GU" = (
 /obj/item/tool/knife/ritual,
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/wizard_station)
 "GZ" = (
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
-	prices = list();
-	products = list(/obj/item/storage/fancy/cigarettes=10,/obj/item/storage/box/matches=10,/obj/item/flame/lighter/zippo=4,/obj/item/clothing/mask/smokable/cigarette/cigar/havana=2)
+	products = list(/obj/item/storage/fancy/cigarettes=10, /obj/item/storage/box/matches=10, /obj/item/flame/lighter/zippo=4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana=2);
+	prices = list()
 	},
 /turf/shuttle/floor{
 	icon_state = "floor6"
@@ -4642,16 +4556,16 @@
 /obj/structure/table/woodentable,
 /obj/item/storage/box/cups,
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "Hk" = (
 /obj/structure/table/bar_special,
 /obj/structure/cable/green{
+	icon_state = "1-2";
 	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	d2 = 2
 	},
 /turf/floor/holofloor/tiled/bar_light,
 /area/space)
@@ -4660,8 +4574,8 @@
 	pixel_y = 32
 	},
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/centcom/merc_base)
 "Hp" = (
@@ -4673,8 +4587,8 @@
 /obj/structure/table/woodentable,
 /obj/item/dice/d20,
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "Hu" = (
@@ -4752,8 +4666,8 @@
 	},
 /obj/structure/plasticflaps/mining,
 /obj/machinery/door/blast/regular{
-	id = "QMLoaddoor2";
-	name = "Supply Dock Loading Door"
+	name = "Supply Dock Loading Door";
+	id = "QMLoaddoor2"
 	},
 /turf/shuttle/floor/mining,
 /area/centcom/suppy)
@@ -4806,9 +4720,9 @@
 "IP" = (
 /obj/structure/table/bar_special,
 /obj/structure/cable/green{
+	icon_state = "1-2";
 	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	d2 = 2
 	},
 /turf/floor/holofloor/tiled/bar_light,
 /area/holodeck/source/spacebar)
@@ -4906,9 +4820,7 @@
 	pixel_y = 9
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /obj/structure/table/glass,
 /turf/shuttle/floor{
@@ -4927,10 +4839,10 @@
 /area/centcom/merc_base)
 "Ke" = (
 /obj/machinery/button/remote/blast_door{
-	id = "pirateshutters_right";
 	name = "remote shutter control";
 	pixel_x = 25;
 	pixel_y = 24;
+	id = "pirateshutters_right";
 	req_access = list(145)
 	},
 /turf/shuttle/floor{
@@ -5003,12 +4915,11 @@
 /area/centcom/pirate_base)
 "KM" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdownside";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/space/transit/north/shuttlespace_ns3,
 /area/space)
@@ -5031,8 +4942,8 @@
 /obj/item/book/manual/wiki/science_robotics,
 /obj/structure/table/glass,
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/wizard_station)
 "Lk" = (
@@ -5049,12 +4960,11 @@
 /area/centcom/evac)
 "Lx" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdownside";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/space/transit/north/shuttlespace_ns8,
 /area/space)
@@ -5064,24 +4974,23 @@
 /area/holodeck/source/texas)
 "LG" = (
 /obj/machinery/door/airlock/external{
-	density = 1;
-	frequency = 1331;
-	id_tag = "merc_shuttle_outer";
 	name = "Ship External Access";
-	req_access = list(150)
+	frequency = 1331;
+	req_access = list(150);
+	id_tag = "merc_shuttle_outer"
 	},
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "serbianmerc";
 	name = "Outer Airlock";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "serbianmerc"
 	},
 /obj/machinery/airlock_sensor/shuttle_exterior{
-	id_tag = "merc_shuttle_sensor_exterior";
 	name = "merc shuttle external sensor";
 	pixel_x = 12;
-	pixel_y = -24
+	pixel_y = -24;
+	id_tag = "merc_shuttle_sensor_exterior"
 	},
 /turf/shuttle/plating,
 /area/shuttle/mercenary)
@@ -5089,8 +4998,8 @@
 /obj/structure/table/woodentable,
 /obj/item/reagent_containers/food/snacks/chawanmushi,
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "LZ" = (
@@ -5162,8 +5071,8 @@
 /obj/structure/table/woodentable,
 /obj/item/dice,
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "MV" = (
@@ -5184,9 +5093,9 @@
 "Nj" = (
 /obj/structure/table/holo_woodentable,
 /obj/structure/cable/green{
+	icon_state = "1-2";
 	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	d2 = 2
 	},
 /turf/floor/holofloor/carpet,
 /area/holodeck/source/texas)
@@ -5200,8 +5109,8 @@
 /obj/structure/table/woodentable,
 /obj/item/book/manual/wiki/security_ironparagraphs,
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "NE" = (
@@ -5263,20 +5172,18 @@
 /area/holodeck/source/texas)
 "NW" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdownside";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdownside";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/space/transit/north/shuttlespace_ns8,
 /area/space)
@@ -5284,15 +5191,15 @@
 /obj/structure/table/woodentable,
 /obj/item/spacecash/bundle/c1,
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "Og" = (
 /obj/machinery/vending/assist{
-	contraband = null;
 	name = "AntagCorpVend";
-	products = list(/obj/item/device/assembly/prox_sensor=5,/obj/item/device/assembly/signaler=4,/obj/item/device/assembly/infra=4,/obj/item/device/assembly/prox_sensor=4,/obj/item/handcuffs=8,/obj/item/device/flash=4,/obj/item/clothing/glasses/sunglasses=4)
+	products = list(/obj/item/device/assembly/prox_sensor=5, /obj/item/device/assembly/signaler=4, /obj/item/device/assembly/infra=4, /obj/item/device/assembly/prox_sensor=4, /obj/item/handcuffs=8, /obj/item/device/flash=4, /obj/item/clothing/glasses/sunglasses=4);
+	contraband = null
 	},
 /obj/machinery/light{
 	dir = 4
@@ -5319,11 +5226,11 @@
 "Om" = (
 /obj/effect/shuttle_landmark/pirate/start,
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "pirateshutters_front";
 	name = "Outer Airlock";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "pirateshutters_front"
 	},
 /turf/wall/low/with_glass/reinforced,
 /area/shuttle/pirate)
@@ -5380,7 +5287,6 @@
 	dir = 10
 	},
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "dark"
 	},
 /area/centcom/merc_base)
@@ -5545,7 +5451,6 @@
 	pixel_y = 32
 	},
 /turf/floor/dummy{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/centcom/merc_base)
@@ -5567,18 +5472,17 @@
 /obj/structure/table/woodentable,
 /obj/item/reagent_containers/food/snacks/milosoup,
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "Re" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdownside";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/space/transit/north/shuttlespace_ns2,
 /area/space)
@@ -5634,8 +5538,8 @@
 	req_access = list(145)
 	},
 /turf/floor/dummy{
-	icon_state = "plating";
-	name = "plating"
+	name = "plating";
+	icon_state = "plating"
 	},
 /area/centcom/pirate_base)
 "Sc" = (
@@ -5663,12 +5567,11 @@
 /area/holodeck/source/industrial_arena)
 "Si" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdownside";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/space/transit/north/shuttlespace_ns9,
 /area/space)
@@ -5859,12 +5762,12 @@
 /area/space)
 "Uj" = (
 /mob/living/bot/secbot/beepsky{
-	desc = "Very robust and powerful companion.";
-	name = "Montague"
+	name = "Montague";
+	desc = "Very robust and powerful companion."
 	},
 /turf/floor/dummy{
-	icon_state = "cult";
-	name = "plating"
+	name = "plating";
+	icon_state = "cult"
 	},
 /area/centcom/merc_base)
 "Uk" = (
@@ -5982,8 +5885,8 @@
 /obj/structure/table/woodentable,
 /obj/item/book/manual/nuclear,
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "VK" = (
@@ -6003,8 +5906,8 @@
 /obj/structure/table/woodentable,
 /obj/item/storage/box/donut,
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "VR" = (
@@ -6097,8 +6000,8 @@
 /obj/structure/table/woodentable,
 /obj/item/storage/bag/money,
 /turf/floor/dummy{
-	dir = 8;
-	icon_state = "wood"
+	icon_state = "wood";
+	dir = 8
 	},
 /area/wizard_station)
 "Xl" = (
@@ -6140,12 +6043,11 @@
 /area/holodeck/source/industrial)
 "XJ" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "escape_pod_2_recovery";
 	pixel_x = 25;
-	pixel_y = 0;
+	frequency = 1380;
 	req_one_access = list(13);
-	tag_door = "escape_pod_2_recovery_hatch"
+	tag_door = "escape_pod_2_recovery_hatch";
+	id_tag = "escape_pod_2_recovery"
 	},
 /turf/floor/tiled/dark/golden,
 /area/centcom/evac)
@@ -6210,9 +6112,7 @@
 "Yo" = (
 /obj/structure/sink{
 	dir = 4;
-	icon_state = "sink";
-	pixel_x = 11;
-	pixel_y = 0
+	pixel_x = 11
 	},
 /obj/item/reagent_containers/glass/bottle/stoxin,
 /obj/item/reagent_containers/glass/bottle/stoxin,
@@ -6225,12 +6125,11 @@
 /area/shuttle/mercenary)
 "YJ" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdownside";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/space/transit/north/shuttlespace_ns10,
 /area/space)
@@ -6257,12 +6156,11 @@
 /area/holodeck/source/spacebar)
 "Ze" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdownside";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/space/transit/north/shuttlespace_ns5,
 /area/space)
@@ -6278,15 +6176,15 @@
 /area/centcom/merc_base)
 "Zo" = (
 /turf/shuttle/wall{
-	dir = 8;
-	icon_state = "diagonalWall3"
+	icon_state = "diagonalWall3";
+	dir = 8
 	},
 /area/shuttle/pirate)
 "Zr" = (
 /obj/machinery/button/remote/blast_door{
-	id = "syndieshutters_workshop";
 	name = "remote shutter control";
-	pixel_x = 25
+	pixel_x = 25;
+	id = "syndieshutters_workshop"
 	},
 /obj/item/storage/deferred/crate/cells,
 /turf/shuttle/floor{
@@ -6306,12 +6204,11 @@
 /area/space)
 "Zv" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
 	name = "thrower_throwdownside";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/space/transit/north/shuttlespace_ns4,
 /area/space)
@@ -11017,13 +10914,13 @@ aa
 aa
 aa
 DH
-IX
+af
 vd
 IX
 IX
 IX
 vd
-IX
+aj
 ta
 Jc
 aa
@@ -11219,13 +11116,13 @@ aa
 aa
 aa
 by
+af
 IX
 IX
 IX
 IX
 IX
-IX
-IX
+aj
 UL
 Wz
 aa
@@ -11419,15 +11316,15 @@ aa
 aa
 aa
 aa
-aa
+ae
 XR
-yM
+ai
 IX
 IX
 IX
 IX
 IX
-IX
+aj
 TK
 nf
 aa
@@ -32123,13 +32020,13 @@ gN
 gN
 iN
 hJ
-jq
-jq
-jq
-jq
-jq
-jq
-jq
+iX
+iX
+iX
+iX
+iX
+iX
+iX
 gZ
 gZ
 gZ
@@ -32325,13 +32222,13 @@ hJ
 hJ
 hJ
 hJ
-jq
-jq
-jq
-jq
-jq
-jq
-jq
+iX
+iX
+iX
+iX
+iX
+iX
+iX
 hf
 hU
 iB
@@ -32527,13 +32424,13 @@ hJ
 hJ
 hJ
 hJ
-jq
-jq
-jq
-jq
-jq
-jq
-jq
+iX
+iX
+iX
+iX
+iX
+iX
+iX
 hf
 Yj
 iB
@@ -32729,13 +32626,13 @@ hJ
 hJ
 hJ
 hJ
-jq
-jq
-jq
-jq
-jq
-jq
-jq
+iX
+iX
+iX
+iX
+iX
+iX
+iX
 hf
 yT
 iB
@@ -32931,13 +32828,13 @@ rl
 jj
 hJ
 hJ
-jq
-jq
-jq
-jq
-jq
-jq
-jq
+iX
+iX
+iX
+iX
+iX
+iX
+iX
 hf
 mO
 iB
@@ -33138,8 +33035,8 @@ gZ
 ku
 gZ
 gZ
-jq
-jq
+iX
+iX
 hf
 kP
 iB
@@ -33340,8 +33237,8 @@ iX
 iX
 iX
 gZ
-jq
-jq
+iX
+iX
 gZ
 is
 iB
@@ -33542,8 +33439,8 @@ iX
 iX
 iX
 hf
-jq
-jq
+iX
+iX
 iA
 iB
 iB
@@ -33741,11 +33638,11 @@ iX
 iX
 iX
 iX
-jq
+iX
 iX
 hf
-jq
-jq
+iX
+iX
 gZ
 gZ
 gZ
@@ -33946,8 +33843,8 @@ iX
 iX
 wf
 hf
-jq
-jq
+iX
+iX
 jG
 jL
 yF
@@ -34148,8 +34045,8 @@ iX
 iX
 kG
 hf
-jq
-jq
+iX
+iX
 gZ
 jL
 jL
@@ -34350,8 +34247,8 @@ iX
 iX
 HJ
 hf
-jq
-jq
+iX
+iX
 gZ
 jv
 jC
@@ -34552,8 +34449,8 @@ iX
 iX
 hS
 gZ
-jq
-jq
+iX
+iX
 gZ
 jL
 QR
