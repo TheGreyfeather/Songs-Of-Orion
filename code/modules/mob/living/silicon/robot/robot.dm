@@ -175,7 +175,7 @@
 			C.wrapped = new C.external_type
 
 	if(!cell)
-		cell = new /obj/item/cell/large/moebius/high(src)
+		cell = new /obj/item/cell/large/astra/high(src)
 
 	..()
 
@@ -446,6 +446,20 @@
 	var/dat = self_diagnosis()
 	src << browse(dat, "window=robotdiagnosis")
 
+/mob/living/silicon/robot/verb/Set_Voice()
+	set name = "Voice Synthisizer"
+	set desc = "Pick a voice"
+	set category = "Silicon Commands"
+	set_robo_voice()
+
+/mob/living/silicon/robot/proc/set_robo_voice()
+	set src in usr
+
+	var/mob/living/silicon/robot/user = usr
+	if(istype(user))
+		var/choice = input(user, "Pick a voice preset, ideally a robotic one.") as null|anything in tts_seeds
+		if(choice)
+			usr.tts_seed = choice
 
 /mob/living/silicon/robot/verb/toggle_component()
 	set category = "Silicon Commands"
