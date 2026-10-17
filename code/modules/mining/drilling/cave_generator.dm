@@ -597,7 +597,7 @@
 				else
 					golem_type = pick(GLOB.golems_normal)
 				// Spawn golem at free location
-				new golem_type(get_turf(locate(x + i, y + j, z)), drill=null, parent=null)
+				new golem_type(get_turf(locate(x + i, y + j, z)))
 
 //////////////////////////////
 // Mineral veins for the cave generator
