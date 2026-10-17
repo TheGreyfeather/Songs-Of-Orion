@@ -115,7 +115,7 @@
 /datum/internal_wound/organic/brain_burn/cooked
 	name = "well-cooked brain"
 	treatments_item = list(/obj/item/stack/medical/advanced/ointment = 4)
-/datum/component/internal_wound/organic/brain_burn/incinerate
+/datum/internal_wound/organic/brain_burn/incinerate
 	name = "incinerated brain fibers"
 
 //---------------------------------------------------------------------------------------------
@@ -232,5 +232,5 @@
 	treatments_tool = list(QUALITY_CAUTERIZE = FAILCHANCE_HARD)
 
 /datum/internal_wound/robotic/brain_emp_burn/upturned
-	name = "upturned memory stack" 
+	name = "upturned memory stack"
 	treatments_tool = list(QUALITY_PRYING = FAILCHANCE_HARD) // gotta put it the way it was!
