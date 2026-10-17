@@ -45152,6 +45152,7 @@
 /area/eris/rnd/server)
 "cfR" = (
 /obj/structure/table/rack,
+/obj/item/computer_hardware/hard_drive/portable/advanced/setup/security,
 /obj/item/cell/medium,
 /obj/item/computer_hardware/processor_unit,
 /obj/item/computer_hardware/tesla_link,
@@ -45275,6 +45276,7 @@
 /area/eris/command/meeting_room)
 "cgd" = (
 /obj/structure/table/rack,
+/obj/item/computer_hardware/hard_drive/portable/advanced/setup/medical,
 /obj/spawner/junkfood,
 /obj/item/cell/medium,
 /obj/item/computer_hardware/processor_unit,
