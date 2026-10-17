@@ -64,14 +64,10 @@
 			M.take_organ_damage(5)
 		if(prob(50))
 			playsound(M, 'sound/items/trayhit1.ogg', 50, 1)
-			for(var/mob/O in viewers(M, null))
-				O.show_message(SPAN_DANGER("[user] slams [M] with the tray!"), 1)
-			return
 		else
 			playsound(M, 'sound/items/trayhit2.ogg', 50, 1)  //we applied the damage, we played the sound, we showed the appropriate messages. Time to return and stop the proc
-			for(var/mob/O in viewers(M, null))
-				O.show_message(SPAN_DANGER("[user] slams [M] with the tray!"), 1)
-			return
+		M.visible_message(SPAN_DANGER("[user] slams [M] with the tray!"), 1)
+		return
 
 
 	var/protected = 0
@@ -97,12 +93,9 @@
 
 		if(prob(50))
 			playsound(M, 'sound/items/trayhit1.ogg', 50, 1)
-			for(var/mob/O in viewers(M, null))
-				O.show_message(SPAN_DANGER("[user] slams [M] with the tray!"), 1)
 		else
 			playsound(M, 'sound/items/trayhit2.ogg', 50, 1)  //sound playin'
-			for(var/mob/O in viewers(M, null))
-				O.show_message(SPAN_DANGER("[user] slams [M] with the tray!"), 1)
+		M.visible_message(SPAN_DANGER("[user] slams [M] with the tray!"), 1)
 		if(prob(10))
 			M.Stun(rand(1,3))
 			M.take_organ_damage(3)
@@ -121,12 +114,9 @@
 
 		if(prob(50))
 			playsound(M, 'sound/items/trayhit1.ogg', 50, 1)
-			for(var/mob/O in viewers(M, null))
-				O.show_message(SPAN_DANGER("[user] slams [M] in the face with the tray!"), 1)
 		else
 			playsound(M, 'sound/items/trayhit2.ogg', 50, 1)  //sound playin' again
-			for(var/mob/O in viewers(M, null))
-				O.show_message(SPAN_DANGER("[user] slams [M] in the face with the tray!"), 1)
+		M.visible_message(SPAN_DANGER("[user] slams [M] in the face with the tray!"), 1)
 		if(prob(30))
 			M.Stun(rand(2,4))
 			M.take_organ_damage(4)
