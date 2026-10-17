@@ -2819,6 +2819,7 @@
 /turf/floor/tiled/dark/golden,
 /area/eris/neotheology/chapel)
 "ctM" = (
+/obj/machinery/atmospherics/pipe/tank/air,
 /obj/structure/railing{
 	dir = 8
 	},
@@ -6498,6 +6499,7 @@
 /turf/floor/tiled/steel/danger,
 /area/eris/maintenance)
 "foG" = (
+/obj/machinery/atmospherics/pipe/tank/air,
 /obj/structure/railing,
 /obj/machinery/light/small{
 	dir = 1;
@@ -11334,6 +11336,7 @@
 /turf/floor/tiled/cafe,
 /area/eris/crew_quarters/toilet/public)
 "jFC" = (
+/obj/machinery/atmospherics/pipe/tank/air,
 /obj/structure/railing{
 	dir = 4
 	},
@@ -12525,6 +12528,9 @@
 /turf/floor/tiled/white/panels,
 /area/eris/crew_quarters/sleep)
 "kKu" = (
+/obj/machinery/atmospherics/pipe/tank/oxygen{
+	dir = 8
+	},
 /turf/floor/plating/under,
 /area/eris/medical/medbay{
 	name = "\improper Medbay maint"
@@ -13224,6 +13230,7 @@
 /turf/floor/tiled/orion,
 /area/eris/hallway/side/bridgehallway)
 "lrr" = (
+/obj/machinery/atmospherics/pipe/tank/air,
 /obj/structure/railing,
 /turf/floor/plating/under,
 /area/eris/engineering/foyer)
