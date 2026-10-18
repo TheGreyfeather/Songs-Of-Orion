@@ -398,7 +398,7 @@
 /turf/floor/tiled/techmaint_panels,
 /area/eris/maintenance/section1deck5central)
 "abm" = (
-/obj/machinery/atmospherics/pipe/tank/air,
+/obj/machinery/atmospherics/tank/air,
 /turf/floor/tiled/techmaint,
 /area/eris/maintenance/section2deck5starboard)
 "abn" = (
@@ -1014,7 +1014,7 @@
 /turf/floor/tiled/dark,
 /area/eris/security/prison)
 "acE" = (
-/obj/machinery/atmospherics/pipe/tank/air,
+/obj/machinery/atmospherics/tank/air,
 /obj/machinery/camera/network/security{
 	dir = 8
 	},
@@ -6299,7 +6299,7 @@
 /turf/floor/tiled/steel,
 /area/eris/hallway/side/eschangarb)
 "apa" = (
-/obj/machinery/atmospherics/pipe/tank/air{
+/obj/machinery/atmospherics/tank/air{
 	dir = 1;
 	initialize_directions = 0
 	},
@@ -6862,7 +6862,7 @@
 /turf/floor/tiled/dark,
 /area/eris/rnd/podbay)
 "aqs" = (
-/obj/machinery/atmospherics/pipe/tank/air,
+/obj/machinery/atmospherics/tank/air,
 /turf/floor/tiled/dark,
 /area/eris/rnd/podbay)
 "aqt" = (
@@ -7550,7 +7550,7 @@
 /turf/wall/low/with_glass/smart,
 /area/eris/hallway/side/section3starboard)
 "arR" = (
-/obj/machinery/atmospherics/pipe/tank/air{
+/obj/machinery/atmospherics/tank/air{
 	dir = 8
 	},
 /turf/floor/tiled/techmaint,
@@ -10590,7 +10590,7 @@
 /turf/floor/plating/under,
 /area/eris/maintenance/section4deck5port)
 "azX" = (
-/obj/machinery/atmospherics/pipe/tank/oxygen{
+/obj/machinery/atmospherics/tank/oxygen{
 	dir = 4
 	},
 /turf/floor/tiled/steel/brown_platform,
@@ -11038,7 +11038,7 @@
 /turf/floor/tiled/steel/cargo,
 /area/eris/maintenance/section3deck2starboard)
 "aAW" = (
-/obj/machinery/atmospherics/pipe/tank/plasma{
+/obj/machinery/atmospherics/tank/plasma{
 	dir = 4
 	},
 /turf/floor/tiled/steel/brown_platform,
@@ -14619,7 +14619,7 @@
 /turf/floor/tiled/steel,
 /area/eris/hallway/side/eschangarb)
 "aLw" = (
-/obj/machinery/atmospherics/pipe/tank/air,
+/obj/machinery/atmospherics/tank/air,
 /turf/floor/plating/under,
 /area/eris/maintenance/section3deck1central)
 "aLx" = (
@@ -15826,7 +15826,7 @@
 /turf/floor/tiled/steel/bluecorner,
 /area/eris/security/prisoncells)
 "aPv" = (
-/obj/machinery/atmospherics/pipe/tank/air{
+/obj/machinery/atmospherics/tank/air{
 	dir = 8
 	},
 /turf/floor/tiled/dark/gray_platform,
@@ -16428,7 +16428,7 @@
 /turf/wall,
 /area/eris/maintenance/section4deck5port)
 "aQw" = (
-/obj/machinery/atmospherics/pipe/tank/air{
+/obj/machinery/atmospherics/tank/air{
 	dir = 8
 	},
 /turf/floor/plating,
@@ -19223,7 +19223,7 @@
 /turf/open,
 /area/eris/security/prisoncells)
 "aXa" = (
-/obj/machinery/atmospherics/pipe/tank/air{
+/obj/machinery/atmospherics/tank/air{
 	dir = 4
 	},
 /turf/floor/plating/under,
@@ -19304,7 +19304,7 @@
 /turf/floor/plating/under,
 /area/eris/maintenance/section1deck4central)
 "aXm" = (
-/obj/machinery/atmospherics/pipe/tank/air{
+/obj/machinery/atmospherics/tank/air{
 	dir = 8
 	},
 /turf/floor/plating/under,
@@ -23071,7 +23071,7 @@
 /turf/floor/tiled/techmaint,
 /area/eris/maintenance/section2deck4central)
 "beN" = (
-/obj/machinery/atmospherics/pipe/tank/air,
+/obj/machinery/atmospherics/tank/air,
 /turf/floor/plating/under,
 /area/eris/maintenance/section2deck4central)
 "beO" = (
@@ -23080,7 +23080,7 @@
 /turf/floor/plating/under,
 /area/eris/maintenance/section2deck4starboard)
 "beP" = (
-/obj/machinery/atmospherics/pipe/tank/air,
+/obj/machinery/atmospherics/tank/air,
 /turf/floor/tiled/techmaint,
 /area/eris/maintenance/section3deck1central)
 "beQ" = (
@@ -30351,7 +30351,7 @@
 /turf/floor/tiled/steel,
 /area/eris/hallway/main/section1)
 "bwC" = (
-/obj/machinery/atmospherics/pipe/tank/air{
+/obj/machinery/atmospherics/tank/air{
 	dir = 4
 	},
 /obj/structure/railing,
@@ -31217,7 +31217,7 @@
 /turf/floor/tiled/steel,
 /area/eris/hallway/main/section2)
 "byA" = (
-/obj/machinery/atmospherics/pipe/tank/air{
+/obj/machinery/atmospherics/tank/air{
 	dir = 8
 	},
 /obj/structure/railing,
@@ -33805,7 +33805,7 @@
 /turf/floor/plating,
 /area/eris/maintenance/section4deck4port)
 "bFc" = (
-/obj/machinery/atmospherics/pipe/tank/air{
+/obj/machinery/atmospherics/tank/air{
 	dir = 4
 	},
 /obj/structure/railing{
@@ -34109,7 +34109,7 @@
 	},
 /area/eris/command/tcommsat/chamber)
 "bFH" = (
-/obj/machinery/atmospherics/pipe/tank/air{
+/obj/machinery/atmospherics/tank/air{
 	dir = 8
 	},
 /obj/structure/railing{
@@ -34844,7 +34844,7 @@
 /turf/floor/wood,
 /area/eris/crew_quarters/hydroponics)
 "bHr" = (
-/obj/machinery/atmospherics/pipe/tank/air{
+/obj/machinery/atmospherics/tank/air{
 	dir = 4
 	},
 /turf/floor/tiled/steel,
@@ -57988,7 +57988,7 @@
 /turf/floor/tiled/steel/techfloor_grid,
 /area/eris/engineering/breakroom)
 "cNa" = (
-/obj/machinery/atmospherics/pipe/tank/air{
+/obj/machinery/atmospherics/tank/air{
 	dir = 4
 	},
 /turf/floor/plating/under,
@@ -58877,13 +58877,13 @@
 	},
 /area/shuttle/mining/station)
 "cPO" = (
-/obj/machinery/atmospherics/pipe/tank/air,
+/obj/machinery/atmospherics/tank/air,
 /turf/shuttle/floor/mining{
 	icon_state = "12,21"
 	},
 /area/shuttle/mining/station)
 "cPP" = (
-/obj/machinery/atmospherics/pipe/tank/air,
+/obj/machinery/atmospherics/tank/air,
 /turf/shuttle/floor/mining{
 	icon_state = "13,21"
 	},
@@ -61118,7 +61118,7 @@
 /turf/floor/tiled/techmaint,
 /area/eris/maintenance/section4deck3port)
 "cWa" = (
-/obj/machinery/atmospherics/pipe/tank/air{
+/obj/machinery/atmospherics/tank/air{
 	dir = 1;
 	initialize_directions = 0
 	},
@@ -74364,7 +74364,7 @@
 /turf/floor/plating/under,
 /area/eris/medical/medbay)
 "dBk" = (
-/obj/machinery/atmospherics/pipe/tank/oxygen{
+/obj/machinery/atmospherics/tank/oxygen{
 	dir = 8
 	},
 /turf/floor/tiled/white/brown_platform,
@@ -76937,7 +76937,7 @@
 /area/eris/maintenance/section4deck2port)
 "dHx" = (
 /obj/effect/floor_decal/rust,
-/obj/machinery/atmospherics/pipe/tank/air{
+/obj/machinery/atmospherics/tank/air{
 	dir = 1;
 	initialize_directions = 0
 	},
@@ -81500,7 +81500,7 @@
 /turf/floor/tiled/techmaint,
 /area/eris/maintenance/section2deck1starboard)
 "dUS" = (
-/obj/machinery/atmospherics/pipe/tank/air,
+/obj/machinery/atmospherics/tank/air,
 /turf/floor/tiled/techmaint,
 /area/eris/maintenance/section2deck1port)
 "dUT" = (
@@ -82906,7 +82906,7 @@
 /turf/wall/low/with_glass/reinforced,
 /area/eris/quartermaster/office)
 "dYk" = (
-/obj/machinery/atmospherics/pipe/tank/air{
+/obj/machinery/atmospherics/tank/air{
 	dir = 8
 	},
 /obj/structure/railing{
@@ -88829,7 +88829,7 @@
 	},
 /area/shuttle/research/station)
 "enr" = (
-/obj/machinery/atmospherics/pipe/tank/air,
+/obj/machinery/atmospherics/tank/air,
 /turf/shuttle/floor/science{
 	icon_state = "5,5"
 	},
@@ -92828,7 +92828,7 @@
 /turf/floor/tiled/steel,
 /area/eris/hallway/side/section3starboard)
 "exh" = (
-/obj/machinery/atmospherics/pipe/tank/air{
+/obj/machinery/atmospherics/tank/air{
 	dir = 8
 	},
 /obj/machinery/alarm{
@@ -95648,7 +95648,7 @@
 /turf/floor/tiled/white,
 /area/eris/rnd/xenobiology/xenoflora)
 "eDP" = (
-/obj/machinery/atmospherics/pipe/tank/air,
+/obj/machinery/atmospherics/tank/air,
 /obj/structure/sign/atmos_air{
 	pixel_y = 32
 	},
