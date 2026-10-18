@@ -2984,7 +2984,7 @@
 /turf/space,
 /area/space)
 "oz" = (
-/obj/machinery/atmospherics/tank/air{
+/obj/machinery/atmospherics/pipe/tank/air{
 	dir = 4;
 	start_pressure = 740.5
 	},
