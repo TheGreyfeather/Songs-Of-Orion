@@ -345,6 +345,11 @@
 	spread_threshold = IORGAN_SMALL_HEALTH
 	status_flag = ORGAN_WOUNDED|ORGAN_INFECTED
 
+/datum/internal_wound/organic/infection/New()
+	..()
+	if(prob(50))
+		treatments_item = list(/obj/item/stack/medical/ointment = 5)
+
 /datum/internal_wound/organic/infection/standard
 	name = "infection"
 
