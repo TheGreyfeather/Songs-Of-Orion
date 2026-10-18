@@ -1205,25 +1205,25 @@ Just a object used in constructing fire alarms
 	var/d2
 	if(ishuman(user) || istype(user, /mob/living/silicon/ai))
 
-		if(A.party)
+		if (A.party)
 			d1 = text("<a href='byond://?src=\ref[];reset=1'>No Party :(</A>", src)
 		else
 			d1 = text("<a href='byond://?src=\ref[];alarm=1'>PARTY!!!</A>", src)
-		if(timing)
+		if (timing)
 			d2 = text("<a href='byond://?src=\ref[];time=0'>Stop Time Lock</A>", src)
 		else
 			d2 = text("<a href='byond://?src=\ref[];time=1'>Initiate Time Lock</A>", src)
 		var/second = time % 60
 		var/minute = (time - second) / 60
-		var/dat = text("<HTML><HEAD></HEAD><BODY><TT><B>Party Button</B> []\n<HR>\nTimer System: []<BR>\nTime Left: [][] <A href='?src=\ref[];tp=-30'>-</A> <A href='?src=\ref[];tp=-1'>-</A> <A href='?src=\ref[];tp=1'>+</A> <A href='?src=\ref[];tp=30'>+</A>\n</TT></BODY></HTML>", d1, d2, (minute ? text("[]:", minute) : null), second, src, src, src, src)
+		var/dat = text("<HTML><HEAD></HEAD><BODY><TT><B>Party Button</B> []\n<HR>\nTimer System: []<BR>\nTime Left: [][] <a href='byond://?src=\ref[];tp=-30'>-</A> <a href='byond://?src=\ref[];tp=-1'>-</A> <a href='byond://?src=\ref[];tp=1'>+</A> <a href='byond://?src=\ref[];tp=30'>+</A>\n</TT></BODY></HTML>", d1, d2, (minute ? text("[]:", minute) : null), second, src, src, src, src)
 		user << browse(dat, "window=partyalarm")
 		onclose(user, "partyalarm")
 	else
-		if(A.fire)
+		if (A.fire)
 			d1 = text("<a href='byond://?src=\ref[];reset=1'>[]</A>", src, stars("No Party :("))
 		else
 			d1 = text("<a href='byond://?src=\ref[];alarm=1'>[]</A>", src, stars("PARTY!!!"))
-		if(timing)
+		if (timing)
 			d2 = text("<a href='byond://?src=\ref[];time=0'>[]</A>", src, stars("Stop Time Lock"))
 		else
 			d2 = text("<a href='byond://?src=\ref[];time=1'>[]</A>", src, stars("Initiate Time Lock"))

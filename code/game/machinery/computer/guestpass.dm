@@ -95,7 +95,7 @@
 		dat += "<a href='byond://?src=\ref[src];mode=0'>Back</a><br>"
 	else
 		dat += "<h3>Guest pass terminal #[uid]</h3><br>"
-		dat += "<a href='?src=\ref[src];mode=1'>View activity log</a><br><br>"
+		dat += "<a href='byond://?src=\ref[src];mode=1'>View activity log</a><br><br>"
 		dat += "Issuing ID: <a href='byond://?src=\ref[src];action=id'>[giver]</a><br>"
 		dat += "Issued to: <a href='byond://?src=\ref[src];choice=giv_name'>[giv_name]</a><br>"
 		dat += "Reason:  <a href='byond://?src=\ref[src];choice=reason'>[reason]</a><br>"

@@ -41,9 +41,9 @@
 			if(T.malfunction)
 				loc_display = pick(SSmapping.main_ship_areas_by_name)
 			dat += "ID: [T.gps.serial_number] | Location: [loc_display]<BR>"
-			dat += "<A href='?src=\ref[src];warn=\ref[T]'>(<font color=red><i>Message Holder</i></font>)</A> |<BR>"
+			dat += "<a href='byond://?src=\ref[src];warn=\ref[T]'>(<font color=red><i>Message Holder</i></font>)</A> |<BR>"
 			dat += "********************************<BR>"
-		dat += "<HR><A href='?src=\ref[src];lock=1'>Lock Console</A>"
+		dat += "<HR><a href='byond://?src=\ref[src];lock=1'>Lock Console</A>"
 
 	user << browse(dat, "window=computer;size=400x500")
 	onclose(user, "computer")
