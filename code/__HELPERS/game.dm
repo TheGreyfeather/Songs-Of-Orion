@@ -159,14 +159,7 @@
 		if(checkghosts == GHOSTS_ALL_HEAR && M.stat == DEAD && M.get_preference_value(/datum/client_preference/ghost_ears) == GLOB.PREF_ALL_SPEECH)
 			mobs[M] = TRUE
 
-	for(var/mob/M as anything in getMobsInRangeChunked(T, range, FALSE, TRUE))
-		mobs[M] = TRUE
-	for(var/mob/M as anything in GLOB.player_ghost_list)
-		if(checkghosts == GHOSTS_ALL_HEAR && M.stat == DEAD && M.get_preference_value(/datum/client_preference/ghost_ears) == GLOB.PREF_ALL_SPEECH)
-			mobs[M] = TRUE
-
 	objs |= getHearersInRangeChunked(T, range)
-
 
 
 /proc/get_mobs_in_radio_ranges(list/obj/item/device/radio/radios)
