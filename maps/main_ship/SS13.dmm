@@ -524,6 +524,10 @@
 	},
 /turf/floor/plating/under,
 /area/eris/medical/medbay)
+"axM" = (
+/obj/structure/salvageable/server,
+/turf/floor/bluegrid,
+/area/turret_protected/ai)
 "axT" = (
 /obj/structure/catwalk,
 /obj/structure/disposalpipe/segment{
@@ -1701,6 +1705,9 @@
 /turf/floor/tiled/orion,
 /area/eris/hallway/side/bridgehallway)
 "buS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 4
+	},
 /turf/wall/untinted/orion/window/reinforced,
 /area/eris/command/tcommsat/chamber)
 "buT" = (
@@ -2819,12 +2826,12 @@
 /turf/floor/tiled/dark/golden,
 /area/eris/neotheology/chapel)
 "ctM" = (
-/obj/machinery/atmospherics/pipe/tank/air,
 /obj/structure/railing{
 	dir = 8
 	},
 /obj/structure/railing,
 /obj/machinery/camera/network/engineering,
+/obj/machinery/atmospherics/tank/air,
 /turf/floor/plating/under,
 /area/eris/engineering/foyer)
 "ctO" = (
@@ -3611,6 +3618,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/salvageable/server,
 /turf/floor/tiled/dark/bluecorner,
 /area/turret_protected/ai_upload_foyer{
 	name = "AI Upload Foyer"
@@ -5639,7 +5647,8 @@
 /obj/spawner/rations,
 /obj/spawner/rations,
 /obj/machinery/alarm{
-	pixel_y = 26
+	pixel_y = 26;
+	target_temperature = 270
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/floor/tiled/white/brown_perforated,
@@ -6499,12 +6508,12 @@
 /turf/floor/tiled/steel/danger,
 /area/eris/maintenance)
 "foG" = (
-/obj/machinery/atmospherics/pipe/tank/air,
 /obj/structure/railing,
 /obj/machinery/light/small{
 	dir = 1;
 	pixel_y = 30
 	},
+/obj/machinery/atmospherics/tank/air,
 /turf/floor/plating/under,
 /area/eris/engineering/foyer)
 "foI" = (
@@ -8756,6 +8765,11 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /turf/floor/tiled/techmaint,
 /area/eris/engineering/engine_smes)
+"hxA" = (
+/obj/structure/railing,
+/obj/machinery/atmospherics/tank/oxygen,
+/turf/floor/plating/under,
+/area/eris/engineering/foyer)
 "hxP" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -11336,7 +11350,6 @@
 /turf/floor/tiled/cafe,
 /area/eris/crew_quarters/toilet/public)
 "jFC" = (
-/obj/machinery/atmospherics/pipe/tank/air,
 /obj/structure/railing{
 	dir = 4
 	},
@@ -11348,6 +11361,7 @@
 	dir = 1;
 	pixel_y = 30
 	},
+/obj/machinery/atmospherics/tank/oxygen,
 /turf/floor/plating/under,
 /area/eris/engineering/foyer)
 "jGi" = (
@@ -12528,7 +12542,7 @@
 /turf/floor/tiled/white/panels,
 /area/eris/crew_quarters/sleep)
 "kKu" = (
-/obj/machinery/atmospherics/pipe/tank/oxygen{
+/obj/machinery/atmospherics/tank/oxygen{
 	dir = 8
 	},
 /turf/floor/plating/under,
@@ -13230,8 +13244,8 @@
 /turf/floor/tiled/orion,
 /area/eris/hallway/side/bridgehallway)
 "lrr" = (
-/obj/machinery/atmospherics/pipe/tank/air,
 /obj/structure/railing,
+/obj/machinery/atmospherics/tank/air,
 /turf/floor/plating/under,
 /area/eris/engineering/foyer)
 "lsb" = (
@@ -23897,6 +23911,14 @@
 	},
 /turf/floor/tiled/orion/tile2,
 /area/eris/hallway/side/bridgehallway)
+"unz" = (
+/obj/spawner/closet,
+/obj/machinery/alarm{
+	pixel_y = 26;
+	target_temperature = 270
+	},
+/turf/floor/tiled/techmaint,
+/area/eris/maintenance)
 "uov" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -24014,11 +24036,11 @@
 /turf/wall/untinted/orion/window/reinforced,
 /area/eris/crew_quarters/sleep/cryo)
 "usl" = (
-/obj/structure/closet/astra/firecloset{
-	dir = 4
-	},
-/turf/floor/reinforced,
-/area/eris/engineering/storage)
+/obj/structure/salvageable/server,
+/turf/floor/tiled/dark/bluecorner,
+/area/turret_protected/ai_upload_foyer{
+	name = "AI Upload Foyer"
+	})
 "usp" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -25829,6 +25851,17 @@
 	},
 /turf/floor/tiled/white/panels,
 /area/eris/security)
+"wap" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/black{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/floor/tiled/techmaint,
+/area/eris/maintenance)
 "waB" = (
 /obj/machinery/telecomms/server/presets/command,
 /turf/floor/bluegrid{
@@ -26345,8 +26378,10 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/obj/spawner/scrap/low_chance,
 /obj/machinery/light/wall{
+	dir = 4
+	},
+/obj/machinery/atmospherics/tank/air{
 	dir = 4
 	},
 /turf/floor/plating/under,
@@ -27338,6 +27373,12 @@
 	},
 /turf/floor/tiled/orion/tile2,
 /area/eris/hallway/side/bridgehallway)
+"xoi" = (
+/obj/machinery/atmospherics/tank/air{
+	dir = 1
+	},
+/turf/floor/tiled/techmaint,
+/area/eris/maintenance)
 "xok" = (
 /obj/machinery/telecomms/server/presets/common,
 /turf/floor/bluegrid{
@@ -58724,7 +58765,7 @@ sNi
 sNi
 sNi
 jsm
-ajy
+unz
 dsp
 nkX
 foI
@@ -59030,8 +59071,8 @@ iZN
 jsm
 mbN
 cxw
-nkX
-luZ
+wap
+xoi
 jsm
 axx
 kOb
@@ -62313,7 +62354,7 @@ rQg
 eBc
 gqy
 agY
-wpH
+usl
 rxT
 uPl
 ixi
@@ -62331,7 +62372,7 @@ gxr
 auq
 ngu
 mEI
-lrr
+hxA
 lno
 aIj
 ddG
@@ -62479,7 +62520,7 @@ huR
 gGg
 xSS
 jpR
-usl
+iFn
 uPN
 ngu
 mEI
@@ -64293,9 +64334,9 @@ rik
 pub
 pfY
 ksO
-oUX
-oUX
-oUX
+axM
+axM
+axM
 pub
 cjX
 uEA
