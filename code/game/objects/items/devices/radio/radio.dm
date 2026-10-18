@@ -31,7 +31,6 @@ var/global/list/default_medbay_channels = list(
 
 /obj/item/device/radio
 	icon = 'icons/obj/radio.dmi'
-	name = "walkie talkie"
 	suffix = "\[3\]"
 	icon_state = "walkietalkie"
 	item_state = "walkietalkie"
@@ -97,6 +96,8 @@ var/global/list/default_medbay_channels = list(
 
 	for (var/ch_name in channels)
 		secure_radio_connections[ch_name] = SSradio.add_object(src, radiochannels[ch_name],  RADIO_CHAT)
+
+	return INITIALIZE_HINT_LATELOAD
 
 /obj/item/device/radio/attack_self(mob/user as mob)
 	user.set_machine(src)
@@ -185,7 +186,7 @@ var/global/list/default_medbay_channels = list(
 	var/list = !!(chan_stat&FREQ_LISTENING)!=0
 	return {"
 			<B>[chan_name]</B><br>
-			Speaker: <A href='byond://?src=\ref[src];ch_name=[chan_name];listen=[!list]'>[list ? "Engaged" : "Disengaged"]</A><BR>
+			Speaker: <a href='byond://?src=\ref[src];ch_name=[chan_name];listen=[!list]'>[list ? "Engaged" : "Disengaged"]</A><BR>
 			"}
 
 /obj/item/device/radio/proc/ToggleBroadcast()
