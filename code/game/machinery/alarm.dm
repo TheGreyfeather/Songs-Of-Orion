@@ -1166,7 +1166,7 @@ FIRE ALARM
 
 /obj/machinery/firealarm/Destroy()
 	GLOB.firealarm_list -= src
-	..()
+	. = ..()
 
 /*
 FIRE ALARM CIRCUIT

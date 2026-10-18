@@ -60,7 +60,7 @@
 	var/toxin_strength = chem_effects[CE_TOXIN] * IORGAN_KIDNEY_TOX_RATIO + chem_toxicity
 
 	// Existing damage is subtracted to prevent weaker toxins from maxing out tox wounds on the organ
-	var/toxin_damage = kidney ? (toxin_strength / (stats.getPerk(PERK_BLOOD_OF_LEAD) ? 2 : 1)) - (kidneys_efficiency / 100) - kidney.damage * 2 : 0
+	var/toxin_damage = kidney ? (toxin_strength / (stats.getPerk(PERK_BLOOD_OF_LEAD) ? 2 : 1)) - (kidneys_efficiency / 32) - kidney.damage : 0
 
 	// Organ functions
 	// Blood regeneration if there is some space
@@ -81,7 +81,7 @@
 	var/toxin_strength = chem_effects[CE_TOXIN] * IORGAN_LIVER_TOX_RATIO + chem_effects[CE_ALCOHOL_TOXIC]
 
 	// Existing damage is subtracted to prevent weaker toxins from maxing out tox wounds on the organ
-	var/toxin_damage = liver ? (toxin_strength / (stats.getPerk(PERK_BLOOD_OF_LEAD) ? 2 : 1)) - (liver_efficiency / 100) - liver.damage * 2 : 0
+	var/toxin_damage = liver ? (toxin_strength / (stats.getPerk(PERK_BLOOD_OF_LEAD) ? 2 : 1)) - (liver_efficiency / 32) - liver.damage : 0
 
 	// Bad stuff
 	// If you're not filtering well, you're in trouble. Ammonia buildup to toxic levels and damage from alcohol
@@ -248,6 +248,10 @@
 		if(carrion_hunger < max_hunger)
 			carrion_hunger = min(carrion_hunger + (round(1* (maw_efficiency / 100))), max_hunger)
 		else
+			if(ingested.has_reagent("nutriment", 1))
+				ingested.remove_reagent("nutriment", 1)
+			else
+				nutrition = max(0, nutrition - 20) // equivalent to a unit of nutriment
 			to_chat(src, SPAN_WARNING("Your hunger is restless!"))
 		carrion_last_hunger = world.time
 

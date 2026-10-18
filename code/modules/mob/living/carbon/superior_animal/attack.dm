@@ -1,11 +1,16 @@
 /mob/living/carbon/superior_animal/attack_ui(slot_id)
 	return
 
-/mob/living/carbon/superior_animal/UnarmedAttack(atom/A, var/proximity)
+/mob/living/carbon/superior_animal/UnarmedAttack(atom/A, proximity, attackdamage)
 	if(!..())
 		return
 
-	var/damage = rand(melee_damage_lower, melee_damage_upper)
+	var/damage
+
+	if(attackdamage) // this allows damage to be overridden, for special cases like the end of the platinum golem's charge
+		damage = attackdamage
+	else
+		damage = rand(melee_damage_lower, melee_damage_upper)
 
 	. = A.attack_generic(src, damage, pick(attacktext), environment_smash, melee_sharp, melee_edge, wound_mult)
 	if(.)
@@ -72,6 +77,5 @@
 	var/obj/item/projectile/A = new projectiletype(user:loc)
 	playsound(user, projectilesound, 100, 1)
 	if(!A)	return
-	A.friendly_fire_faction += src.faction
 	var/def_zone = get_exposed_defense_zone(target)
 	A.launch(target, def_zone)

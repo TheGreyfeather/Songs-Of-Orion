@@ -54,7 +54,6 @@
 
 /obj/item/projectile/roach_spit/on_hit(atom/target)
 	. = ..()
-	PulseRadiation(src, 2, 4)
 	if(isliving(target))
 		var/mob/living/L = target
 		var/damage = rand(3, 7)
@@ -65,6 +64,11 @@
 		return FALSE // so these pass through roaches
 	..()
 
-/obj/item/projectile/roach_spit/on_hit(turf/target)
-	. = ..()
-	PulseRadiation(src, 2, 4)
+/mob/living/carbon/superior_animal/roach/toxic/joinOvermind(datum/overmind/roachmind/jointhis)
+	jointhis.addRanged(src) // Gestrahlte is Ranged
+	overseer = jointhis
+
+/mob/living/carbon/superior_animal/roach/toxic/leaveOvermind()
+	overseer?.removeRanged(src) // Ranged Gestrahlte
+	overseer?.casualties.Remove(src)
+	overseer = null

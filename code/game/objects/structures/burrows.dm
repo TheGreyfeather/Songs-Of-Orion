@@ -35,7 +35,8 @@
 	//Vars for migration
 	var/processing = FALSE
 	var/obj/structure/burrow/target //Burrow we're currently sending mobs to
-	var/obj/structure/burrow/receiving	//Burrow currently sending mobs to us
+	var/obj/structure/burrow/recieving	//Burrow currently sending mobs to us
+	var/datum/weakref/lastleader // for mob AI
 
 	var/list/sending_mobs = list()
 	var/migration_initiated //When a migration started
@@ -53,37 +54,37 @@
 	//Animation
 	var/max_shake_intensity = 20
 
-	var/reinforcements = 2 //Maximum number of times this burrow may receive reinforcements
+	var/reinforcements = 2 //Maximum number of times this burrow may recieve reinforcements
 
 	var/deepmaint_entry_point = FALSE //Will this burrow turn into a deep maint entry point upon getting collapsed?
 
 
-/obj/structure/burrow/New(loc, turf/anchor)
+/obj/structure/burrow/New(var/loc, turf/anchor)
 	.=..()
 	GLOB.all_burrows.Add(src)
 	var/obj/machinery/power/nt_obelisk/obelisk = locate(/obj/machinery/power/nt_obelisk) in range(7, src)
 	if(obelisk && obelisk.active)
 		qdel(src)
 		return
-	if(anchor)
+	if (anchor)
 		offset_to(anchor, 8)
 
 	//Hide burrows under floors
 	var/turf/floor/F = loc
-	if(istype(F))
+	if (istype(F))
 		F.levelupdate()
 
 	life_scan()
 
 	// apparently burrows should face walls
-	for(var/d in cardinal)
+	for (var/d in cardinal)
 		var/turf/T = get_step(F, d)
-		if(T.is_wall)
+		if (T.is_wall)
 			dir = d
 			break
 
 	var/area/A = get_area(src)
-	if(A && A.is_maintenance)
+	if (A && A.is_maintenance)
 		maintenance = TRUE
 		break_open(TRUE)
 
@@ -98,10 +99,10 @@
 	unpopulated_burrows -= src
 	distressed_burrows -= src
 	target = null
-	receiving = null
+	recieving = null
 	//Eject any mobs that tunnelled through us
-	for(var/atom/movable/a in sending_mobs)
-		if(a.loc == src)
+	for (var/atom/movable/a in sending_mobs)
+		if (a.loc == src)
 			a.forceMove(loc)
 	population = list()
 	plantspread_burrows = list()	// Other burrows may still hold a reference to this burrow after it qdels
@@ -112,16 +113,17 @@
 //Any kind of simple or superior animal is valid, all of them are treated as population for this burrow
 /obj/structure/burrow/proc/life_scan()
 	population.Cut()
-	for(var/mob/living/L in dview(14, loc))
-		if(is_valid(L))
+	for (var/mob/living/L in dview(14, loc))
+		if (is_valid(L))
 			population |= "\ref[L]"
 
-	if(population.len)
+	if (population.len)
 		populated_burrows |= src
 		unpopulated_burrows -= src
 	else
 		populated_burrows -= src
 		unpopulated_burrows |= src
+
 
 /*
 	Returns true/false to indicate if the passed mob is valid to be considered population for this burrow
@@ -131,19 +133,19 @@
 		return FALSE
 
 	//Dead mobs don't count
-	if(L.stat == DEAD)
+	if (L.stat == DEAD)
 		return FALSE
 
 	//We don't want player controlled mobs getting sucked up by holes
-	if(L.client)
+	if (L.client)
 		return FALSE
 
 	//Type must be designated eligible for burrowing
-	if(!L.can_burrow)
+	if (!L.can_burrow)
 		return FALSE
 
 	//Creatures only. No humans or robots
-	if(!isanimal(L) && !issuperioranimal(L))
+	if (!isanimal(L) && !issuperioranimal(L))
 		return FALSE
 
 	//Kaisers are too fat, they can't fit in
@@ -153,9 +155,13 @@
 	return TRUE
 
 
+
+
+
 /*
 	Migration based procs
 */
+
 
 /*
 Starts the process of sending mobs from one burrow to another
@@ -169,32 +175,36 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 	The mobs it is to send should be placed inside it by the caller
 */
 /obj/structure/burrow/proc/migrate_to(obj/structure/burrow/_target, time = 1, percentage = 1)
-	if(!_target)
+	if (!_target)
 		return
 
-	//We're already busy sending or receiving a migration, can't start another
-	if(target || receiving)
+	//We're already busy sending or recieving a migration, can't start another
+	if (target || recieving)
 		return
 
 	target = _target
-	if(!processing)
+
+	if (!processing)
 		START_PROCESSING(SSobj, src)
 		processing = TRUE
 
+
 	//The time we started. Used for animations
 	migration_initiated = world.time
+
 	duration = time
 
 	//When the completion time is reached, the mobs we're sending will emerge from the destination hole
 	completion_time = migration_initiated + duration
 
-	if(percentage != 0)
+
+	if (percentage != 0)
 		summon_mobs(percentage)
 	else
 		//Special case, mobs have already spawned inside us by infestation event or somesuch
 		//add all the mobs in our contents to the sending mobs list
 		sending_mobs = list()
-		for(var/mob/M in contents)
+		for (var/mob/M in contents)
 			sending_mobs.Add(M)
 
 	target.prepare_reception(migration_initiated, duration, src)
@@ -205,15 +215,16 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 	var/list/candidates = population.Copy() //Make a copy of the population list so we can modify it
 	var/step = 1 / candidates.len //What percentage of the population is each mob worth?
 	sending_mobs = list()
-	for(var/v in candidates)
+	for (var/v in candidates)
 		var/mob/living/L = locate(v) //Resolve the hex reference into a mob
 
 		//Check that it's still valid. Hasn't been deleted, etc
 		if(!is_valid(L))
 			continue
 
+
 		//Alright now how do we make this mob come to us?
-		if(issuperioranimal(L))
+		if (issuperioranimal(L))
 			//If its a superior animal, then we'll set their mob target to this burrow
 			var/mob/living/carbon/superior_animal/SA = L
 			SA.activate_ai()
@@ -224,18 +235,21 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 
 		//We deplete this percentage for every mob we send
 		percentage -= step
-		if(percentage <= 0)
+		if (percentage <= 0)
 			//If it hits zero we're done summoning
 			break
 
 
-//Tells this burrow that it's soon to receive new arrivals
+
+
+//Tells this burrow that it's soon to recieve new arrivals
 /obj/structure/burrow/proc/prepare_reception(start_time, _duration, sender)
 	migration_initiated = start_time
 	duration = _duration
-	receiving = sender
+	recieving = sender
 	START_PROCESSING(SSobj, src)
 	processing = TRUE
+
 
 
 /obj/structure/burrow/Process()
@@ -244,61 +258,63 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 	if(!processing)
 		return
 
-	//Burrows process when they are either sending or receiving mobs.
+	//Burrows process when they are either sending or recieving mobs.
 	//One or the other, cant do both at once
 	var/progress = (world.time - migration_initiated) / duration
 
 	//Sending processing is done to suck in candidates when they come near
 	//As well as to check how much time has passed, and when completion time happens, to deliver mobs to the destination
-	if(target)
+	if (target)
 
 		//Lets loop through the mobs we're sending, and bring them in if possible
-		for(var/mob/living/L in sending_mobs)
-			if(!is_valid(L))
+		for (var/mob/living/L in sending_mobs)
+			if (!is_valid(L))
 				//Uh oh. Maybe it died
 				sending_mobs -= L
 				continue
 
-			if(!istype(L.loc, /turf))
+			if (!istype(L.loc, /turf))
 				//Its already inside, this burrow or another one
-				if(L.loc != src)
+				if (L.loc != src)
 					//If it went inside another burrow its no longer our problem
 					sending_mobs -= L
 				continue
+
+
 
 			//Succ
 			pull_mob(L)
 
 			//If its near enough, swallow it
-			if(get_dist(L, src) <= 1)
+			if (get_dist(L, src) <= 1)
 				enter_burrow(L)
 				return //One mob enters per second
 
-			else if(progress > 0.5)
+			else if (progress > 0.5)
 				//If the mob has spent more than half the time, it must be unable to reach.
 				//Increase the suck range
-				if(get_dist(L, src) <= 2)
+				if (get_dist(L, src) <= 2)
 					enter_burrow(L)
 					return //One mob enters per second
 
 
-		if(progress >= 1)
+		if (progress >= 1)
 			//We're done, its time to send them
 			complete_migration()
 
-	//Processing on the receiving end is done to make sounds and visual FX
-	else if(receiving)
+	//Processing on the recieving end is done to make sounds and visual FX
+	else if (recieving)
 		//Do audio, but not every second
-		if(prob(45))
+		if (prob(45))
 			audio("crumble", progress*100)
 
 		//Do a shake animation each second that gets more intense the closer we are to emergence
 		// We shake florring only if burrow is still a cracks
-		if(!is_revealed)
+		if (!is_revealed)
 			var/turf/floor/F = loc
-			if(istype(F) && F.flooring)
+			if (istype(F) && F.flooring)
 				//This should never be false
-				if(prob(25)) //Occasional impact sound of something trying to force its way through
+				if (prob(25)) //Occasional impact sound of something trying to force its way through
 					audio("thud", progress*100)
 				F.shake_animation(progress * max_shake_intensity)
 		shake_animation(progress * max_shake_intensity)
@@ -307,43 +323,53 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 /obj/structure/burrow/proc/complete_migration()
 	//The final step in the process
 	//This finishes up the process of sending mobs
-	if(target)
-		if(QDELETED(target))
+	if (target)
+		if (QDELETED(target))
 			abort_migration()
 			return
 
 		//We'll put all of our mobs into the target burrow
-		for(var/mob/M in contents)
+		for (var/mob/M in contents)
 			M.forceMove(target)
 
 		target.complete_migration()
 
 
-	if(receiving)
-		//If we're the burrow receiving the migration, then the above code will have put lots of mobs inside us. Lets move them out into surrounding turfs
+	if (recieving)
+		//If we're the burrow recieving the migration, then the above code will have put lots of mobs inside us. Lets move them out into surrounding turfs
 		//First, make sure we clear the destination area
 		break_open()
 
 		audio("crumble", 120) //And a loud sound as mobs emerge
 		//Next get a list of floors to move them to
 		var/list/floors = list()
-		for(var/turf/floor/F in dview(2, loc))
-			if(F.is_wall)
+		for (var/turf/floor/F in dview(2, loc))
+			if (F.is_wall)
 				continue
 
-			if(turf_is_external(F))
+			if (turf_is_external(F))
 				continue
 
-			if(!turf_clear(F))
+			if (!turf_clear(F))
 				continue
 
 			floors.Add(F)
 
-		if(floors.len > 0)
+		if (floors.len > 0)
 
 			//We'll move all the mobs briefly onto our own turf, then shortly after, onto a surrounding one
-			for(var/mob/M in contents)
+			for (var/mob/M in contents)
 				M.forceMove(loc)
+				if(lastleader) // then we resolve the overseer
+					if(issuperioranimal(M))
+						var/mob/living/carbon/superior_animal/tochain = M
+						tochain.commandchain(lastleader.resolve())
+					// don't bother with non-superior mobs
+				else
+					if(issuperioranimal(M))
+						if(isroach(M))
+							var/mob/living/carbon/superior_animal/roach/toalert = M
+							toalert.findOverseer()
 				spawn(rand(1,5))
 					var/turf/T = pick(floors)
 					M.forceMove(T)
@@ -351,12 +377,14 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 					//Emerging from a burrow will create rubble and mess
 					if(spawn_rubble(loc, 2, 80))
 						spawn_rubble(loc, 3, 30)
+			lastleader = null // only summon once, then don't let automatic migrations count
+
 
 	//Lets reset all these vars that we used during migration
 	STOP_PROCESSING(SSobj, src)
 	processing = FALSE
 	target = null
-	receiving = null
+	recieving = null
 
 	sending_mobs = list()
 	migration_initiated = 0
@@ -370,34 +398,35 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 	STOP_PROCESSING(SSobj, src)
 	processing = FALSE
 	target = null
-	receiving = null
+	recieving = null
+	lastleader = null
 
 	sending_mobs = list()
 	migration_initiated = 0
 	completion_time = 0
 	duration = 0
 
-	for(var/mob/M in contents)
+	for (var/mob/M in contents)
 		M.forceMove(loc)
 
 
 
 //Called when an area becomes uninhabitable
 /obj/structure/burrow/proc/evacuate(force_nonmaint = TRUE)
-	//We're already busy sending or receiving a migration, can't start another or closed
-	if(target || receiving || is_sealed)
+	//We're already busy sending or recieving a migration, can't start another or closed
+	if (target || recieving || is_sealed)
 		return
 
 	//Lets check there's anyone to evacuate
 	life_scan()
-	if(population.len)
+	if (population.len)
 		var/obj/structure/burrow/btarget = SSmigration.choose_burrow_target(src, FALSE, 100)
-		if(!btarget)
+		if (!btarget)
 			//If no target then maybe there are no nonmaint burrows left. In that case lets try to get one in maint
 			btarget = SSmigration.choose_burrow_target(src)
 
 			//If still no target, then every other burrow on the map is collapsed. Evacuation failed
-			if(!btarget)
+			if (!btarget)
 				return
 
 
@@ -406,14 +435,16 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 
 /obj/structure/burrow/proc/distress(immediate = FALSE, atom/caller)
 	//This burrow requests reinforcements from elsewhere
-	if(reinforcements <= 0)
+	if (reinforcements <= 0)
 		return
 
 	distressed_burrows |= src //Add ourselves to a global list.
 	//The migration subsystem will look at it and send things.
 	//It may take up to 30 seconds to tick and notice our request
+	if(ismob(caller))
+		lastleader = WEAKREF(caller)
 
-	if(immediate)
+	if (immediate)
 		//Alternatively, we can demand things be sent right now
 		spawn()
 			SSmigration.handle_distress_calls()
@@ -445,7 +476,7 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 		is_revealed = TRUE
 		level = ABOVE_PLATING_LEVEL
 	var/turf/floor/F = loc
-	if(istype(F))
+	if (istype(F))
 		F.levelupdate()
 
 /*****************************************************
@@ -463,11 +494,11 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 	if(!is_revealed)
 		return
 	if(is_sealed)
-		if(I.has_quality(QUALITY_WELDING))
+		if (I.has_quality(QUALITY_WELDING))
 			user.visible_message("[user] attempts to weld [src] with the [I]", "You start welding [src] with the [I]")
 			if(I.use_tool(user, src, WORKTIME_NORMAL, QUALITY_WELDING, FAILCHANCE_VERY_EASY, required_stat = STAT_MEC) && is_sealed)
 				user.visible_message("[user] welds [src] with the [I].", "You welds [src] with the [I].")
-				if(receiving)
+				if(recieving)
 					if(prob(33))
 						qdel(src)
 					else	// false welding, critters will create new cracks
@@ -494,21 +525,21 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 					return
 
 
-		if(I.has_quality(QUALITY_DIGGING) && !is_sealed)
+		if (I.has_quality(QUALITY_DIGGING) && !is_sealed)
 			user.visible_message("[user] starts breaking and collapsing [src] with the [I].", "You start breaking and collapsing [src] with the [I].")
 
 			//Attempting to collapse a burrow may trigger reinforcements.
 			//Not immediate so they will take some time to arrive.
 			//Enough time to finish one attempt at breaking the burrow.
 			//If you succeed, then the reinforcements won't come
-			if(prob(5))
+			if (prob(5))
 				distress()
 
 			//We record the time to prevent exploits of starting and quickly cancelling
 			var/start = world.time
 			var/target_time = WORKTIME_FAST+ 2*health
 
-			if(I.use_tool(user, src, target_time, QUALITY_DIGGING, health * 0.66, list(STAT_MEC, STAT_ROB), forced_sound = WORKSOUND_PICKAXE))
+			if (I.use_tool(user, src, target_time, QUALITY_DIGGING, health * 0.66, list(STAT_MEC, STAT_ROB), forced_sound = WORKSOUND_PICKAXE))
 				//On success, the hole is destroyed!
 				if(collapse()) // Or is it?
 					new /obj/spawner/scrap/sparse(get_turf(user))
@@ -517,12 +548,12 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 					user.visible_message("[user] tried to collapse [src] with the [I], but it's only getting worse.", "You attempt to collapse [src] with the [I], expanding [src] instead.")
 			else
 				var/duration = world.time - start
-				if(duration < 10) //Digging less than a second does nothing
+				if (duration < 10) //Digging less than a second does nothing
 					return
 
 				spawn_rubble(loc, 1, 100)
 
-				if(I.get_tool_quality(QUALITY_DIGGING) > 30)
+				if (I.get_tool_quality(QUALITY_DIGGING) > 30)
 					to_chat(user, SPAN_NOTICE("The [src] crumbles a bit. Keep trying and you'll collapse it eventually"))
 				else
 					to_chat(user, SPAN_NOTICE("This isn't working very well. Perhaps you should get a better digging tool?"))
@@ -531,7 +562,7 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 				//This will make things much easier next time
 				var/time_mult = 1
 
-				if(duration < target_time)
+				if (duration < target_time)
 					//If they spent less than the full time attempting the work, then the reduction is reduced
 					//A multiplier is based on 85% of the time spent working,
 					time_mult = (duration / target_time) * 0.85
@@ -573,20 +604,20 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 
 //Spawns some rubble on or near a target turf
 //Will only allow one rubble decal per tile
-/obj/structure/burrow/proc/spawn_rubble(turf/T, spread = 0, chance = 100)
-	if(!prob(chance))
+/obj/structure/burrow/proc/spawn_rubble(var/turf/T, var/spread = 0, var/chance = 100)
+	if (!prob(chance))
 		return FALSE
 
 	var/list/floors = list()
-	for(var/turf/floor/F in dview(spread, T))
-		if(F.is_wall)
+	for (var/turf/floor/F in dview(spread, T))
+		if (F.is_wall)
 			continue
-		if(locate(/obj/effect/decal/cleanable/rubble) in F)
+		if (locate(/obj/effect/decal/cleanable/rubble) in F)
 			continue
 
 		floors |= F
 
-	if(!floors.len)
+	if (!floors.len)
 		return FALSE
 
 	new /obj/effect/decal/cleanable/rubble(pick(floors))
@@ -594,7 +625,7 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 
 
 //If underfloor, hide the burrow
-/obj/structure/burrow/hide(i)
+/obj/structure/burrow/hide(var/i)
 	invisibility = i ? INVISIBILITY_MAXIMUM : 0
 
 /obj/structure/burrow/hides_under_flooring()
@@ -605,7 +636,7 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 /****************************
 	Burrow entering
 ****************************/
-/obj/structure/burrow/proc/enter_burrow(mob/living/L)
+/obj/structure/burrow/proc/enter_burrow(var/mob/living/L)
 	break_open()
 	spawn()
 		L.do_pickup_animation(src, L.loc)
@@ -615,15 +646,15 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 //Mobs that are summoned will walk up and attack this burrow
 //This will suck them in
 /obj/structure/burrow/attack_generic(mob/living/L)
-	if(is_valid(L))
+	if (is_valid(L))
 		enter_burrow(L)
-	if(issuperioranimal(L))//So they don't carry burrow's reference and never qdel
+	if (issuperioranimal(L))//So they don't carry burrow's reference and never qdel
 		var/mob/living/carbon/superior_animal/SA = L
 		SA.target_mob = null
 
 
 /obj/structure/burrow/proc/pull_mob(mob/living/L)
-	if(!L.incapacitated())//Can't flee if you're stunned
+	if (!L.incapacitated())//Can't flee if you're stunned
 		walk_to(L, src, 1, L.move_to_delay*RAND_DECIMAL(1,1.5))
 //We randomise the move delay a bit so that mobs don't just move in sync like particles of dust being sucked up
 
@@ -656,7 +687,7 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 		var/obj/effect/plant/hivemind/wire = new(loc, plant)
 		hivemind_node.add_wireweed(wire)
 
-	for(var/obj/effect/plant in loc)
+	for (var/obj/effect/plant in loc)
 		return
 
 	//The plant is not assigned a parent, so it will become the parent of plants that grow from here
@@ -668,14 +699,14 @@ percentage is a value in the range 0..1 that determines what portion of this mob
 /****************************
 	Audio Management
 ****************************/
-/obj/structure/burrow/proc/audio(soundtype, volume)
+/obj/structure/burrow/proc/audio(var/soundtype, var/volume)
 	//All audio generated by burrows is run through this function
 	//If this burrow is located in maintenance, players care about it less, and as a result the sounds it makes
 	//will be quieter and not travel as far
 	playsound(src, soundtype, maintenance ? volume*0.5 : volume, TRUE,maintenance ? -3 : 0)
 
 /obj/structure/burrow/examine(mob/user, extra_description = "")
-	if(is_sealed && receiving)
+	if(is_sealed && recieving)
 		extra_description += SPAN_WARNING("You can see something move behind the cracks. You should weld them shut before it breaks through.")
 	..(user, extra_description)
 
