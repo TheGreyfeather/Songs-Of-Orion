@@ -39,10 +39,10 @@
 </div>
 Cart:<br>
 {{if data.prg_type != "ordering"}}
-	{{:helper.link(data.total, 'cart', {"PRG_receive" : 1}, data.total ? null : 'disabled')}}
-	{{:helper.link("Create Order", 'comment', {"PRG_build_order" : 1}, data.total ? null : 'disabled')}}
+    {{:helper.link(data.total, 'cart', {"PRG_receive" : 1}, data.total ? null : 'disabled')}}
+    {{:helper.link("Create Order", 'comment', {"PRG_build_order" : 1}, data.total ? null : 'disabled')}}
 {{else}}
-	{{:helper.link(data.total, 'comment', {"PRG_build_order" : 1}, data.total ? null : 'disabled')}}
+    {{:helper.link("Create Order", 'comment', {"PRG_build_order" : 1}, data.total ? null : 'disabled')}}
 {{/if}}
 {{:helper.link("Save", 'disk', {'PRG_cart_save' : 1})}}
 {{:helper.link("Load", 'print', {'PRG_cart_load' : 1})}}
