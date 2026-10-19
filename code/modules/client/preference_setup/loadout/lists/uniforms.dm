@@ -118,7 +118,7 @@
 	path = /obj/item/clothing/under/rank/security/camo
 	cost = 1
 
-/datum/gear/uniform/flannel/color_presets/New()
+/datum/gear/uniform/camo/color_presets/New()
 	..()
 	var/camo = list(
 		"Urban"			=	/obj/item/clothing/under/rank/security/camo,
