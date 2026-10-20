@@ -441,6 +441,7 @@ SUBSYSTEM_DEF(trade)
 	for(var/path in category)
 		. += get_import_cost(path, station) * category[path]
 
+
 /datum/controller/subsystem/trade/proc/buy(obj/machinery/trade_beacon/receiving/senderBeacon, datum/money_account/account, list/shopList, is_order = FALSE, buyer_name = null)
 	if(QDELETED(senderBeacon) || !istype(senderBeacon) || !account || !recursiveLen(shopList))
 		return
@@ -448,8 +449,14 @@ SUBSYSTEM_DEF(trade)
 	var/obj/structure/closet/secure_closet/personal/trade/C
 	var/count_of_all = collect_counts_from(shopList)
 	var/price_for_all = collect_price_for_list(shopList)
+
 	if((isnum(count_of_all) && count_of_all > 1) || shopList.Find("/obj/machinery/power/supermatter") > 0)
 		C = senderBeacon.drop(/obj/structure/closet/secure_closet/personal/trade)
+
+		if(!C)
+			stack_trace("Trade purchase failed: unable to create delivery closet at [senderBeacon].")
+			return FALSE
+
 		if(is_order)
 			C.locked = TRUE
 			C.registered_name = buyer_name
@@ -477,6 +484,10 @@ SUBSYSTEM_DEF(trade)
 							new good_path(C)
 						else
 							var/atom/movable/new_item = senderBeacon.drop(good_path)
+							if(!new_item)
+								log_debug("TRADE DEBUG: FAILED - drop() returned null")
+								stack_trace("Trade delivery failed: [good_path] could not be dropped by [senderBeacon].")
+								return FALSE
 							invoice_location = new_item.loc
 					if(isnum(index_of_good))
 						station.set_good_amount(category_name, index_of_good, max(0, station.get_good_amount(category_name, index_of_good) - count_of_good))
@@ -495,6 +506,8 @@ SUBSYSTEM_DEF(trade)
 
 	create_log_entry("Shipping", account.get_name(), order_contents_info, price_for_all, FALSE, invoice_location)
 	charge_to_account(account.account_number, account.get_name(), "Purchase", "Trade Network", price_for_all)
+
+	return TRUE
 
 /datum/controller/subsystem/trade/proc/export(obj/machinery/trade_beacon/sending/senderBeacon)
 	if(QDELETED(senderBeacon))
@@ -616,11 +629,16 @@ SUBSYSTEM_DEF(trade)
 		var/list/viewable_contents = order["viewable_contents"]
 		var/total_cost = order["cost"] + order["fee"]
 		var/is_requestor_master = (requesting_account == master_account) ? TRUE : FALSE
+		var/success = buy(beacon, master_account, shopping_list, !is_requestor_master, requesting_account.owner_name)
 
-		buy(beacon, master_account, shopping_list, !is_requestor_master, requesting_account.owner_name)
+		if(!success)
+			return FALSE
+
 		if(!is_requestor_master)
 			transfer_funds(requesting_account, master_account, "Order Request", null, total_cost)
+
 		create_log_entry("Order", requesting_account.get_name(), viewable_contents, total_cost)
+		return TRUE
 
 // === LOGGING ===
 

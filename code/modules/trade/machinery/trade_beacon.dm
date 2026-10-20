@@ -69,23 +69,45 @@
 	return ..()
 
 /obj/machinery/trade_beacon/receiving/proc/drop(drop_type)
-	var/list/floor = list()
-	for(var/turf/floor/F in block(locate(drop_x - 2, drop_y - 8, drop_z), locate(drop_x + 2, drop_y - 2, drop_z)))
-		if(F.contains_dense_objects(TRUE))
-			continue
-		floor += F
+	var/list/delivery_turfs = list()
+	var/turf/beacon_turf = get_turf(src)
 
-	if(!length(floor))
-		//visible_message(SPAN_WARNING("[src] cannot find a suitable location to deliver the shipment."))
+	if(!beacon_turf)
+		log_debug("TRADE DROP: Beacon has no turf.")
+		return FALSE
+
+	// Search a 5x7 zone centered on the beacon's actual turf.
+	for(var/turf/T in block(
+		locate(beacon_turf.x - 2, beacon_turf.y - 3, beacon_turf.z),
+		locate(beacon_turf.x + 2, beacon_turf.y + 3, beacon_turf.z)
+	))
+		if(istype(T, /turf/space))
+			continue
+
+		if(T.contains_dense_objects(TRUE))
+			continue
+
+		delivery_turfs += T
+
+	if(!length(delivery_turfs))
+		log_debug("TRADE DROP: No valid turfs near beacon at ([beacon_turf.x],[beacon_turf.y],[beacon_turf.z]).")
 		return FALSE
 
 	activate()
 
-	var/turf/floor/pickfloor = pick(floor)
+	var/turf/pickfloor = pick(delivery_turfs)
 
 	if(ispath(drop_type, /obj/structure/closet))
 		var/mob/living/carbon/human/dude = locate(/mob/living/carbon/human) in pickfloor
 		if(dude)
 			dude.damage_through_armor(30)
 
-	return new drop_type(pickfloor)
+	var/atom/movable/delivered = new drop_type(pickfloor)
+
+	if(!delivered)
+		log_debug("TRADE DROP: Failed to create [drop_type].")
+		return FALSE
+
+	//log_debug("TRADE DROP: Delivered [delivered] at ([pickfloor.x],[pickfloor.y],[pickfloor.z]).")
+	return delivered
+

@@ -582,7 +582,10 @@
 				to_chat(usr, SPAN_WARNING("ERROR: Not enough funds in requesting account ([requesting_account.get_name()] #[requesting_account.account_number])."))
 				return
 
-			SStrade.purchase_order(receiving, order)
+			if(!SStrade.purchase_order(receiving, order))
+				to_chat(usr, SPAN_WARNING("ERROR: Unable to deliver this order. Verify docking, funds, and available floor space."))
+				return
+
 			SStrade.order_queue.Remove(order)
 			if(current_order == order)
 				current_order = null
