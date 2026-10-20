@@ -30,6 +30,7 @@ var/global/list/default_medbay_channels = list(
 )
 
 /obj/item/device/radio
+	name = "walkie talkie"
 	icon = 'icons/obj/radio.dmi'
 	suffix = "\[3\]"
 	icon_state = "walkietalkie"
