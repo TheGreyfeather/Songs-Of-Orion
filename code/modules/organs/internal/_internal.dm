@@ -301,7 +301,7 @@
 			)
 
 			if(owner.species && !(owner.species.flags & NO_PAIN))
-				owner.emote("scream")
+				owner.emote("painscream")
 
 			// Fractures have a chance of getting you out of restraints
 			if(prob(25))
