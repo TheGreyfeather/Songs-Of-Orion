@@ -217,14 +217,14 @@
 	perks = list(PERK_GUNSLINGER)
 
 
-/datum/category_item/setup_option/background/origin/risingsun
-	name = "The Rising Sun"
+/datum/category_item/setup_option/background/origin/redsun
+	name = "The Red Sun"
 	desc = "<b>Exile</b> <br>\
 	<br>\
 	From the ashes of the People's Alliance of Liberated States' Lunar and Martian colonies and the Misriah Pact, the sun rises. \
 	A clan-based techno-syndicate, once the primary provider of robotics and cybernetic augmentations centered around the Sun Microsystems conglomerate, \
 	the Rising Sun is more of a collective delusion and fantasy code of conduct than an organization. A twisted web of cybernetics and technology firms deeply entwined with organized crime, \
-	members of the Rising Sun are often of various East-Asian admix and can be found anywhere high technology and dirty money mix."
+	members of the Red Sun are often of various East-Asian admix and can be found anywhere high technology and dirty money mix."
 
 	stat_modifiers = list(
 		STAT_ROB = -6,

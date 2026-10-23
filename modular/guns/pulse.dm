@@ -23,6 +23,7 @@
 	damage_multiplier = 1.1
 	gun_parts = list(/obj/item/part/gun = 2 ,/obj/item/stack/material/plasteel = 6)
 	zoom_factors = list(0.6)
+	spawn_blacklisted = FALSE
 
 	init_firemodes = list(
 		FULL_AUTO_300,

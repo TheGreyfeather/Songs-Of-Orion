@@ -3247,17 +3247,13 @@
 /turf/floor/holofloor/plating/under,
 /area/holodeck/source/industrial)
 "th" = (
-/obj/machinery/door/airlock/external{
-	name = "Cargo Docking Hatch";
-	icon_state = "door_locked";
+/obj/machinery/door/airlock/orion{
 	frequency = 1380;
-	locked = 1;
+	icon_state = "door_locked";
+	name = "Cargo Docking Hatch";
 	req_access = list(13);
-	id_tag = "cargo_bay_door"
-	},
-/obj/machinery/door/blast/regular{
-	name = "Supply Dock Loading Door";
-	id = "QMLoaddoor"
+	id_tag = "cargo_bay_door";
+	locked = 1
 	},
 /turf/shuttle/floor/mining{
 	icon_state = "10,19"
@@ -4257,7 +4253,7 @@
 /obj/structure/plasticflaps/mining,
 /obj/machinery/door/blast/regular{
 	name = "Supply Dock Loading Door";
-	id = "QMLoaddoor2"
+	id = "QMLoaddoor"
 	},
 /turf/shuttle/floor/mining,
 /area/centcom/suppy)
@@ -4667,7 +4663,7 @@
 /obj/structure/plasticflaps/mining,
 /obj/machinery/door/blast/regular{
 	name = "Supply Dock Loading Door";
-	id = "QMLoaddoor2"
+	id = "QMLoaddoor"
 	},
 /turf/shuttle/floor/mining,
 /area/centcom/suppy)

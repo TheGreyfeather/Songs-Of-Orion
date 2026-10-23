@@ -23,6 +23,7 @@
 	var/list/wounddatums = list()
 	dropped_sound = 'sound/items/drop_sounds/flesh.ogg'
 	pickup_sound = 'sound/items/drop_sounds/leather.ogg'
+
 /obj/item/organ/internal/Initialize()
 	. = ..()
 	initialize_organ_efficiencies()
@@ -71,6 +72,9 @@
 	action_button_proc = initial(action_button_proc)
 	action_button_is_hands_free = initial(action_button_is_hands_free)
 
+	var/mob/living/carbon/human/owner = find_owner_recursively()
+	if (QDELETED(owner))
+		return
 	for(var/process in organ_efficiency)
 		owner.internal_organs_by_efficiency[process] -= src
 
@@ -117,11 +121,13 @@
 	SEND_SIGNAL(src, COMSIG_ADDVAL)
 
 /obj/item/organ/internal/proc/handle_organ_eff()
+	if (!owner)
+		return
 	for(var/process in organ_efficiency)
 		if(is_usable())
 			owner.internal_organs_by_efficiency[process] |= src
 		else
-			owner.internal_organs_by_efficiency[process] -= src
+			owner?.internal_organs_by_efficiency[process] -= src // dead organs don't necessarily have an owner
 
 /obj/item/organ/internal/proc/get_process_efficiency(process_define)
 	var/organ_eff = organ_efficiency[process_define]
@@ -146,7 +152,7 @@
 			if(!LAZYLEN(possible_wounds))
 				break
 	else
-	
+
 		return TRUE
 	return FALSE
 
@@ -200,7 +206,7 @@
 		return
 	if(!blood_req)
 		return
-	if(OP_BLOOD_VESSEL in organ_efficiency && !(owner.status_flags & BLEEDOUT))
+	if((OP_BLOOD_VESSEL in organ_efficiency) && !(owner.status_flags & BLEEDOUT))
 		current_blood = min(current_blood + 5, max_blood_storage)	//Blood vessels get an extra flat 5 blood regen
 
 	if(owner.status_flags & BLEEDOUT)
@@ -228,18 +234,18 @@
 
 /obj/item/organ/internal/examine(mob/user, extra_description = "")
 	if(user.stats?.getStat(STAT_BIO) > STAT_LEVEL_BASIC)
-		extra_description += SPAN_NOTICE("\nOrgan size: [specific_organ_size]")
+		extra_description += span_notice("\nOrgan size: [specific_organ_size]")
 	if(user.stats?.getStat(STAT_BIO) > STAT_LEVEL_EXPERT - 5)
 		var/organs
 		for(var/organ in organ_efficiency)
 			organs += organ + " ([organ_efficiency[organ]]), "
 		organs = copytext(organs, 1, length(organs) - 1)
 
-		extra_description += SPAN_NOTICE("\nRequirements: <span style='color:red'>[blood_req]</span>/<span style='color:blue'>[oxygen_req]</span>/<span style='color:orange'>[nutriment_req]</span>")
-		extra_description += SPAN_NOTICE("\nOrgan tissues present (efficiency): <span style='color:pink'>[organs ? organs : "none"]</span>")
+		extra_description += span_notice("\nRequirements: <span style='color:red'>[blood_req]</span>/<span style='color:blue'>[oxygen_req]</span>/<span style='color:orange'>[nutriment_req]</span>")
+		extra_description += span_notice("\nOrgan tissues present (efficiency): <span style='color:pink'>[organs ? organs : "none"]</span>")
 
 		if(item_upgrades.len)
-			extra_description += SPAN_NOTICE("\nOrgan grafts present ([item_upgrades.len]/[max_upgrades]). Use a laser cutting tool to remove.")
+			extra_description += span_notice("\nOrgan grafts present ([item_upgrades.len]/[max_upgrades]). Use a laser cutting tool to remove.")
 	..(user, extra_description)
 
 /obj/item/organ/internal/is_usable()
@@ -409,6 +415,7 @@
 	current_blood = initial(current_blood)
 	for(var/woundtype in wounddatums)
 		remove_wound(wounddatums[woundtype])
+	handle_organ_eff()//makes sure the organ is properly re-added to internal_organs_by_efficiency
 
 // Store these so we can properly restore them when installing/removing mods
 /obj/item/organ/internal/proc/initialize_organ_efficiencies()

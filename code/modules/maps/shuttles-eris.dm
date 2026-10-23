@@ -401,7 +401,7 @@
 	current_location = "nav_cargo_start"
 	shuttle_area = /area/centcom/suppy
 	location = 1
-	move_time = 5
+	move_time = 60
 
 /datum/shuttle/autodock/ferry/cargo/New()
 	SStrade.shuttle = src

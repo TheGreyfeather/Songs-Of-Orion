@@ -327,3 +327,14 @@
 
 /obj/item/organ/proc/is_usable()
 	return !(status & (ORGAN_CUT_AWAY|ORGAN_DEAD))
+
+/obj/item/organ/proc/find_owner_recursively()
+	var/obj/item/organ/O = src
+
+	while (O)
+		if (O.owner)
+			return O.owner
+
+		O = O.parent
+
+	return null

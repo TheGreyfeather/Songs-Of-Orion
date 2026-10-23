@@ -2824,6 +2824,7 @@
 #include "maps\submaps\junk_field\j25_25\serbian\serbian.dm"
 #include "maps\submaps\junk_field\j25_25\spacewrecks\spacewrecks.dm"
 #include "maps\submaps\junk_field\j5_5\neutral\neutral.dm"
+#include "modular\astra_autolathe_designs.dm"
 #include "modular\astra_closets.dm"
 #include "modular\astra_closets_job.dm"
 #include "modular\astra_crates.dm"

@@ -3,8 +3,8 @@
 //Jobs depatment lists for use in constant expressions
 #define JOBS_SECURITY "Director of Asset Denial","Deputy Solar Marshal","Search And Rescue Specialist","Security Officer"
 #define JOBS_COMMAND "Captain","First Officer","Director of Asset Denial","Guild Merchant","Chief Engineer","Brotherhood Coordinator","Human Resources Officer","Syndicate Logistics Officer"
-#define JOBS_ENGINEERING "Chief Engineer","Space Engineer","EVA Foremxn","EVA Reclaimation Personnel"
-#define JOBS_MEDICAL "Brotherhood Coordinator","Brotherhood Doctor","Brotherhood Volunteer"
+#define JOBS_ENGINEERING "Chief Engineer","Space Engineer","EVA Foremxn","EVA Reclaimation Personnel","Engineer"
+#define JOBS_MEDICAL "Brotherhood Coordinator","Brotherhood Doctor","Brotherhood Volunteer", "Doctor"
 #define JOBS_SCIENCE "Human Resources Officer","HR Biotechnician","HR WAGIE"
 #define JOBS_MOEBIUS "Human Resources Officer"
 #define JOBS_CARGO "Syndicate Logistics Officer","Syndicate Hacker","Syndicate Agent"

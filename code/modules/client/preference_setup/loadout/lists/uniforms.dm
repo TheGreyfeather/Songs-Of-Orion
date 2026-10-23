@@ -336,7 +336,7 @@
 	display_name = "SAR alt selection"
 	path = /obj/item/clothing/under/rank/medspec/skirt
 	cost = 1
-	allowed_roles = list(JOBS_SECURITY)
+	allowed_roles = list(JOBS_MEDICAL)
 
 /datum/gear/uniform/sar/color_presets/New()
 	..()
