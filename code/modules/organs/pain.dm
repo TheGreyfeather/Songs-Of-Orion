@@ -30,9 +30,11 @@ mob/living/carbon/proc/pain(var/partname, var/amount, var/force, var/burning = 0
 		switch(amount)
 			if(1 to 10)
 				msg = "\red <b>Your [partname] burns.</b>"
+			if(11 to 25)
+				msg = "\red <b>Your [partname] really burns.</b>"
 				if(prob(30))
 					emote("agony_level_1")
-			if(11 to 90)
+			if(26 to 90)
 				flash_weak_pain()
 				msg = "\red <b><font size=2>Your [partname] burns badly!</font></b>"
 				if(prob(40))
@@ -46,9 +48,11 @@ mob/living/carbon/proc/pain(var/partname, var/amount, var/force, var/burning = 0
 		switch(amount)
 			if(1 to 10)
 				msg = "<b>Your [partname] hurts.</b>"
+			if(11 to 25)
+				msg = "<b>Your [partname] really hurts.</b>"
 				if(prob(30))
 					emote("agony_level_1")
-			if(11 to 90)
+			if(26 to 90)
 				flash_weak_pain()
 				msg = "<b><font size=2>Your [partname] hurts badly.</font></b>"
 				if(prob(40))
