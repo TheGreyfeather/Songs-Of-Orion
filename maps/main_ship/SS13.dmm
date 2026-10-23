@@ -1096,13 +1096,6 @@
 	},
 /turf/wall/untinted/orion_reinforced,
 /area/eris/engineering/engine_airlock)
-"aYF" = (
-/obj/structure/cryofeed,
-/obj/machinery/computer/cryopod{
-	pixel_y = 32
-	},
-/turf/floor/tiled/steel/brown_platform,
-/area/eris/crew_quarters/sleep/cryo)
 "aZu" = (
 /obj/structure/grille,
 /obj/structure/lattice,
@@ -1224,6 +1217,19 @@
 	},
 /turf/wall/untinted/orion/window/reinforced,
 /area/space)
+"bcZ" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/orion/centcom{
+	name = "Maint Airlock";
+	dir = 2
+	},
+/obj/structure/disposalpipe/segment,
+/turf/floor/tiled/white/techfloor_grid/doorway,
+/area/eris/maintenance)
 "bel" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -2794,13 +2800,13 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/machinery/conveyor/west{
+	id = "cargo_load"
+	},
 /obj/machinery/door/blast/shutters{
 	dir = 4;
 	name = "supply hanger shutter";
 	id = "QMLoaddoor"
-	},
-/obj/machinery/conveyor/west{
-	id = "cargo_load"
 	},
 /turf/floor/plating/under,
 /area/eris/quartermaster/hangarsupply)
@@ -7687,20 +7693,6 @@
 	},
 /turf/floor/carpet/bcarpet,
 /area/eris/command/courtroom)
-"gtj" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/conveyor/west{
-	id = "cargo_load"
-	},
-/obj/machinery/door/blast/shutters{
-	dir = 4;
-	name = "supply hanger shutter";
-	id = "QMLoaddoor"
-	},
-/turf/floor/plating/under,
-/area/eris/quartermaster/hangarsupply)
 "gtu" = (
 /obj/effect/floor_decal/ss13/l13,
 /obj/effect/floor_decal/semiotic/evac{
@@ -9565,6 +9557,18 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/floor/tiled/techmaint_cargo,
+/area/eris/maintenance)
+"icH" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/floor/tiled/techmaint,
 /area/eris/maintenance)
 "idb" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal{
@@ -14361,17 +14365,6 @@
 /area/eris/hallway/main{
 	name = "lower hall"
 	})
-"mqI" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/floor/tiled/techmaint,
-/area/eris/maintenance)
 "mrf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -14485,6 +14478,17 @@
 /area/eris/crew_quarters/cafeteria)
 "muT" = (
 /turf/floor/tiled/orion/wood,
+/area/eris/maintenance)
+"muU" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/floor/tiled/techmaint,
 /area/eris/maintenance)
 "mvo" = (
 /obj/spawner/scrap/sparse/low_chance,
@@ -16801,6 +16805,13 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/floor/tiled/steel/techfloor_grid,
 /area/ai_monitored/storage/eva)
+"oAE" = (
+/obj/structure/cryofeed,
+/obj/machinery/computer/cryopod{
+	pixel_y = 32
+	},
+/turf/floor/tiled/steel/brown_platform,
+/area/eris/crew_quarters/sleep/cryo)
 "oAG" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -19417,19 +19428,6 @@
 /obj/structure/barricade,
 /turf/floor/tiled/techmaint_perforated,
 /area/eris/maintenance)
-"qDg" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/door/airlock/orion/centcom{
-	name = "Maint Airlock";
-	dir = 2
-	},
-/obj/structure/disposalpipe/segment,
-/turf/floor/tiled/white/techfloor_grid/doorway,
-/area/eris/maintenance)
 "qDk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -19749,6 +19747,20 @@
 /obj/structure/disposalpipe/segment,
 /turf/floor/tiled/white/techfloor_grid/doorway,
 /area/eris/crew_quarters/hydroponics/garden)
+"qSz" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 4;
+	name = "supply hanger shutter";
+	id = "QMLoaddoor"
+	},
+/obj/machinery/conveyor/west{
+	id = "cargo_load"
+	},
+/turf/floor/plating/under,
+/area/eris/quartermaster/hangarsupply)
 "qSI" = (
 /obj/spawner/scrap/sparse/low_chance,
 /obj/structure/salvageable/wall_panel/poppy,
@@ -25096,18 +25108,6 @@
 /obj/landmark/storyevent/midgame_stash_spawn,
 /turf/floor/plating/under,
 /area/eris/maintenance)
-"vkW" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/floor/tiled/techmaint,
-/area/eris/maintenance)
 "vlN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -28031,6 +28031,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/floor/tiled/white,
 /area/eris/crew_quarters/cafeteria)
+"xMn" = (
+/obj/machinery/power/smes/magical,
+/obj/structure/cable,
+/turf/floor/plating/under,
+/area/eris/command/tcommsat/chamber)
 "xMB" = (
 /obj/structure/railing,
 /obj/spawner/mob/roaches/cluster/low_chance,
@@ -34631,7 +34636,7 @@ tfB
 dul
 dNT
 cKP
-gtj
+cqV
 dNT
 onU
 sJN
@@ -34766,8 +34771,8 @@ uNW
 nqb
 bXr
 iOJ
-vcI
-vWC
+mVg
+xMn
 fOA
 fOA
 onU
@@ -34935,7 +34940,7 @@ tfB
 jUj
 dNT
 jUj
-cqV
+qSz
 dNT
 onU
 sJN
@@ -58182,7 +58187,7 @@ lJT
 rya
 rya
 urJ
-aYF
+oAE
 mRs
 kDQ
 bfm
@@ -61389,7 +61394,7 @@ bHM
 vQT
 bvE
 dLu
-mqI
+muU
 hUR
 onU
 sJN
@@ -61541,7 +61546,7 @@ bHM
 vQT
 afE
 oGm
-mqI
+muU
 hUR
 onU
 sJN
@@ -61845,7 +61850,7 @@ rBG
 vQT
 hwT
 jsm
-mqI
+muU
 hUR
 onU
 sJN
@@ -61997,7 +62002,7 @@ oHP
 nJz
 eAn
 jsm
-mqI
+muU
 hUR
 onU
 sJN
@@ -62149,7 +62154,7 @@ dpc
 exH
 ntl
 jsm
-mqI
+muU
 hUR
 onU
 sJN
@@ -62301,7 +62306,7 @@ dWf
 eAn
 eAn
 jsm
-mqI
+muU
 hUR
 onU
 sJN
@@ -62605,7 +62610,7 @@ oEs
 vQT
 vQT
 jsm
-mqI
+muU
 jsm
 raT
 onU
@@ -62757,7 +62762,7 @@ ejg
 jsm
 iLy
 jsm
-mqI
+muU
 hUR
 gGg
 onU
@@ -62909,7 +62914,7 @@ rua
 jsm
 bKn
 jsm
-mqI
+muU
 hUR
 onU
 sJN
@@ -63061,7 +63066,7 @@ cHf
 jsm
 xOI
 glf
-vkW
+icH
 hUR
 onU
 sJN
@@ -63213,7 +63218,7 @@ qIM
 jsm
 kgT
 jsm
-mqI
+muU
 hUR
 onU
 sJN
@@ -63365,7 +63370,7 @@ puq
 jsm
 iLy
 jsm
-mqI
+muU
 hUR
 onU
 sJN
@@ -63517,7 +63522,7 @@ alf
 alf
 alf
 jsm
-mqI
+muU
 jsm
 oRt
 onU
@@ -63669,7 +63674,7 @@ jyI
 bLD
 mir
 jsm
-mqI
+muU
 hUR
 jAL
 onU
@@ -63821,7 +63826,7 @@ amC
 amC
 eqg
 jsm
-mqI
+muU
 hUR
 jAL
 onU
@@ -63973,7 +63978,7 @@ amC
 amC
 laE
 jsm
-vkW
+icH
 hUR
 jAL
 onU
@@ -65019,7 +65024,7 @@ cxN
 vYx
 kTh
 cwD
-qDg
+bcZ
 bLc
 kIK
 dvj
