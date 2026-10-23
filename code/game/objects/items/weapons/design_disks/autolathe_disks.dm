@@ -30,3 +30,16 @@
 
 /obj/item/computer_hardware/hard_drive/portable/design/guns
 	bad_type = /obj/item/computer_hardware/hard_drive/portable/design/guns
+	spawn_blacklisted = TRUE
+
+/obj/item/computer_hardware/hard_drive/portable/design/guns/printed_gun
+	disk_name = "printed handgun plans"
+	icon_state = "onestar"
+	rarity_value = 25
+	license = -1
+	designs = list(
+		/datum/design/autolathe/gun/printed_pistol,
+		/datum/design/autolathe/ammo/sl_pistol/empty,
+		/datum/design/autolathe/ammo/pistol_ammobox/practice
+	)
+	spawn_blacklisted = FALSE

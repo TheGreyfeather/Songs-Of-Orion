@@ -37,6 +37,7 @@ obj/item/gun/projectile/automatic/hk //MP5A5
 	init_recoil = SMG_RECOIL(0.6)
 	gun_parts = list(/obj/item/part/gun = 4, /obj/item/part/gun/modular/grip/black = 1, /obj/item/part/gun/modular/mechanism/smg = 1, /obj/item/part/gun/modular/barrel/pistol = 1)
 	can_dual = TRUE
+	spawn_blacklisted = FALSE
 
 	init_firemodes = list(
 		FULL_AUTO_600,

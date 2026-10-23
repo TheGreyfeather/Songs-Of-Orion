@@ -32,6 +32,7 @@
 	init_recoil = CARBINE_RECOIL(1)
 
 	serial_type = "OR"
+	spawn_blacklisted = FALSE
 
 /obj/item/gun/energy/robo_smg/update_icon()
  	..()

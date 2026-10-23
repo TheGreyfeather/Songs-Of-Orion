@@ -22,6 +22,7 @@
 	saw_off = FALSE
 	attack_verb = list("attacked", "bashed", "slammed", "beat", "cracked")
 	sharp = FALSE
+	spawn_blacklisted = FALSE
 
 
 /obj/item/part/gun/frame/pumpgun

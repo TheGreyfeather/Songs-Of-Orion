@@ -24,7 +24,7 @@
 		list(mode_name="flash", mode_desc="Fire a blinding flash", projectile_type=/obj/item/projectile/energy/flash, charge_cost=50, burst=1, fire_delay=20, icon="stun", fire_sound = 'sound/weapons/lasercannonfire.ogg'),
 		list(mode_name="ion", mode_desc="Fires an electical-ion pulse tuned to disable machinery.", projectile_type=/obj/item/projectile/ion, charge_cost=200, burst=1, fire_delay=12, icon="charge", fire_sound = 'sound/weapons/cat/cat_fire2.ogg')
 	)
-
+	spawn_blacklisted = FALSE
 /obj/item/gun/energy/cat/proc/set_status(s)
 	if(cell && cell.charge <= charge_cost)
 		status = TRUE

@@ -37,6 +37,7 @@ Yes, this really was the very first code written for Braking Point that has been
 	var/item_suffix = ""
 	var/bolt_open_sound = 'sound/weapons/guns/interact/hpistol_cock.ogg'
 	var/bolt_closed_sound = 'sound/weapons/guns/interact/rifle_boltforward.ogg'
+	spawn_blacklisted = FALSE
 
 /obj/item/gun/projectile/internalmag/update_icon()
 	..()
@@ -102,7 +103,7 @@ Actual weapons below
 
 //Mausers in the spirit of Chinese warlord period weapons.
 /obj/item/gun/projectile/internalmag/wauser
-	name = "\"Wauser\" pistol"
+	name = "mystery pistol"
 	desc = "A mystery pistol of unknown origin, presumably some backwater workshop."
 	description_antag = "A relic weapon, and even then just a copy of something ancient. The markings are in Gaeltalk, oddly enough."
 	icon = 'modular/guns/icons/pistol.dmi'
@@ -116,7 +117,7 @@ Actual weapons below
 	penetration_multiplier = 1.5
 	gun_parts = list(/obj/item/part/gun = 4, /obj/item/part/gun/modular/grip/wood = 1, /obj/item/part/gun/modular/mechanism/pistol = 1, /obj/item/part/gun/modular/barrel/pistol = 1)
 	can_dual = TRUE
-
+	serial_type = "BROWNINGS BROWNINGS BROWNINGS WAUSER"
 
 /*/SAR Tround revolver, though trounds themselves were cut for simplicity.
 /obj/item/gun/projectile/internalmag/tround
@@ -174,16 +175,13 @@ Actual weapons below
 	matter = list(MATERIAL_STEEL = 1, MATERIAL_PLASTIC = 9)
 	price_tag = 200
 	fire_sound = 'sound/weapons/guns/fire/cal/35pistol.ogg'
-	damage_multiplier = 0.9
-	penetration_multiplier = 1.2
-	init_recoil = HANDGUN_RECOIL(1)
-	rarity_value = 40
+	rarity_value = 20
 	gun_parts = list(/obj/item/stack/material/plastic = 2)
 	safety = FALSE
 	var/list/possible_colors = list("blue", "orange", "green", "red", "white", "violet" )
 	var/choosen_color = ""
 	damage_multiplier = 0.7
-	penetration_multiplier = 0.2
+	penetration_multiplier = 0.7
 	init_recoil = HANDGUN_RECOIL(1.6)
 	bolt_open_sound = 'sound/weapons/guns/interact/pistol_magin.ogg'
 	bolt_closed_sound = 'sound/weapons/guns/interact/smg_cock.ogg'

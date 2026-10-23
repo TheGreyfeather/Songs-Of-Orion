@@ -34,6 +34,7 @@ obj/item/gun/projectile/automatic/stoner
 		)
 
 	serial_type = "S"
+	spawn_blacklisted = FALSE
 
 
 

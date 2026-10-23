@@ -32,7 +32,7 @@
 	pickup_sound = 'sound/weapons/guns/interact/smg_cock.ogg'
 	health = 600
 	maxHealth = 600
-
+	spawn_blacklisted = TRUE
 	var/list/custom_default = list() // used to preserve changes to stats past refresh_upgrades proccing
 	var/damage_multiplier = 1 //Multiplies damage of projectiles fired from this gun
 	var/halloss_multiplier = 1 //Multiplies agony damage of projectiles fired from this gun
